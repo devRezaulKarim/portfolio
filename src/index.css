@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --color-primary: #022f40;
+  --color-secondary: #67828c;
+  --color-accent: #af9123;
+  --color-light: #e8eef2;
+  --color-dark: #000;
+}
+
+.active {
+  @apply bg-[var(--color-secondary)];
+  /* Add more Tailwind CSS classes as needed */
+
+  color: var(--color-primary);
+}
+.navLinks li {
+  @apply my-4;
+}
+.navLinks li a {
+  @apply px-4 py-2 font-bold text-lg;
+}
