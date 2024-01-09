@@ -44,12 +44,16 @@ export default function Home() {
             coding, ensuring user-centric websites that captivate and engage.
           </p>
           <div className="btns">
-            <button>Hire Me</button>
-            <button>Download Resume</button>
+            <button className="bg-[var(--color-secondary)] text-[var(--color-primary)] border-2 border-[var(--color-accent)] duration-200 py-1 px-4 font-semibold text-xl rounded-lg hover:shadow-md hover:border-[var(--color-primary)] hover:shadow-[var(--color-accent)] hover:-translate-y-1">
+              Hire Me
+            </button>
+            <button className="ml-8 bg-[var(--color-secondary)] text-[var(--color-primary)] border-2 border-[var(--color-accent)] duration-200 py-1 px-4 font-semibold text-xl rounded-lg hover:shadow-md hover:border-[var(--color-primary)] hover:shadow-[var(--color-accent)] hover:-translate-y-1">
+              Download Resume
+            </button>
           </div>
         </div>
-        <div className="heroRight">
-          <img src="/Programming.gif" alt="" />
+        <div className="heroRight w-1/2">
+          <img className="w-3/4 " src="/Programming.gif" alt="" />
         </div>
       </div>
     </div>
