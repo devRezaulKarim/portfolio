@@ -4,7 +4,8 @@
 :root {
   --color-primary: #022f40;
   --color-secondary: #67828c;
-  --color-accent: #af9123;
+  --color-accent: #daa520;
+  /* --color-accent: #af9123; */
   --color-light: #e8eef2;
   --color-dark: #000;
 }
@@ -25,4 +26,49 @@
   before:content-[''] before:absolute before:h-8 before:w-8 before:bg-transparent  before:rounded-bl-2xl before:top-[-32px] before:left-0 before:shadow-[-6px_4px_0_var(--color-primary)] before:bg-gradient-to-tr before:from-0% before:from-[var(--color-accent)] before:to-25% before:to-transparent 
   /* after class */
    after:content-[''] after:absolute after:h-8 after:w-8 after:bg-gradient-to-br after:from-0% after:from-[var(--color-accent)] after:to-25% after:to-transparent  after:rounded-tl-2xl after:bottom-[-32px] after:left-0  after:shadow-[-6px_-4px_0_var(--color-primary)];
+}
+
+.animation {
+  animation: blink 2s linear infinite;
+  display: inline-block;
+  color: var(--color-accent);
+  transform: scale(1);
+  position: relative;
+}
+
+.animation::before {
+  content: open-quote;
+  color: var(--color-secondary);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  font-size: 40px;
+
+  left: -20px;
+}
+.animation::after {
+  content: close-quote;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--color-secondary);
+  position: absolute;
+  font-size: 40px;
+  right: -20px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  10%,
+  90% {
+    transform: scale(1);
+  }
+  15%,
+  90% {
+    opacity: 1;
+  }
 }
