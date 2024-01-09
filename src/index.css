@@ -19,5 +19,10 @@
   @apply text-slate-700 px-4 py-2 font-bold text-lg flex items-center gap-2 w-32  rounded-r-3xl  after:transition-colors after:duration-500;
 }
 .navLinks a.active {
-  @apply bg-[var(--color-primary)] text-[var(--color-accent)] rounded-r-3xl relative before:content-[''] before:absolute before:h-8 before:w-8 before:bg-transparent  before:rounded-bl-2xl before:top-[-32px] before:left-0 before:shadow-[-6px_4px_0_var(--color-primary)]  after:content-[''] after:absolute after:h-8 after:w-8 after:bg-transparent  after:rounded-tl-2xl after:bottom-[-32px] after:left-0 border-r-2	 border-r-[var(--color-accent)] after:shadow-[-6px_-4px_0_var(--color-primary)];
+  @apply bg-[var(--color-primary)] text-[var(--color-accent)] rounded-r-3xl relative border-r-2	 border-r-[var(--color-accent)] 
+  
+  /* before class */
+  before:content-[''] before:absolute before:h-8 before:w-8 before:bg-transparent  before:rounded-bl-2xl before:top-[-32px] before:left-0 before:shadow-[-6px_4px_0_var(--color-primary)] before:bg-gradient-to-tr before:from-0% before:from-[var(--color-accent)] before:to-25% before:to-transparent 
+  /* after class */
+   after:content-[''] after:absolute after:h-8 after:w-8 after:bg-gradient-to-br after:from-0% after:from-[var(--color-accent)] after:to-25% after:to-transparent  after:rounded-tl-2xl after:bottom-[-32px] after:left-0  after:shadow-[-6px_-4px_0_var(--color-primary)];
 }
