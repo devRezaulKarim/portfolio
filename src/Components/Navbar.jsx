@@ -3,6 +3,7 @@ import { FaHome } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
 import { MdContacts } from "react-icons/md";
 import { IoIosPaper } from "react-icons/io";
+import { FaListCheck } from "react-icons/fa6";
 
 export default function Navbar() {
   return (
@@ -16,24 +17,30 @@ export default function Navbar() {
         <ul className="navLinks">
           <li>
             <NavLink to={"/"}>
-              <FaHome />
+              <FaHome className="text-sm icon" />
               <span>Home</span>
             </NavLink>
           </li>
           <li>
+            <NavLink to={"/skills"}>
+              <FaListCheck className="text-sm icon" />
+              <span>Skills</span>
+            </NavLink>
+          </li>
+          <li>
             <NavLink to={"/projects"}>
-              <AiFillProject />
+              <AiFillProject className="text-sm icon" />
               <span>Projects</span>
             </NavLink>
           </li>
           <li>
             <NavLink to={"/contact"}>
-              <MdContacts /> <span>Contact</span>
+              <MdContacts className="text-sm icon" /> <span>Contact</span>
             </NavLink>
           </li>
           <li>
             <Link>
-              <IoIosPaper />
+              <IoIosPaper className="text-sm icon" />
               <span>Resume</span>
             </Link>
           </li>

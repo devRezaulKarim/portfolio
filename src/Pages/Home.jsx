@@ -53,7 +53,7 @@ export default function Home() {
           </div>
         </div>
         <div className="heroRight w-1/2">
-          <img className="w-3/4 " src="/Programming.gif" alt="" />
+          <img className="w-3/4 " src="/Programming.png" alt="" />
         </div>
       </div>
     </div>
