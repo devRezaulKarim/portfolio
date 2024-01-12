@@ -89,8 +89,6 @@
 }
 
 .bar {
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
   width: 80%;
   background: linear-gradient(
     90deg,
@@ -99,45 +97,59 @@
     rgba(218, 165, 32, 1) 55%,
     rgba(218, 165, 32, 0) 100%
   );
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 .bar::before {
   position: absolute;
   content: "";
-  background-color: var(--color-accent);
-  width: 50px;
-  height: 50px;
+  background-color: var(--color-secondary);
+  width: 40px;
+  height: 40px;
   transform: rotate(45deg) translate(-120%, 50%);
   border-bottom-left-radius: 32px;
   border-top-left-radius: 32px;
   border-bottom-right-radius: 32px;
-  animation: opacity 0.5s ease-in-out 0.5s 1 backwards;
+  animation: opacity 0.5s ease-in-out 0.2s 1 backwards;
+}
+.logoAnimation {
+  animation: opacity 0.5s ease-in-out 0.2s 1 backwards;
 }
 
 .html {
   height: 90%;
-  animation: progressHtml 1.5s ease-out 0.5s 1;
+  animation: progressHtml 1.5s ease-out 0.2s 1 backwards;
 }
 .css {
   height: 65%;
-  animation: progressCss 1.5s ease-out 0.5s 1;
+  animation: progressCss 1.5s ease-out 0.2s 1;
 }
-.bs {
+.bootstrap {
   height: 60%;
-  animation: progressBs 1.5s ease-out 0.5s 1;
+  animation: progressBs 1.5s ease-out 0.2s 1;
 }
-.tw {
+.tailwind {
   height: 70%;
-  animation: progressTw 1.5s ease-out 0.5s 1;
+  animation: progressTw 1.5s ease-out 0.2s 1;
 }
-.js {
+.javascript {
   height: 50%;
-  animation: progressJs 1.5s ease-out 0.5s 1;
+  animation: progressJs 1.5s ease-out 0.2s 1;
 }
 
 .react {
   height: 75%;
-  animation: progressReact 1.5s ease-out 0.5s 1;
+  animation: progressReact 1.5s ease-out 0.2s 1;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes progressHtml {
