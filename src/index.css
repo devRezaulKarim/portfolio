@@ -77,44 +77,21 @@
   }
 }
 
-.bgGradient {
-  background: linear-gradient(
-    90deg,
-    rgba(29, 29, 29, 1) 0%,
-    rgba(255, 255, 255, 1) 30%,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(29, 29, 29, 1) 100%
-  );
-  border-radius: 16px;
+.skills p {
+  position: relative;
 }
 
-.bar {
-  width: 80%;
-  background: linear-gradient(
-    90deg,
-    rgba(218, 165, 32, 0) 0%,
-    rgba(218, 165, 32, 1) 35%,
-    rgba(218, 165, 32, 1) 55%,
-    rgba(218, 165, 32, 0) 100%
-  );
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-.bar::before {
+.skills p::before {
+  background-color: var(--color-accent);
   position: absolute;
   content: "";
-  background-color: var(--color-secondary);
-  width: 40px;
-  height: 40px;
-  transform: rotate(45deg) translate(-120%, 50%);
-  border-bottom-left-radius: 32px;
-  border-top-left-radius: 32px;
-  border-bottom-right-radius: 32px;
-  animation: opacity 0.5s ease-in-out 0.2s 1 backwards;
-}
-.logoAnimation {
-  animation: opacity 0.5s ease-in-out 0.2s 1 backwards;
+  width: 15px;
+  aspect-ratio: 1;
+  top: 25px;
+  transform: rotate(45deg) translateX(-30px);
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .html {
@@ -125,13 +102,13 @@
   height: 65%;
   animation: progressCss 1.5s ease-out 0.2s 1;
 }
-.bootstrap {
+.next {
   height: 60%;
-  animation: progressBs 1.5s ease-out 0.2s 1;
+  animation: progressNext 1.5s ease-out 0.2s 1;
 }
-.tailwind {
+.type {
   height: 70%;
-  animation: progressTw 1.5s ease-out 0.2s 1;
+  animation: progressType 1.5s ease-out 0.2s 1;
 }
 .javascript {
   height: 50%;
@@ -168,7 +145,7 @@
     height: 65%;
   }
 }
-@keyframes progressBs {
+@keyframes progressNext {
   0% {
     height: 0%;
   }
@@ -176,7 +153,7 @@
     height: 60%;
   }
 }
-@keyframes progressTw {
+@keyframes progressType {
   0% {
     height: 0%;
   }
@@ -200,3 +177,294 @@
     height: 75%;
   }
 }
+
+/* **************************************
+*************************************** */
+.box {
+  margin: 0 auto;
+  width: 100%;
+  height: 250px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  position: absolute;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.6),
+    15px 15px 2px rgba(0, 0, 0, 0.04);
+}
+.ball.next .shadow {
+  box-shadow: inset -3px -3px 5px rgba(218, 165, 32, 0.6),
+    15px 15px 2px rgba(0, 0, 0, 0.04);
+
+  /* top-left  inset 1px -1px 2px rgba(218, 165, 32, 0.6),
+     top-right  inset -1px 1px 2px rgba(218, 165, 32, 0.6),
+     bottom-left  inset 1px 1px 2px rgba(218, 165, 32, 0.6),*/
+}
+
+.ball.html {
+  animation: moveXHtml 2.5s linear 0.01s infinite alternate,
+    moveYHtml 3.9s linear 0.01s infinite alternate;
+}
+
+.ball.css {
+  left: 50px;
+  animation: moveXCss 2.6s linear 0.02s infinite alternate,
+    moveYCss 3s linear 0.02s infinite alternate;
+}
+.ball.javascript {
+  left: 100px;
+  animation: moveXJavascript 2.7s linear 0.03s infinite alternate,
+    moveYJavascript 2.6s linear 0.03s infinite alternate;
+}
+.ball.react {
+  left: 150px;
+  animation: moveXReact 2.8s linear 0.015s infinite alternate,
+    moveYReact 4.2s linear 0.015s infinite alternate;
+}
+.ball.next {
+  left: 200px;
+  animation: moveXNext 2.9s linear 0.025s infinite alternate,
+    moveYNext 3.3s linear 0.025s infinite alternate;
+}
+.ball.type {
+  left: 250px;
+
+  animation: moveXType 3s linear 0.035s infinite alternate,
+    moveYType 2.6s linear 0.035s infinite alternate both;
+}
+.ball.bootstrap {
+  left: 250px;
+
+  animation: moveXBootstrap 3s linear 0.035s infinite alternate,
+    moveYBootstrap 3.1s linear 0.035s infinite alternate both;
+}
+.ball.tailwind {
+  left: 250px;
+
+  animation: moveXTailwind 3s linear 0.035s infinite alternate,
+    moveYTailwind 3.6s linear 0.035s infinite alternate both;
+}
+.ball.node {
+  animation: moveXHtml 3s linear 0.01s infinite alternate,
+    moveYHtml 4.4s linear 0.01s infinite alternate;
+}
+
+.ball.express {
+  left: 50px;
+  animation: moveXCss 3.1s linear 0.02s infinite alternate,
+    moveYCss 3.6s linear 0.02s infinite alternate;
+}
+
+@keyframes moveXHtml {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+@keyframes moveXCss {
+  0% {
+    left: 90%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes moveXJavascript {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+@keyframes moveXReact {
+  0% {
+    left: 90%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes moveXNext {
+  0% {
+    left: 90%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes moveXType {
+  0% {
+    left: 90%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes moveXBootstrap {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+@keyframes moveXTailwind {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+
+/* y-axis */
+
+@keyframes moveYHtml {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 83%;
+  }
+}
+@keyframes moveYCss {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 83%;
+  }
+}
+@keyframes moveYJavascript {
+  0% {
+    top: 83%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@keyframes moveYReact {
+  0% {
+    top: 83%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@keyframes moveYNext {
+  0% {
+    top: 83%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes moveYType {
+  0% {
+    top: 83%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes moveYBootstrap {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 83%;
+  }
+}
+@keyframes moveYTailwind {
+  0% {
+    top: 83%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/* other browser */
+
+/* @-webkit-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 90%;
+  }
+}
+@-moz-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 90%;
+  }
+}
+@-o-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 90%;
+  }
+} */
+
+/* @-webkit-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 250px;
+  }
+}
+@-moz-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 250px;
+  }
+}
+@-o-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 250px;
+  }
+} */
