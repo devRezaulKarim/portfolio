@@ -1,0 +1,63 @@
+[
+    {
+      "title": "HTML (HyperText Markup Language)",
+      "text": 
+        "Proficient in creating structured and semantic web content using HTML. Able to build the foundational structure of web pages."
+      
+    },
+    {
+      "title": "CSS (Cascading Style Sheets)",
+      "text": 
+        "Skilled in styling and layout techniques using CSS. Capable of creating visually appealing and responsive designs to enhance user experience."
+      
+    },
+    {
+      "title": "Bootstrap",
+      "text": 
+        "Experienced in utilizing the Bootstrap framework to expedite the development process. Able to create consistent and mobile-friendly web designs using pre-built components."
+      
+    },
+    {
+      "title": "Tailwind CSS",
+      "text": 
+        "Proficient in the utility-first approach of Tailwind CSS, allowing for efficient styling and customization of web elements directly in the markup."
+      
+    },
+    {
+      "title": "JavaScript",
+      "text": 
+        "Competent in client-side scripting with JavaScript. Capable of creating interactive and dynamic web content, manipulating the DOM, and handling user events."
+      
+    },
+    {
+      "title": "React",
+      "text": 
+        "Intermediate level proficiency in React, a powerful JavaScript library for building user interfaces.  Experienced in creating modular and reusable components to develop dynamic and efficient web applications."
+      
+    },
+    {
+      "title": "Next.js",
+      "text": 
+        "Experienced in Next.js, utilizing its features for server-rendered applications. Proficient in optimizing  performance, handling data fetching, and enhancing SEO."
+      
+    },
+    {
+      "title": "TypeScript",
+      "text": 
+        "Competent in using TypeScript to add static typing to JavaScript, leading to improved code quality, better collaboration, and enhanced scalability in larger projects."
+      
+    },
+    {
+      "title": "Node.js",
+      "text": 
+        "Introduced to Express.js for building web applications with Node.js. Learning basics such as routing and handling requests."
+      
+    },
+    {
+      "title": "Express.js",
+      "text": 
+        "Entry-level understanding of server-side development using Node.js. Beginning to explore building basic server-side applications."
+      
+    }
+  ]
+  
