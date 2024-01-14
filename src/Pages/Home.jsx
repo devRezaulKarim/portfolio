@@ -28,8 +28,11 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className="hero flex items-center h-screen">
-        <div className="heroLeft w-1/2 flex flex-col gap-2">
+      <div className="hero lg:flex flex-row-reverse items-center min-h-screen p-2">
+        <div className="heroRight lg:w-1/2">
+          <img className="w-full " src="/Programming.png" alt="" />
+        </div>
+        <div className="heroLeft lg:w-1/2 flex flex-col gap-2">
           <h2 className="text-2xl font-semibold">Hey there, </h2>
           <h1 className="text-3xl font-bold">
             This is Rezaul Karim <br /> and I&#39;m
@@ -51,9 +54,6 @@ export default function Home() {
               Download Resume
             </button>
           </div>
-        </div>
-        <div className="heroRight w-1/2">
-          <img className="w-3/4 " src="/Programming.png" alt="" />
         </div>
       </div>
     </div>

@@ -43,10 +43,19 @@ export default function Skills() {
   ];
   return (
     <div className="py-6 px-2 skills">
+      <div className="flex box w-full py-48 md:py-0">
+        {languages.map((language, i) => (
+          <SkillsBall key={i} language={language} />
+        ))}
+      </div>
       <div className="flex gap-2 flex-col-reverse md:flex-row">
-        <div className=" lg:w-full ">
+        <div className=" lg:w-full "></div>
+      </div>
+
+      <div className="lg:flex gap-x-4 ">
+        <div>
           <div>
-            <h3 className="md:text-2xl lg:text-lg flex  items-center gap-2 text-lg font-bold mb-2 text-[var(--color-accent)] ">
+            <h3 className="mt-6 md:text-2xl lg:text-lg flex  items-center gap-2 text-lg font-bold mb-2 text-[var(--color-accent)] ">
               <FaHandPointRight className="text-2xl" /> HTML (HyperText Markup
               Language):
             </h3>
@@ -55,28 +64,6 @@ export default function Skills() {
               HTML. Able to build the foundational structure of web pages.
             </p>
           </div>
-          <div>
-            <h3 className="md:text-2xl lg:text-lg flex items-center gap-2 text-lg font-bold  mt-6 text-[var(--color-accent)] ">
-              <FaHandPointRight className="text-2xl" /> CSS (Cascading Style
-              Sheets):
-            </h3>
-
-            <p className="indent-12 leading-6	md:text-2xl lg:text-base">
-              Skilled in styling and layout techniques using CSS. Capable of
-              creating visually appealing and responsive designs to enhance user
-              experience.
-            </p>
-          </div>
-        </div>
-        <div className="flex box w-full py-48 md:py-0">
-          {languages.map((language, i) => (
-            <SkillsBall key={i} language={language} />
-          ))}
-        </div>
-      </div>
-
-      <div className="lg:flex gap-x-4 ">
-        <div>
           <div>
             <h3 className="md:text-2xl md:mt-6 lg:mt-0 lg:text-lg flex items-center gap-2 text-lg font-bold   text-[var(--color-accent)] ">
               <FaHandPointRight className="text-2xl" /> Bootstrap:
@@ -120,6 +107,18 @@ export default function Skills() {
           </div>
         </div>
         <div>
+          <div>
+            <h3 className="md:text-2xl lg:text-lg flex items-center gap-2 text-lg font-bold  mt-6 text-[var(--color-accent)] ">
+              <FaHandPointRight className="text-2xl" /> CSS (Cascading Style
+              Sheets):
+            </h3>
+
+            <p className="indent-12 leading-6	md:text-2xl lg:text-base">
+              Skilled in styling and layout techniques using CSS. Capable of
+              creating visually appealing and responsive designs to enhance user
+              experience.
+            </p>
+          </div>
           <div>
             <h3 className="md:text-2xl lg:text-lg flex items-center gap-2 text-lg font-bold  mt-6 text-[var(--color-accent)] ">
               <FaHandPointRight className="text-2xl" /> Tailwind CSS:{" "}
