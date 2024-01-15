@@ -1,16 +1,42 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import { FaBars } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
+import { useState } from "react";
 
 export default function App() {
+  // const device = window.innerWidth;
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const device = 500;
+  const mobileMenuHandler = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
+
   return (
     <>
       <div className="flex">
-        <div className="grow bg-[var(--color-primary)] min-h-screen text-[var(--color-light)]">
-          <div className="max-w-screen-lg mx-auto">
+        <div className="bg-[var(--color-primary)] text-[var(--color-light)] lg:w-[calc(100vw-10rem)] w-screen overflow-auto h-screen lg:p-8 p-4 ">
+          <div>
             <Outlet />
           </div>
+          {device < 767 && (
+            <div
+              onClick={mobileMenuHandler}
+              className="w-14 h-14 bg-[var(--color-accent)] fixed top-2 right-2 rounded-full mobileMenuBg z-50 flex items-center justify-center"
+            >
+              {menuIsOpen ? (
+                <FaXmark className="text-4xl text-[var(--color-primary)]" />
+              ) : (
+                <FaBars className="text-3xl text-[var(--color-primary)]" />
+              )}
+            </div>
+          )}
         </div>
-        <Navbar />
+
+        <div className="bg-green-500 hidden lg:block w-40 h-screen"></div>
+        <div>
+          <Navbar />
+        </div>
       </div>
     </>
   );
