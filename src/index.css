@@ -32,6 +32,32 @@
   @apply text-xl;
 }
 
+/* mobile Navbar */
+.mobileNavbar li {
+  width: 130px;
+}
+
+.mobileNavbar li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(51, 65, 85);
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  border-radius: 16px;
+}
+
+.mobileNavbar a.active {
+  color: var(--color-accent);
+  background-color: var(--color-primary);
+  font-size: 22px;
+}
+.mobileNavbar a.active .icon {
+  font-size: 24px;
+}
+
 .animation {
   animation: blink 2s linear infinite;
   display: inline-block;

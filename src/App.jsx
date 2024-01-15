@@ -3,11 +3,12 @@ import Navbar from "./Components/Navbar";
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { useState } from "react";
+import MobileNavbar from "./Components/MobileNavbar";
 
 export default function App() {
-  // const device = window.innerWidth;
+  const device = window.innerWidth;
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const device = 500;
+
   const mobileMenuHandler = () => {
     setMenuIsOpen(!menuIsOpen);
   };
@@ -19,6 +20,9 @@ export default function App() {
           <div>
             <Outlet />
           </div>
+
+          {/* mobile menu */}
+
           {device < 767 && (
             <div
               onClick={mobileMenuHandler}
@@ -29,6 +33,11 @@ export default function App() {
               ) : (
                 <FaBars className="text-3xl text-[var(--color-primary)]" />
               )}
+            </div>
+          )}
+          {device < 767 && menuIsOpen && (
+            <div className="w-40 py-8 bg-[var(--color-accent)] fixed top-2 right-2 rounded-full mobileMenuBg z-40 flex items-center justify-center">
+              <MobileNavbar mobileMenuHandler={mobileMenuHandler} />
             </div>
           )}
         </div>
