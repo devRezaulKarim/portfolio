@@ -58,6 +58,14 @@
   font-size: 24px;
 }
 
+.mobileMenuBg {
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.6);
+}
+.mobileMenuNavBg {
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.6),
+    inset 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
 .animation {
   animation: blink 2s linear infinite;
   display: inline-block;
@@ -101,10 +109,6 @@
   90% {
     opacity: 1;
   }
-}
-
-.mobileMenuBg {
-  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .skills p {

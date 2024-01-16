@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { AiFillProject } from "react-icons/ai";
-import { FaHome } from "react-icons/fa";
+import { FaGithubSquare, FaHome, FaLinkedin } from "react-icons/fa";
 import { FaListCheck } from "react-icons/fa6";
 import { IoIosPaper } from "react-icons/io";
 import { MdContacts } from "react-icons/md";
@@ -8,7 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function MobileNavbar({ mobileMenuHandler }) {
   return (
-    <div className="mobileNavbar pt-8 pb-4">
+    <div className="mobileNavbar pt-8">
       <ul className="">
         <li>
           <NavLink to={"/"} onClick={mobileMenuHandler}>
@@ -40,6 +40,21 @@ export default function MobileNavbar({ mobileMenuHandler }) {
           </Link>
         </li>
       </ul>
+      <div className="flex gap-4 justify-center mt-8">
+        <div>
+          <Link to={"https://github.com/devRezaulKarim"} target="_blank">
+            <FaGithubSquare className="text-3xl text-[var(--color-dark)] " />
+          </Link>
+        </div>
+        <div>
+          <Link
+            to={"https://www.linkedin.com/in/dev-rezaul-karim/"}
+            target="_blank"
+          >
+            <FaLinkedin className="text-3xl " />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

@@ -35,14 +35,18 @@ export default function App() {
               )}
             </div>
           )}
-          {device < 767 && menuIsOpen && (
-            <div className="w-40 py-8 bg-[var(--color-accent)] fixed top-2 right-2 rounded-full mobileMenuBg z-40 flex items-center justify-center">
+          {device < 767 && (
+            <div
+              className={`${
+                menuIsOpen ? "w-40" : "w-0"
+              } overflow-hidden	duration-200 transition-all py-8 bg-[var(--color-secondary)] fixed top-2 right-2 rounded-lg rounded-tr-3xl mobileMenuNavBg z-40 flex items-center justify-center `}
+            >
               <MobileNavbar mobileMenuHandler={mobileMenuHandler} />
             </div>
           )}
         </div>
 
-        <div className="bg-green-500 hidden lg:block w-40 h-screen"></div>
+        <div className="bg-green-500 hidden md:block w-40 h-screen"></div>
         <div>
           <Navbar />
         </div>
