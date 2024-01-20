@@ -19,7 +19,10 @@
       "topic": "react",
       "logo": "https://www.svgrepo.com/show/493719/react-javascript-js-framework-facebook.svg"
     },
-
+    {
+      "topic": "next",
+      "logo": "https://www.svgrepo.com/show/342062/next-js.svg"
+    },
     {
       "topic": "node",
       "logo": "https://www.svgrepo.com/show/376337/node-js.svg"
@@ -28,10 +31,7 @@
       "topic": "express",
       "logo": "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg"
     },
-    {
-      "topic": "next",
-      "logo": "https://www.svgrepo.com/show/342062/next-js.svg"
-    },
+    
     {
       "topic": "type",
       "logo": "https://www.svgrepo.com/show/349540/typescript.svg"

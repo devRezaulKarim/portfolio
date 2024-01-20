@@ -9,12 +9,12 @@ export default function Skills() {
   return (
     <div className="skills px-4 lg:px-0">
       <div className=" w-full h-80 relative ">
-        {skillsLogo.map((language, i) => (
+        {skillsLogo.slice(0, 7).map((language, i) => (
           <SkillsBall key={i} language={language} />
         ))}
       </div>
       <div className="lg:grid grid-cols-2 gap-x-8">
-        {skillsText.map((skill, i) => (
+        {skillsText.slice(0, 7).map((skill, i) => (
           <Skill key={i} skill={skill} />
         ))}
       </div>
