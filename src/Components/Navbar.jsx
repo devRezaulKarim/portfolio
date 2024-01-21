@@ -39,10 +39,10 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
-            <Link>
+            <a href="https://t.ly/zj6gR">
               <IoIosPaper className="text-sm icon" />
               <span>Resume</span>
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

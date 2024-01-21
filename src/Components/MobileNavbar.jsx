@@ -34,10 +34,10 @@ export default function MobileNavbar({ mobileMenuHandler }) {
           </NavLink>
         </li>
         <li>
-          <Link onClick={mobileMenuHandler}>
+          <a href="https://t.ly/zj6gR" onClick={mobileMenuHandler}>
             <IoIosPaper className="text-md icon" />
             <span>Resume</span>
-          </Link>
+          </a>
         </li>
       </ul>
       <div className="flex gap-4 justify-center mt-8">
