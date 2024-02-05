@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="lg:flex flex-row-reverse items-center min-h-[calc(100vh-4rem)]">
       <div className="heroRight lg:w-1/2">
-        <img width={560} height={565} src="/Programming-2.png" alt="" />
+        <img className="w-11/12" src="/Programming-2.png" alt="" />
       </div>
       <div className="heroLeft lg:w-1/2 flex flex-col gap-2">
         <h2 className="text-2xl font-semibold mb-4">Hey there, </h2>
