@@ -31,7 +31,7 @@ export default function Home() {
     <div className="">
       <div className="lg:flex flex-row-reverse items-center ">
         <div className="heroRight  ">
-          <img className="w-full" src="/Programming.png" alt="" />
+          <img className="w-full" src="/Programming-2.png" alt="" />
         </div>
         <div className="heroLeft  flex flex-col gap-2">
           <h2 className="text-2xl font-semibold mb-4">Hey there, </h2>
