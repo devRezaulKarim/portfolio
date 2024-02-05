@@ -34,7 +34,12 @@ export default function MobileNavbar({ mobileMenuHandler }) {
           </NavLink>
         </li>
         <li>
-          <a href="https://t.ly/zj6gR" onClick={mobileMenuHandler}>
+          <a
+            href="https://t.ly/ItvXD"
+            target="_blank"
+            rel="noreferrer"
+            onClick={mobileMenuHandler}
+          >
             <IoIosPaper className="text-md icon" />
             <span>Resume</span>
           </a>

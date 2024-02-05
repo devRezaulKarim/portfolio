@@ -7,7 +7,7 @@ export default function Skills() {
   const skillsText = useFetch("/skillsText.json");
 
   return (
-    <div className="skills px-4 lg:px-0">
+    <div className="skills ">
       <div className=" w-full h-80 relative ">
         {skillsLogo.slice(0, 7).map((language, i) => (
           <SkillsBall key={i} language={language} />

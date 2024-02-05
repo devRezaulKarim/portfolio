@@ -7,7 +7,7 @@ import { FaListCheck } from "react-icons/fa6";
 
 export default function Navbar() {
   return (
-    <div className="hidden md:flex flex-col justify-between bg-[var(--color-secondary)] text-[var(--color-light)] fixed top-0 right-0 w-40  h-full shadow-[inset_10px_0_10px_-10px_var(--color-accent)]	">
+    <div className="hidden md:flex flex-col justify-between bg-[var(--color-secondary)] text-[var(--color-light)] relative top-0 right-0 w-40  h-full shadow-[inset_10px_0_10px_-10px_var(--color-accent)]	">
       <div className="">
         <div className="text-center py-4">
           <h1 className="uppercase text-3xl font-black text-[var(--color-light)]">
@@ -39,7 +39,7 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
-            <a href="https://t.ly/zj6gR">
+            <a href="https://t.ly/ItvXD" target="_blank" rel="noreferrer">
               <IoIosPaper className="text-sm icon" />
               <span>Resume</span>
             </a>

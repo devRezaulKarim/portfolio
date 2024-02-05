@@ -15,40 +15,42 @@ export default function App() {
 
   return (
     <>
-      <div className="flex">
-        <div className="bg-[var(--color-primary)] text-[var(--color-light)] lg:w-[calc(100vw-10rem)] w-screen overflow-auto h-screen lg:p-8 p-4 ">
-          <div>
-            <Outlet />
+      <div className="bg-gradient-to-r from-[var(--color-primary)] from-50%  to-[var(--color-secondary)] to-50%">
+        <div className="flex max-w-screen-2xl mx-auto relative bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)] customShadow">
+          <div className="bg-[var(--color-primary)] text-[var(--color-light)] lg:w-full overflow-auto h-screen lg:p-8 p-4 ">
+            <div>
+              <Outlet />
+            </div>
+
+            {/* mobile menu */}
+
+            {device < 767 && (
+              <div
+                onClick={mobileMenuHandler}
+                className="w-14 h-14 bg-[var(--color-accent)] fixed top-2 right-2 rounded-full mobileMenuBg z-50 flex items-center justify-center"
+              >
+                {menuIsOpen ? (
+                  <FaXmark className="text-4xl text-[var(--color-primary)]" />
+                ) : (
+                  <FaBars className="text-3xl text-[var(--color-primary)]" />
+                )}
+              </div>
+            )}
+            {device < 767 && (
+              <div
+                className={`${
+                  menuIsOpen ? "w-40" : "w-0"
+                } overflow-hidden	duration-200 transition-all py-8 bg-[var(--color-secondary)] fixed top-2 right-2 rounded-lg rounded-tr-3xl mobileMenuNavBg z-40 flex items-center justify-center `}
+              >
+                <MobileNavbar mobileMenuHandler={mobileMenuHandler} />
+              </div>
+            )}
           </div>
 
-          {/* mobile menu */}
-
-          {device < 767 && (
-            <div
-              onClick={mobileMenuHandler}
-              className="w-14 h-14 bg-[var(--color-accent)] fixed top-2 right-2 rounded-full mobileMenuBg z-50 flex items-center justify-center"
-            >
-              {menuIsOpen ? (
-                <FaXmark className="text-4xl text-[var(--color-primary)]" />
-              ) : (
-                <FaBars className="text-3xl text-[var(--color-primary)]" />
-              )}
-            </div>
-          )}
-          {device < 767 && (
-            <div
-              className={`${
-                menuIsOpen ? "w-40" : "w-0"
-              } overflow-hidden	duration-200 transition-all py-8 bg-[var(--color-secondary)] fixed top-2 right-2 rounded-lg rounded-tr-3xl mobileMenuNavBg z-40 flex items-center justify-center `}
-            >
-              <MobileNavbar mobileMenuHandler={mobileMenuHandler} />
-            </div>
-          )}
-        </div>
-
-        <div className="bg-green-500 hidden md:block w-40 h-screen"></div>
-        <div>
-          <Navbar />
+          {/* <div className="bg-green-500 hidden md:block w-60 h-screen"></div> */}
+          <div>
+            <Navbar />
+          </div>
         </div>
       </div>
     </>
