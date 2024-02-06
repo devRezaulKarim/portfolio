@@ -46,13 +46,13 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="flex gap-4 justify-center mb-8">
-        <div>
+      <div className="flex gap-4 justify-center mb-8 flex-wrap-reverse">
+        <div className="github">
           <Link to={"https://github.com/devRezaulKarim"} target="_blank">
             <FaGithubSquare className="text-3xl text-[var(--color-dark)] " />
           </Link>
         </div>
-        <div>
+        <div className="linkedin">
           <Link
             to={"https://www.linkedin.com/in/dev-rezaul-karim/"}
             target="_blank"
@@ -60,6 +60,35 @@ export default function Navbar() {
             <FaLinkedin className="text-3xl " />
           </Link>
         </div>
+        {/* extra */}
+        {/* extra */}
+        {/* extra */}
+        {/* <div className="linkedin2">
+          <Link to={"https://github.com/devRezaulKarim"} target="_blank">
+            <FaGithubSquare className="text-3xl text-[var(--color-dark)] " />
+          </Link>
+        </div>
+        <div className="linkedin3">
+          <Link
+            to={"https://www.linkedin.com/in/dev-rezaul-karim/"}
+            target="_blank"
+          >
+            <FaLinkedin className="text-3xl " />
+          </Link>
+        </div>
+        <div className="linkedin4">
+          <Link to={"https://github.com/devRezaulKarim"} target="_blank">
+            <FaGithubSquare className="text-3xl text-[var(--color-dark)] " />
+          </Link>
+        </div>
+        <div className="linkedin5">
+          <Link
+            to={"https://www.linkedin.com/in/dev-rezaul-karim/"}
+            target="_blank"
+          >
+            <FaLinkedin className="text-3xl " />
+          </Link>
+        </div> */}
       </div>
     </div>
   );

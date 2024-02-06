@@ -203,9 +203,8 @@
     moveYCss 5.6s linear 0.02s infinite alternate;
 }
 
-.customShadow{
+.customShadow {
   box-shadow: 0 1px 25px var(--color-accent);
-
 }
 
 @media screen and (max-width: 767px) {
@@ -449,3 +448,48 @@
     top: 250px;
   }
 } */
+
+.github {
+  animation: bounce 1s ease-out 1 backwards;
+}
+
+.linkedin {
+  animation: bounce 1s ease-out 0.7s 1 backwards;
+  /* animation: toLeft 1s ease-out 1 backwards; */
+}
+.linkedin2 {
+  animation: bounce 1s ease-out 1.4s 1 backwards;
+  /* animation: toLeft 1s ease-out 1 backwards; */
+}
+.linkedin3 {
+  animation: bounce 1s ease-out 2.2s 1 backwards;
+  /* animation: toLeft 1s ease-out 1 backwards; */
+}
+.linkedin4 {
+  animation: bounce 1s ease-out 3s 1 backwards;
+  /* animation: toLeft 1s ease-out 1 backwards; */
+}
+.linkedin5 {
+  animation: bounce 1s ease-out 3.7s 1 backwards;
+  /* animation: toLeft 1s ease-out 1 backwards; */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-100rem);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0.5rem) rotateX(0);
+  }
+  70% {
+    transform: translateY(-4rem) rotateX(360deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(0);
+    opacity: 1;
+  }
+}
