@@ -9,10 +9,14 @@
   --color-light: #e8eef2;
   --color-dark: #000;
 }
-::-webkit-scrollbar {
-  display: none;
-}
 
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+* {
+  scrollbar-width: none;
+}
 .navLinks li {
   @apply my-2;
 }

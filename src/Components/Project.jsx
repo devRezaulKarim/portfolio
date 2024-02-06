@@ -22,8 +22,8 @@ export default function Project({ value, project }) {
         <div
           className={`lg:w-[calc(100%-250px)] lg:border-2 lg:border-[var(--color-accent)] lg:p-2  my-12 lg:my-0  relative${
             condition
-              ? "lg:pr-6 lg:border-r-[var(--color-primary)] translate-x-[2px] rounded-s-lg"
-              : "lg:pl-6 lg:border-l-[var(--color-primary)] -translate-x-[2px] rounded-e-lg"
+              ? "lg:pr-6 lg:border-r-4 lg:border-r-[var(--color-primary)] translate-x-[2px] rounded-s-lg"
+              : "lg:pl-6 lg:border-l-4 lg:border-l-[var(--color-primary)] -translate-x-[2px] rounded-e-lg"
           }`}
         >
           {/* project title */}
