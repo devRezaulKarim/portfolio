@@ -4,6 +4,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export default function Project({ value, project }) {
   const { title, imgUrl, liveLink, sourceLink } = project;
   const condition = value % 2 === 0;
+
   return (
     <div className="lg:w-10/12 mx-auto py-8 px-2 mb-4 border-2 rounded-lg lg:py-0 lg:px-0 lg:mb-0 lg:border-0 lg:rounded-0 ">
       {/* Image part */}
