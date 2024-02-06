@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import travelVista from "../../public/Travel-vista-long.jpg";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-export default function Project({ value, title }) {
+export default function Project({ value, project }) {
+  const { title, imgUrl, liveLink, sourceLink } = project;
   const condition = value % 2 === 0;
   return (
     <div className="lg:w-10/12 mx-auto py-8 px-2 mb-4 border-2 rounded-lg lg:py-0 lg:px-0 lg:mb-0 lg:border-0 lg:rounded-0 ">
@@ -12,8 +12,8 @@ export default function Project({ value, title }) {
           condition ? "lg:flex-row-reverse" : "lg:flex-row"
         }`}
       >
-        <div className="w-[250px] lg:border-2 lg:border-[var(--color-accent)] lg:p-2 rounded-lg mb-8 lg:mb-0">
-          <img className="w-full" src={travelVista} alt="" />
+        <div className="w-[250px] h-[450px] lg:border-2 lg:border-[var(--color-accent)] lg:p-2 rounded-lg mb-8 lg:mb-0">
+          <img className="w-full h-full" src={imgUrl} alt="" />
         </div>
 
         {/* description part */}
@@ -82,7 +82,7 @@ export default function Project({ value, title }) {
             } `}
           >
             <a
-              href="https://travel-vista-rkz.netlify.app/"
+              href={liveLink}
               target="_blank"
               rel="noreferrer"
               className="text-xl font-semibold px-4 border border-[var(--color-accent)] text-[var(--color-accent)] flex items-center gap-4 rounded-md duration-300 hover:text-[var(--color-primary)] hover:bg-[var(--color-accent)] whitespace-nowrap"
@@ -90,7 +90,7 @@ export default function Project({ value, title }) {
               Live Link <FaExternalLinkAlt className="text-sm" />
             </a>
             <a
-              href="https://github.com/devRezaulKarim/travelVista"
+              href={sourceLink}
               target="_blank"
               rel="noreferrer"
               className="text-xl font-semibold px-4 border border-[var(--color-accent)] text-[var(--color-accent)] flex items-center gap-4 rounded-md duration-300 hover:text-[var(--color-primary)] hover:bg-[var(--color-accent)] ml-8 whitespace-nowrap"

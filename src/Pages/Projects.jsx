@@ -1,18 +1,13 @@
 import Project from "../Components/Project";
+import useFetch from "../hooks/useFetch";
 
 export default function Projects() {
-  const arr = [
-    { id: 1, title: "Travel Vista" },
-    { id: 2, title: "Halal Jibika" },
-    { id: 3, title: "Task Management" },
-    { id: 4, title: "Expense Tracker" },
-    { id: 5, title: "Inventory Management" },
-  ];
+  const projects = useFetch("/projects.json");
 
   return (
     <div className="text-justify">
-      {arr.map((a) => (
-        <Project key={a.id} value={a.id} title={a.title} />
+      {projects.map((project) => (
+        <Project key={project.id} value={project.id} project={project} />
       ))}
     </div>
   );
