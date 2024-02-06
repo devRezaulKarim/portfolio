@@ -14,7 +14,7 @@ export default function Project({ value, project }) {
         }`}
       >
         <div className="w-[250px] h-[450px] lg:border-2 lg:border-[var(--color-accent)] lg:p-2 rounded-lg mb-8 lg:mb-0">
-          <img className="w-full h-full" src={imgUrl} alt="" />
+          <img className="w-full h-full rounded-[4px]" src={imgUrl} alt="" />
         </div>
 
         {/* description part */}
@@ -36,7 +36,7 @@ export default function Project({ value, project }) {
             } `}
           >
             <h1
-              className={`text-5xl font-semibold relative after:content-[''] after:w-full after:h-2/5 after:skew-x-[-25deg] after:absolute  after:left-1 after:bottom-0 after:-z-50   after:bg-[rgba(218,165,32,0.75)] whitespace-nowrap	`}
+              className={`text-5xl font-semibold relative after:content-[''] after:w-full after:h-2/4 after:skew-x-[-25deg] after:absolute  after:left-1 after:bottom-0 after:-z-50  after:bg-gradient-to-t	after:from-[rgba(218,165,32,0.75)] after:to-[rgba(218,165,32,0)] whitespace-nowrap	`}
             >
               {title}
             </h1>
