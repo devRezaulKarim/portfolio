@@ -1,6 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Akronim&family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Shade&family=Londrina+Shadow&family=Monoton&family=Rubik+Doodle+Shadow&family=Rye&family=Tilt+Prism&family=Tourney&family=Train+One&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* ***************************************
+font-family: 'Akronim', system-ui;
+font-family: 'Bungee Inline', sans-serif;
+font-family: 'Bungee Outline', sans-serif;
+font-family: 'Bungee Shade', sans-serif;
+font-family: 'Londrina Shadow', sans-serif;
+font-family: 'Monoton', sans-serif;
+font-family: 'Rubik Doodle Shadow', system-ui;
+font-family: 'Rye', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Tourney', sans-serif;
+font-family: 'Train One', system-ui; 
+*************************************** */
+
 :root {
   --color-primary: #022f40;
   --color-secondary: #67828c;
@@ -496,4 +511,28 @@
     transform: translateY(0) rotateX(0);
     opacity: 1;
   }
+}
+
+.sectionTitle {
+  /* font-family: "Akronim", system-ui;
+  font-family: "Bungee Inline", sans-serif;
+  font-family: "Bungee Outline", sans-serif;
+  font-family: "Bungee Shade", sans-serif;
+  font-family: "Londrina Shadow", sans-serif;
+  font-family: "Monoton", sans-serif;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-family: "Rye", serif;
+  font-family: "Tilt Prism", sans-serif;
+  font-family: "Tourney", sans-serif; */
+
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  translate: -50%;
+  text-align: center;
+  color: var(--color-accent);
+  opacity: 0.1;
+  font-size: 12rem;
+  font-family: "Bungee Shade", system-ui;
+  z-index: -1;
 }
