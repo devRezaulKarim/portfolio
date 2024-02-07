@@ -5,6 +5,7 @@ import { FaGithubSquare, FaHome, FaLinkedin } from "react-icons/fa";
 import { FaListCheck } from "react-icons/fa6";
 import { MdContacts } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
+import { FaSkype } from "react-icons/fa6";
 
 export default function MobileNavbar({ mobileMenuHandler }) {
   return (
@@ -51,12 +52,21 @@ export default function MobileNavbar({ mobileMenuHandler }) {
             <FaGithubSquare className="text-3xl text-[var(--color-dark)] " />
           </Link>
         </div>
+
         <div>
           <Link
             to={"https://www.linkedin.com/in/dev-rezaul-karim/"}
             target="_blank"
           >
             <FaLinkedin className="text-3xl " />
+          </Link>
+        </div>
+        <div>
+          <Link
+            to={"https://join.skype.com/invite/raOqXQNYEz6m"}
+            target="_blank"
+          >
+            <FaSkype className="text-3xl text-[var(--color-dark)] " />
           </Link>
         </div>
       </div>

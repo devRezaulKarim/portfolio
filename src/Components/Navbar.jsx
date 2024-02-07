@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FaGithubSquare, FaHome, FaLinkedin } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
 import { MdContacts } from "react-icons/md";
-import { FaListCheck } from "react-icons/fa6";
+import { FaListCheck, FaSkype } from "react-icons/fa6";
 import { BiLinkExternal } from "react-icons/bi";
 
 export default function Navbar() {
@@ -48,7 +48,11 @@ export default function Navbar() {
       </div>
       <div className="flex gap-4 justify-center mb-8 flex-wrap-reverse">
         <div className="github">
-          <Link to={"https://github.com/devRezaulKarim"} target="_blank">
+          <Link
+            to={"https://github.com/devRezaulKarim"}
+            target="_blank"
+            title="GitHub"
+          >
             <FaGithubSquare className="text-3xl text-[var(--color-dark)] " />
           </Link>
         </div>
@@ -56,18 +60,24 @@ export default function Navbar() {
           <Link
             to={"https://www.linkedin.com/in/dev-rezaul-karim/"}
             target="_blank"
+            title="LinkedIn"
           >
             <FaLinkedin className="text-3xl " />
           </Link>
         </div>
-        {/* extra */}
-        {/* extra */}
-        {/* extra */}
-        {/* <div className="linkedin2">
-          <Link to={"https://github.com/devRezaulKarim"} target="_blank">
-            <FaGithubSquare className="text-3xl text-[var(--color-dark)] " />
+        <div className="linkedin2">
+          <Link
+            to={"https://join.skype.com/invite/raOqXQNYEz6m"}
+            target="_blank"
+            title="Skype"
+          >
+            <FaSkype className="text-3xl text-[var(--color-dark)] " />
           </Link>
         </div>
+        {/* extra */}
+        {/* extra */}
+        {/* extra */}
+        {/* 
         <div className="linkedin3">
           <Link
             to={"https://www.linkedin.com/in/dev-rezaul-karim/"}
