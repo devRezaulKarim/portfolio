@@ -5,10 +5,13 @@ export default function Projects() {
   const projects = useFetch("/projects.json");
 
   return (
-    <div className="text-justify">
-      {projects.map((project) => (
-        <Project key={project.id} value={project.id} project={project} />
-      ))}
+    <div className="text-justify relative">
+      <h1 className="sectionTitle projectsTitle">Projects</h1>
+      <div className="lg:pt-20">
+        {projects.map((project) => (
+          <Project key={project.id} value={project.id} project={project} />
+        ))}
+      </div>
     </div>
   );
 }

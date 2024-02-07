@@ -1,8 +1,10 @@
+import { BiLinkExternal } from "react-icons/bi";
+
 export default function Contact() {
   return (
     <div className="relative isolate">
       <h1 className="sectionTitle">Contact</h1>
-      <div className="lg:flex gap-4 pt-10 min-h-[calc(100vh-10rem)] items-center">
+      <div className="lg:flex gap-4 lg:pt-20  items-center">
         <div className="contactLeft lg:w-1/2 ">
           <p className="text-lg mb-8">
             Thank you for taking the time to visit my portfolio. <br /> If you
@@ -13,25 +15,41 @@ export default function Contact() {
             <span className="mr-2 font-bold text-[var(--color-accent)]">
               Email:
             </span>
-            <span>YourEmail@example.com</span>
+            <span>dev.rezaulkarim@gmail.com</span>
           </div>
           <div className="text-xl mb-2">
             <span className="mr-2 font-bold text-[var(--color-accent)]">
               Phone:
             </span>
-            <span>+1 (555) 123-4567</span>
+            <span>+880 1633179004</span>
           </div>
-          <div className="text-xl mb-2">
+          <div className="text-xl mb-2 flex">
             <span className="mr-2 font-bold text-[var(--color-accent)]">
               LinkedIn:
             </span>
-            <span> Your LinkedIn Profile</span>
+            <a
+              className="flex items-center gap-1 relative after:duration-200 after:content-[''] after:w-0 after:h-[2px] after:bg-[var(--color-accent)] after:absolute after:-bottom-[2px]  hover:after:w-full"
+              href="https://www.linkedin.com/in/dev-rezaul-karim/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn Profile{" "}
+              <BiLinkExternal className="text-[var(--color-accent)]" />
+            </a>
           </div>
-          <div className="text-xl">
+          <div className="text-xl flex">
             <span className="mr-2 font-bold text-[var(--color-accent)]">
               GitHub:
             </span>
-            <span>Your GitHub Profile</span>
+            <a
+              className="flex items-center gap-1 relative after:duration-200 after:content-[''] after:w-0 after:h-[2px] after:bg-[var(--color-accent)] after:absolute after:-bottom-[2px] after:right-0 hover:after:w-full"
+              href="https://github.com/devRezaulKarim"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Profile{" "}
+              <BiLinkExternal className="text-[var(--color-accent)]" />
+            </a>
           </div>
           <p className="text-lg mt-8">
             I&#39;m always eager to collaborate on exciting projects, discuss
@@ -39,6 +57,9 @@ export default function Contact() {
             development. Don&#39;t hesitate to get in touch— <br />I look
             forward to hearing from you!
           </p>
+          <h3 className="mt-5 text-3xl text-[var(--color-accent)] font-extrabold">
+            Md. Rezaul Karim
+          </h3>
         </div>
         <div className="contactRight lg:w-1/2 mt-10 lg:mt-0">
           <form action="submit.php" method="post">

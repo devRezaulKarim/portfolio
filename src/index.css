@@ -532,7 +532,11 @@ font-family: 'Train One', system-ui;
   text-align: center;
   color: var(--color-accent);
   opacity: 0.1;
-  font-size: 12rem;
+  font-size: 10rem;
   font-family: "Bungee Shade", system-ui;
   z-index: -1;
+}
+.skillsTitle,
+.projectsTitle {
+  z-index: 0;
 }

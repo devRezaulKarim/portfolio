@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import { BiLinkExternal } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -46,15 +47,16 @@ export default function Home() {
           and innovation, I bring ideas to life through meticulous coding,
           ensuring user-centric websites that captivate and engage.
         </p>
-        <div className="btns">
+        <div className="btns flex">
           <Link to={"/contact"}>
             <button className="bg-[var(--color-secondary)] text-[var(--color-primary)] border-2 border-[var(--color-accent)] duration-200 py-1 px-4 font-semibold text-xl rounded-lg hover:shadow-md hover:border-[var(--color-primary)] hover:shadow-[var(--color-accent)] hover:-translate-y-1">
               Hire Me
             </button>
           </Link>
           <a href="https://t.ly/ItvXD" target="_blank" rel="noreferrer">
-            <button className="ml-8 bg-[var(--color-secondary)] text-[var(--color-primary)] border-2 border-[var(--color-accent)] duration-200 py-1 px-4 font-semibold text-xl rounded-lg hover:shadow-md hover:border-[var(--color-primary)] hover:shadow-[var(--color-accent)] hover:-translate-y-1">
+            <button className="ml-8 bg-[var(--color-secondary)] text-[var(--color-primary)] border-2 border-[var(--color-accent)] duration-200 py-1 px-4 font-semibold text-xl rounded-lg hover:shadow-md hover:border-[var(--color-primary)] hover:shadow-[var(--color-accent)] hover:-translate-y-1 flex items-center gap-1">
               See Resume
+              <BiLinkExternal className="text-[var(--color-primary)]" />
             </button>
           </a>
         </div>

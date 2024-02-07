@@ -2,8 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import { FaGithubSquare, FaHome, FaLinkedin } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
 import { MdContacts } from "react-icons/md";
-import { IoIosPaper } from "react-icons/io";
 import { FaListCheck } from "react-icons/fa6";
+import { BiLinkExternal } from "react-icons/bi";
 
 export default function Navbar() {
   return (
@@ -40,7 +40,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="https://t.ly/ItvXD" target="_blank" rel="noreferrer">
-              <IoIosPaper className="text-sm icon" />
+              <BiLinkExternal className="text-sm icon" />
               <span>Resume</span>
             </a>
           </li>

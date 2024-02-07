@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { AiFillProject } from "react-icons/ai";
+import { BiLinkExternal } from "react-icons/bi";
 import { FaGithubSquare, FaHome, FaLinkedin } from "react-icons/fa";
 import { FaListCheck } from "react-icons/fa6";
-import { IoIosPaper } from "react-icons/io";
 import { MdContacts } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 
@@ -40,7 +40,7 @@ export default function MobileNavbar({ mobileMenuHandler }) {
             rel="noreferrer"
             onClick={mobileMenuHandler}
           >
-            <IoIosPaper className="text-md icon" />
+            <BiLinkExternal className="text-md icon" />
             <span>Resume</span>
           </a>
         </li>
