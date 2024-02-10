@@ -8,9 +8,10 @@ export default function Project({ value, project }) {
 
   return (
     <motion.div
-      initial={{ x: condition ? 500 : -500 }}
+      initial={{ x: condition ? 500 : -500, opacity: 0 }}
       whileInView={{
         x: 0,
+        opacity: 1,
       }}
       transition={{
         duration: 0.5,
