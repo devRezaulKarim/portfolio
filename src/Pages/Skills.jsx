@@ -1,5 +1,5 @@
 import SkillsBall from "../Components/SkillsBall.jsx";
-import Skill from "../Components/skill.jsx";
+import Skill from "../Components/Skill.jsx";
 import useFetch from "../hooks/useFetch.jsx";
 
 export default function Skills() {

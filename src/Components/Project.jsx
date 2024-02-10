@@ -1,12 +1,22 @@
 /* eslint-disable react/prop-types */
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Project({ value, project }) {
   const { title, imgUrl, liveLink, sourceLink } = project;
   const condition = value % 2 === 0;
 
   return (
-    <div className="lg:w-10/12 mx-auto py-8 px-2 mb-4 border-2 rounded-lg lg:py-0 lg:px-0 lg:mb-0 lg:border-0 lg:rounded-0 ">
+    <motion.div
+      initial={{ x: condition ? 500 : -500 }}
+      whileInView={{
+        x: 0,
+      }}
+      transition={{
+        duration: 0.5,
+      }}
+      className="lg:w-10/12 mx-auto py-8 px-2 mb-4 border-2 rounded-lg lg:py-0 lg:px-0 lg:mb-0 lg:border-0 lg:rounded-0 "
+    >
       {/* Image part */}
       <div
         className={`flex items-center justify-center  flex-col  ${
@@ -101,7 +111,7 @@ export default function Project({ value, project }) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
