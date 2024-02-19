@@ -1,12 +1,26 @@
 import { BiLinkExternal } from "react-icons/bi";
 import { IoIosSend } from "react-icons/io";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
     <div className="relative isolate">
       <h1 className="sectionTitle">Contact</h1>
       <div className="lg:flex gap-4 lg:pt-20  items-center">
-        <div className="contactLeft lg:w-1/2 ">
+        <motion.div
+          initial={{
+            y: -500,
+            opacity: [0],
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          className="contactLeft lg:w-1/2 "
+        >
           <p className="text-lg mb-6">
             Thank you for taking the time to visit my portfolio. <br /> If you
             have any inquiries, opportunities, or simply want to say hello, feel
@@ -76,8 +90,22 @@ export default function Contact() {
           <h3 className="mt-4 text-3xl text-[var(--color-accent)] font-extrabold">
             Md. Rezaul Karim
           </h3>
-        </div>
-        <div className="contactRight lg:w-1/2 mt-10 lg:mt-0">
+        </motion.div>
+
+        <motion.div
+          initial={{
+            y: 500,
+            opacity: [0],
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          className="contactRight lg:w-1/2 mt-10 lg:mt-0"
+        >
           <form
             className=" border-2 border-[var(--color-accent)] py-3 rounded-md lg:w-3/4 mx-auto flex flex-col items-center"
             action="submit.php"
@@ -145,7 +173,7 @@ export default function Contact() {
               </button>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

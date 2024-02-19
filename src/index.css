@@ -525,8 +525,8 @@ font-family: 'Train One', system-ui;
   font-family: "Tilt Prism", sans-serif;
   font-family: "Tourney", sans-serif; */
 
-  position: absolute;
-  top: -5rem;
+  position: fixed;
+  top: -2rem;
   left: 50%;
   translate: -50%;
   text-align: center;

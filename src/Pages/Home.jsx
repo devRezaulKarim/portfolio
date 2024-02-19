@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Home() {
@@ -30,10 +31,41 @@ export default function Home() {
 
   return (
     <div className="lg:flex flex-row-reverse items-center min-h-[calc(100vh-4rem)]">
-      <div className="heroRight lg:w-1/2">
+      <motion.div
+        initial={{
+          x: -1000,
+          y: 350,
+          opacity: [0, 0.5],
+        }}
+        whileInView={{
+          x: 0,
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        className="heroRight lg:w-1/2"
+      >
         <img className="w-11/12" src="/Programming-2.png" alt="" />
-      </div>
-      <div className="heroLeft lg:w-1/2 flex flex-col gap-2">
+      </motion.div>
+
+      <motion.div
+        initial={{
+          x: 1000,
+          y: -350,
+          opacity: [0, 0.5],
+        }}
+        whileInView={{
+          x: 0,
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        className="heroLeft lg:w-1/2 flex flex-col gap-2"
+      >
         <h2 className="text-2xl font-semibold mb-4">Hey there, </h2>
         <h1 className="text-3xl font-bold leading-10">
           This is Rezaul Karim <br /> and I&#39;m
@@ -60,7 +92,7 @@ export default function Home() {
             </button>
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

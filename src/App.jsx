@@ -17,7 +17,7 @@ export default function App() {
     <>
       <div className="bg-gradient-to-r from-[var(--color-primary)] from-50%  to-[var(--color-secondary)] to-50%">
         <div className="flex max-w-screen-2xl mx-auto relative bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)] customShadow">
-          <div className="bg-[var(--color-primary)] text-[var(--color-light)] lg:w-full overflow-auto h-screen lg:p-8 p-4 ">
+          <div className="bg-[var(--color-primary)] text-[var(--color-light)] lg:w-full overflow-auto h-screen lg:p-8 p-4 z-10">
             <div>
               <Outlet />
             </div>
@@ -48,7 +48,7 @@ export default function App() {
           </div>
 
           {/* <div className="bg-green-500 hidden md:block w-60 h-screen"></div> */}
-          <div>
+          <div className="">
             <Navbar />
           </div>
         </div>
