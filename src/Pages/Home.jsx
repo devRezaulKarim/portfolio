@@ -35,12 +35,12 @@ export default function Home() {
         initial={{
           x: -1000,
           y: 350,
-          opacity: [0, 0.5],
+          opacity: 0,
         }}
         whileInView={{
           x: 0,
           y: 0,
-          opacity: 1,
+          opacity: [0.1, 0.1, 0.5, 1],
         }}
         transition={{
           duration: 0.5,
@@ -54,12 +54,12 @@ export default function Home() {
         initial={{
           x: 1000,
           y: -350,
-          opacity: [0, 0.5],
+          opacity: 0,
         }}
         whileInView={{
           x: 0,
           y: 0,
-          opacity: 1,
+          opacity: [0.1, 0.1, 0.5, 1],
         }}
         transition={{
           duration: 0.5,

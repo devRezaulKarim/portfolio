@@ -3,7 +3,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Project({ value, project }) {
-  const { title, imgUrl, liveLink, sourceLink } = project;
+  const { title, imgUrl, liveLink, sourceLink, desc, features, techs } =
+    project;
   const condition = value % 2 === 0;
 
   return (
@@ -54,20 +55,14 @@ export default function Project({ value, project }) {
           </div>
           {/* project description */}
 
-          <p>
-            Welcome to my portfolio showcasing a dynamic and user-friendly hotel
-            booking platform that I&#39;ve designed and developed. This
-            comprehensive web application allows users to seamlessly explore a
-            wide array of available hotels and efficiently book their
-            accommodations.
-          </p>
+          <p>{desc}</p>
           <div className="mt-4">
             <div>
               <h4 className="text-xl font-bold">Key Features:</h4>
               <ul className="flex flex-wrap gap-2">
-                <Li feature={true} data={"User-Friendly Interface"} />
-                <Li feature={true} data={"Search Functionality"} />
-                <Li feature={true} data={"User Authentication"} />
+                {features.map((feature, i) => (
+                  <Li key={i} feature={true} data={feature} />
+                ))}
               </ul>
             </div>
             <div className="mt-2">
@@ -75,12 +70,9 @@ export default function Project({ value, project }) {
                 Technologies & Packages Used:
               </h4>
               <ul className="flex flex-wrap gap-2">
-                <Li data={"React"} />
-                <Li data={"react-router-dom"} />
-                <Li data={"react-date-range"} />
-                <Li data={"react-icons"} />
-                <Li data={"react-toastify"} />
-                <Li data={"Firebase"} />
+                {techs.map((tech, i) => (
+                  <Li key={i} data={tech} />
+                ))}
               </ul>
             </div>
           </div>

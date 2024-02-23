@@ -4,34 +4,50 @@
         "title": "Travel Vista", 
         "imgUrl": "https://live.staticflickr.com/65535/53512228893_d6fef1c754.jpg" ,
         "liveLink": "https://travel-vista-rkz.netlify.app/",
-        "sourceLink": "https://github.com/devRezaulKarim/travelVista"
+        "sourceLink": "https://github.com/devRezaulKarim/travelVista",
+        "desc": "Welcome to my portfolio showcasing a dynamic and user-friendly hotel booking platform that I've designed and developed. This comprehensive web application allows users to seamlessly explore a wide array of available hotels and efficiently book their accommodations.",
+        "features": ["User-Friendly Interface", "Search Functionality", "User Authentication"],
+        "techs": ["React", "React Router Dom", "React Date Range","JSON API","React Toastify", "Firebase"]
     },
     {
         "id": 2, 
         "title": "Halal Jibika", 
         "imgUrl": "https://live.staticflickr.com/65535/53511167192_fec6f69e27.jpg" ,
         "liveLink": "https://halal-jibika.netlify.app/",
-        "sourceLink": "https://github.com/devRezaulKarim/halal-jibika"
+        "sourceLink": "https://github.com/devRezaulKarim/halal-jibika",
+        "desc": "Welcome to HALAL JIBIKA! This is a web application where users can find jobs, add them to favorites, and apply for them. Admins have access to a dashboard where they can manage job listings by adding, deleting, or editing them. Users are required to log in to access features such as adding favorites or applying for jobs.",
+        "features": ["Job Listings",  "Job Applications", "User Authentication", "Add/Delete/Edit Jobs"],
+        "techs": ["React", "React Router Dom", "React Hook Form","Firebase","JSON API", "React Toastify"]
     },
     {
         "id": 3,
         "title": "Task Management",
         "imgUrl": "https://live.staticflickr.com/65535/53512229138_ae86fb3542.jpg",
         "liveLink": "https://task-management-appp.vercel.app/",
-        "sourceLink": "https://github.com/devRezaulKarim/task-management-app"
+        "sourceLink": "https://github.com/devRezaulKarim/task-management-app",
+        "desc": "A simple Task Management app built with React, react-router-dom, useReducer, and context.",
+        "features": ["Add tasks", "Toggle complete/incomplete tasks", "Edit/update tasks","Delete tasks"],
+        "techs": ["React", "React Icons","Local Storage"]
     },
     {
         "id": 4,
         "title": "Expense Tracker",
         "imgUrl": "https://live.staticflickr.com/65535/53512228923_74e6ea0252.jpg",
         "liveLink": "https://trackyourexpenses.vercel.app/",
-        "sourceLink": "https://github.com/devRezaulKarim/expenses-tracker"
+        "sourceLink": "https://github.com/devRezaulKarim/expenses-tracker",
+        "desc": "This Expense Tracker web application allows users to track their expenses under various categories. Users can add expenses, view them based on different time-frames such as 'today', 'last seven days', and 'this month'. Additionally, users can view detailed information about their expenses on a separate details page.",
+        "features": ["Add expenses", "View expenses based on time-frames"],
+        "techs": ["React", "React Router Dom"]
     },
+    
     {
         "id": 5,
         "title": "Inventory Management",
         "imgUrl": "https://live.staticflickr.com/65535/53511167187_41f92f7cc5.jpg",
         "liveLink": "https://product-inventory-lilac.vercel.app/",
-        "sourceLink": "https://github.com/devRezaulKarim/product-inventory"
+        "sourceLink": "https://github.com/devRezaulKarim/product-inventory",
+        "desc": "Welcome to my portfolio showcasing a dynamic and user-friendly hotel booking platform that I've designed and developed. This comprehensive web application allows users to seamlessly explore a wide array of available hotels and efficiently book their accommodations.",
+        "features": ["User-Friendly Interface", "Search Functionality", "User Authentication"],
+        "techs": ["React", "React Router Dom", "React Date Range","React Icons","React Toastify", "Firebase"]
       }
   ]
