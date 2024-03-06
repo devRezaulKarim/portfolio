@@ -12,6 +12,16 @@
     {
         "id": 2, 
         "title": "Halal Jibika", 
+        "imgUrl": "https://live.staticflickr.com/65535/53571296340_3c6d72c560.jpg" ,
+        "liveLink": "https://fontawesome-clone.vercel.app/",
+        "sourceLink": "https://github.com/devRezaulKarim/fontawesome-clone",
+        "desc": "Welcome to HALAL JIBIKA! This is a web application where users can find jobs, add them to favorites, and apply for them. Admins have access to a dashboard where they can manage job listings by adding, deleting, or editing them. Users are required to log in to access features such as adding favorites or applying for jobs.",
+        "features": ["See all icons",  "Style filtration", "Icon Family filtration", "Category filtration", "Search icon"],
+        "techs": ["React", "Redux", "JSON API", "Axios","React-paginate"]
+    },
+    {
+        "id": 3, 
+        "title": "Halal Jibika", 
         "imgUrl": "https://live.staticflickr.com/65535/53511167192_fec6f69e27.jpg" ,
         "liveLink": "https://halal-jibika.netlify.app/",
         "sourceLink": "https://github.com/devRezaulKarim/halal-jibika",
@@ -20,7 +30,7 @@
         "techs": ["React", "React Router Dom", "React Hook Form","Firebase","JSON API", "React Toastify"]
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Task Management",
         "imgUrl": "https://live.staticflickr.com/65535/53512229138_ae86fb3542.jpg",
         "liveLink": "https://task-management-appp.vercel.app/",
@@ -30,7 +40,7 @@
         "techs": ["React", "React Icons","Local Storage"]
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Expense Tracker",
         "imgUrl": "https://live.staticflickr.com/65535/53512228923_74e6ea0252.jpg",
         "liveLink": "https://trackyourexpenses.vercel.app/",
@@ -41,7 +51,7 @@
     },
     
     {
-        "id": 5,
+        "id": 6,
         "title": "Inventory Management",
         "imgUrl": "https://live.staticflickr.com/65535/53511167187_41f92f7cc5.jpg",
         "liveLink": "https://product-inventory-lilac.vercel.app/",
