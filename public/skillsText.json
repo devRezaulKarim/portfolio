@@ -36,6 +36,12 @@
       
     },
     {
+      "title": "Redux",
+      "text": 
+        "Proficient in Redux, a predictable state container for JavaScript apps. Skilled in managing application state and centralizing logic to simplify data flow in complex React applications."
+      
+    },
+    {
       "title": "Next.js",
       "text": 
         "Experienced in Next.js, utilizing its features for server-rendered applications. Proficient in optimizing  performance, handling data fetching, and enhancing SEO."

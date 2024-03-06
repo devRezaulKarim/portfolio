@@ -196,6 +196,11 @@ font-family: 'Train One', system-ui;
   animation: moveXReact 4.8s linear 0.015s infinite alternate,
     moveYReact 6.2s linear 0.015s infinite alternate;
 }
+
+.ball.redux {
+  animation: moveXReact 6.2s linear 0.015s infinite alternate,
+    moveYReact 4.8s linear 0.015s infinite alternate;
+}
 .ball.next {
   animation: moveXNext 4.9s linear 0.025s infinite alternate,
     moveYNext 5.3s linear 0.025s infinite alternate;
@@ -243,6 +248,11 @@ font-family: 'Train One', system-ui;
   .ball.react {
     animation: moveXReact 2.8s linear 0.015s infinite alternate,
       moveYReact 4.2s linear 0.015s infinite alternate;
+  }
+
+  .ball.redux {
+    animation: moveXReact 4.2s linear 0.015s infinite alternate,
+      moveYReact 2.8s linear 0.015s infinite alternate;
   }
   .ball.next {
     animation: moveXNext 2.9s linear 0.025s infinite alternate,
