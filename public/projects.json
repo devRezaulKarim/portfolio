@@ -15,7 +15,7 @@
         "imgUrl": "https://live.staticflickr.com/65535/53571296340_3c6d72c560.jpg" ,
         "liveLink": "https://fontawesome-clone.vercel.app/",
         "sourceLink": "https://github.com/devRezaulKarim/fontawesome-clone",
-        "desc": "Welcome to HALAL JIBIKA! This is a web application where users can find jobs, add them to favorites, and apply for them. Admins have access to a dashboard where they can manage job listings by adding, deleting, or editing them. Users are required to log in to access features such as adding favorites or applying for jobs.",
+        "desc": "This is a clone of font-awesome",
         "features": ["See all icons",  "Style filtration", "Icon Family filtration", "Category filtration", "Search icon"],
         "techs": ["React", "Redux", "JSON API", "Axios","React-paginate"]
     },
