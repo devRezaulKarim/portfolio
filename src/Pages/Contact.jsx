@@ -36,7 +36,7 @@ export default function Contact() {
             <span className="mr-2 font-bold text-[var(--color-accent)]">
               Phone:
             </span>
-            <span>+880 1633179004</span>
+            <span>+880 1540652375</span>
           </div>
           <div className="text-xl mb-2 flex">
             <span className="mr-2 font-bold text-[var(--color-accent)]">
