@@ -31,13 +31,4 @@ body {
   text-align: center; */
 }
 
-h1 {
-  font-size: calc(4vw + 1rem);
-  font-weight: 700;
-  line-height: 1.2;
-}
-p {
-  font-size: calc(1vw + 0.75rem);
-  max-width: 600px;
-  line-height: 1.2;
-}
+

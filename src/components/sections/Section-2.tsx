@@ -1,4 +1,6 @@
 import { SECTION_CONST } from "../../lib/constants";
+import { SectionSubtitle } from "../shared/section-subtitle";
+import { SectionTitle } from "../shared/section-title";
 
 export const SectionTwo = () => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION2;
@@ -13,11 +15,11 @@ export const SectionTwo = () => {
       }}
     >
       <div className="section-content flex min-h-[150vh] flex-col items-center justify-center p-4 text-center">
-        <h1>Welcome from section 2</h1>
-        <p>
-          This is a demonstration of horizontal scrolling navigation. Scroll
-          down to begin.
-        </p>
+        <SectionTitle title="Welcome from section 2" />
+        <SectionSubtitle
+          subtitle="This is a demonstration of horizontal scrolling navigation. Scroll
+          down to begin."
+        />
       </div>
     </div>
   );
