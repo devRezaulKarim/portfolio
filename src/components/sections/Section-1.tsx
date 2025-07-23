@@ -1,11 +1,15 @@
 import { DownloadIcon, MailPlusIcon } from "lucide-react";
 import { SECTION_CONST, heroSubtitles } from "../../lib/constants";
 import { Button } from "../shared/button";
+import { useEffect, useState } from "react";
 
 export const SectionOne = () => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION1;
-  const index = Math.floor(Math.random() * 5); // 0, 1, 2, 3, or 4
-  const subtitle = heroSubtitles[index];
+  const [subtitle, setSubtitle] = useState<string>(heroSubtitles[0]);
+  useEffect(() => {
+    const index = Math.floor(Math.random() * 5);
+    setSubtitle(heroSubtitles[index]);
+  }, []);
 
   return (
     <div
