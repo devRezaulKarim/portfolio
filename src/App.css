@@ -1,0 +1,42 @@
+:root {
+  --transition-duration: 0.5s;
+  --transition-timing: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+body {
+  overflow: hidden;
+}
+.sections-container {
+  /* display: flex;
+  height: 100vh; */
+  /* The transition is set dynamically in the script */
+}
+.section {
+  /* width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  overflow-y: auto; */
+  scrollbar-width: none; /* Firefox */
+}
+.section::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.section-content {
+  /* padding: 4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+}
+
+h1 {
+  font-size: calc(5vw + 1rem);
+  font-weight: 700;
+}
+p {
+  font-size: calc(1.75vw + 0.75rem);
+  max-width: 600px;
+  line-height: 1.1;
+}
