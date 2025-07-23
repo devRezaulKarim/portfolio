@@ -1,4 +1,4 @@
-import { SECTION_CONST } from "../lib/constants";
+import { SECTION_CONST } from "../../lib/constants";
 
 export const SectionThree = () => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION3;

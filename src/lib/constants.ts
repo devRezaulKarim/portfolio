@@ -28,8 +28,6 @@ export const SECTION_CONST = {
   },
 };
 
-
-
 export const originalSections: SectionData[] = [
   {
     id: "section-1",
@@ -56,4 +54,12 @@ export const originalSections: SectionData[] = [
     bgColor: "#bcdada", // Similar contrast to #bdc3c7
     textColor: "#1a2a2a", // Dark for contrast
   },
+];
+
+export const heroSubtitles = [
+  "From pixels to performance, I design and develop frontend solutions that bring ideas to life.",
+  "I create modern web interfaces that are fast, intuitive, and responsive across every device.",
+  "I craft high-performing UIs that users love and developers trust. Let’s bring your vision to the browser.",
+  "I build sleek, scalable web apps that look great and perform even better. Let's craft digital experiences your users will love.",
+  "Design is the voice. Code is the action. I make both work in harmony.",
 ];

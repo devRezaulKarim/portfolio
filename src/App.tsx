@@ -1,6 +1,6 @@
 import "./App.css";
-import SectionsContainer from "./components/SectionsContainer";
-import { ConeIcon } from "./components/cone-icon";
+import SectionsContainer from "./components/sections/SectionsContainer";
+import { ConeIcon } from "./components/shared/cone-icon";
 
 function App() {
   return (

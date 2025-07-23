@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { SectionOne } from "./Section-1";
-import { originalSections } from "../lib/constants";
-import type { SectionData } from "../lib/custom-types";
 import { SectionTwo } from "./Section-2";
 import { SectionThree } from "./Section-3";
 import { SectionFour } from "./Section-4";
 import { SectionFive } from "./Section-5";
+import type { SectionData } from "../../lib/custom-types";
+import { originalSections } from "../../lib/constants";
 
 // Clone for looping
 const sectionsData: SectionData[] = [
