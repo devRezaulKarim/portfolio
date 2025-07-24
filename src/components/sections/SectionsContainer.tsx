@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SectionOne } from "./Section-1";
 import { SectionTwo } from "./Section-2";
 import { SectionThree } from "./Section-3";
@@ -6,6 +6,7 @@ import { SectionFour } from "./Section-4";
 import { SectionFive } from "./Section-5";
 import type { SectionDataType } from "../../lib/custom-types";
 import { originalSections } from "../../lib/constants";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 // Clone for looping
 const sectionsData: SectionDataType[] = [
@@ -19,6 +20,7 @@ const SectionsContainer = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const isJumpingRef = useRef(false);
+  const resetSectionScroll = useScrollToTop(containerRef);
 
   // Use refs to hold the latest state for event listeners
   const stateRef = useRef({ currentIndex, isTransitioning });
@@ -38,16 +40,6 @@ const SectionsContainer = () => {
       });
     });
   };
-
-  const resetSectionScroll = useCallback((index: number) => {
-    // return;
-    const container = containerRef.current;
-    if (!container) return;
-    const sections = container.children as HTMLCollectionOf<HTMLElement>;
-    if (sections[index]) {
-      sections[index].scrollTop = 0;
-    }
-  }, []);
 
   // Effect for handling the "jump" after a transition to a clone
   useEffect(() => {
