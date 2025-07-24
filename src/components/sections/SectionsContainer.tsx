@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { SectionOne } from "./Section-1";
 import { SectionTwo } from "./Section-2";
 import { SectionThree } from "./Section-3";
@@ -39,6 +39,16 @@ const SectionsContainer = () => {
     });
   };
 
+  const resetSectionScroll = useCallback((index: number) => {
+    // return;
+    const container = containerRef.current;
+    if (!container) return;
+    const sections = container.children as HTMLCollectionOf<HTMLElement>;
+    if (sections[index]) {
+      sections[index].scrollTop = 0;
+    }
+  }, []);
+
   // Effect for handling the "jump" after a transition to a clone
   useEffect(() => {
     if (isJumpingRef.current) {
@@ -50,10 +60,7 @@ const SectionsContainer = () => {
       container.style.transform = `translateX(-${currentIndex * 100}vw)`;
 
       // Reset the scroll position of the new section
-      const sections = container.children as HTMLCollectionOf<HTMLElement>;
-      if (sections[currentIndex]) {
-        sections[currentIndex].scrollTop = 0;
-      }
+      resetSectionScroll(currentIndex);
 
       // Use a timeout to re-enable transitions after the browser has painted the jump
       setTimeout(() => {
@@ -65,7 +72,7 @@ const SectionsContainer = () => {
         }
       }, 50);
     }
-  }, [currentIndex]);
+  }, [currentIndex, resetSectionScroll]);
 
   // Effect for setting up event listeners once
   useEffect(() => {
@@ -79,11 +86,7 @@ const SectionsContainer = () => {
       setIsTransitioning(true);
       setCurrentIndex(index);
 
-      const sections = container.children as HTMLCollectionOf<HTMLElement>;
-      if (sections[index]) {
-        sections[index].scrollTop = 0;
-      }
-
+      resetSectionScroll(index);
       container.style.transform = `translateX(-${index * 100}vw)`;
     };
 
@@ -199,7 +202,7 @@ const SectionsContainer = () => {
       document.body.removeEventListener("touchend", handleTouchEnd);
       document.removeEventListener("keydown", handleKey);
     };
-  }, []); // Empty dependency array ensures this runs only once
+  }, [resetSectionScroll]); // Empty dependency array ensures this runs only once
 
   return (
     <div className="flex h-screen" ref={containerRef}>
