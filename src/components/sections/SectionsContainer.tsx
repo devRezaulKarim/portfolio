@@ -4,11 +4,11 @@ import { SectionTwo } from "./Section-2";
 import { SectionThree } from "./Section-3";
 import { SectionFour } from "./Section-4";
 import { SectionFive } from "./Section-5";
-import type { SectionData } from "../../lib/custom-types";
+import type { SectionDataType } from "../../lib/custom-types";
 import { originalSections } from "../../lib/constants";
 
 // Clone for looping
-const sectionsData: SectionData[] = [
+const sectionsData: SectionDataType[] = [
   originalSections[originalSections.length - 1], // Clone last at beginning
   ...originalSections,
   originalSections[0], // Clone first at end

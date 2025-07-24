@@ -1,4 +1,4 @@
-import { SECTION_CONST } from "../../lib/constants";
+import { JourneyCards, SECTION_CONST } from "../../lib/constants";
 import { JourneyCard } from "../shared/journey-card";
 import { SectionTitle } from "../shared/section-title";
 
@@ -14,10 +14,10 @@ export const SectionTwo = () => {
         color: textColor,
       }}
     >
-      <div className="section-content flex min-h-[calc(100vh-40px)] flex-col gap-10 md:px-8">
+      <div className="section-content flex min-h-[calc(100vh-40px)] flex-col gap-20 md:px-8 lg:gap-10">
         <div
           style={{ backgroundColor: bgColor }}
-          className="sticky top-0 flex flex-col items-center gap-4 text-center"
+          className="top-0 z-10 flex flex-col items-center gap-4 text-center"
         >
           <SectionTitle title="How I Got Here" />
           <p
@@ -28,8 +28,15 @@ export const SectionTwo = () => {
             dropping out to deploying code—has shaped the developer I am today.”
           </p>
         </div>
-        <div className="flex flex-col items-center">
-          <JourneyCard color={bgColor} />
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-20 pb-20 lg:gap-10">
+          {[...JourneyCards].reverse().map((card, index) => (
+            <JourneyCard
+              key={card.id}
+              color={bgColor}
+              {...card}
+              index={index}
+            />
+          ))}
         </div>
       </div>
     </div>
