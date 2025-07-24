@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/font/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("/font/Jost-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Niconne";
+  src: url("/font/Niconne-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
 :root {
   --transition-duration: 0.5s;
   --transition-timing: cubic-bezier(0.65, 0, 0.35, 1);
@@ -5,30 +21,20 @@
 
 body {
   overflow: hidden;
-}
-.sections-container {
-  /* display: flex;
-  height: 100vh; */
-  /* The transition is set dynamically in the script */
+  font-family: Jost;
 }
 .section {
-  /* width: 100vw;
-  height: 100vh;
-  flex-shrink: 0;
-  overflow-y: auto; */
   scrollbar-width: none; /* Firefox */
 }
 .section::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
-.section-content {
-  /* padding: 4rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center; */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter;
 }
-
-
