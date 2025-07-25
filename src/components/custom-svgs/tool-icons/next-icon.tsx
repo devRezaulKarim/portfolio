@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utls";
+import { cn } from "../../../lib/utls";
 
 export const NextIcon = ({ className }: { className?: string }) => {
   return (

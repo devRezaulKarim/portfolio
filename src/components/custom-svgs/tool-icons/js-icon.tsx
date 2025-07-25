@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utls";
+import { cn } from "../../../lib/utls";
 
 export const JSIcon = ({ className }: { className?: string }) => {
   return (
