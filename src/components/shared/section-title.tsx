@@ -13,7 +13,10 @@ export const SectionTitle = ({
 }: SectionTitleProps) => {
   return (
     <h1
-      className={cn("text-[calc(4vw+1rem)] leading-[1.2] font-bold", className)}
+      className={cn(
+        "text-[calc(4vw+1rem)] leading-[1.2] font-bold capitalize",
+        className,
+      )}
       {...props}
     >
       {title}
