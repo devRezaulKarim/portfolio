@@ -5,16 +5,21 @@ export const useSectionScroll = (
 ) => {
   const handleSectionScroll = useCallback(
     (index: number, direction: "up" | "down") => {
-      if (direction === "up") return; // Persist scroll on upward scroll
-
       const container = containerRef.current;
       if (!container) return;
+
       const sections = container.children as HTMLCollectionOf<HTMLElement>;
-      if (sections[index]) {
-        sections[index].scrollTop = 0; // Reset scroll on downward scroll
+      const section = sections[index];
+      if (!section) return;
+
+      if (direction === "up") {
+        section.scrollTop = section.scrollHeight; // Scroll to bottom
+      } else {
+        section.scrollTop = 0; // Scroll to top
       }
     },
     [containerRef],
   );
+
   return handleSectionScroll;
 };
