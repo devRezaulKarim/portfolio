@@ -19,7 +19,7 @@ export const SectionOne = ({ subtitle }: { subtitle: string }) => {
     >
       <div className="section-content min-h-[calc(100vh-80px)] md:flex md:items-center md:justify-center md:px-8">
         <div className="flex flex-col-reverse items-center md:flex-row">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4 sm:gap-6">
             <div>
               <SectionTitle title="Md. Rezaul Karim" />
               <h2 className="text-[calc(1.5vw+1rem)] leading-[1.2] font-bold">
@@ -27,7 +27,7 @@ export const SectionOne = ({ subtitle }: { subtitle: string }) => {
               </h2>
             </div>
             <SectionSubtitle subtitle={subtitle} />
-            <div className="mt-4 flex items-center gap-3">
+            <div className="flex items-center gap-3 sm:mt-4">
               <Button
                 text="Contact"
                 icon={MailPlusIcon}
