@@ -9,7 +9,7 @@ export const SectionOne = ({ subtitle }: { subtitle: string }) => {
 
   return (
     <div
-      className="section h-screen w-screen shrink-0 overflow-y-auto border-[40px]"
+      className="section h-screen w-screen shrink-0 overflow-y-auto border-[24px] md:border-[40px]"
       id={sectionId}
       style={{
         background: bgColor,
@@ -17,7 +17,7 @@ export const SectionOne = ({ subtitle }: { subtitle: string }) => {
         color: textColor,
       }}
     >
-      <div className="section-content min-h-[calc(100vh-80px)] md:flex md:items-center md:justify-center md:px-8">
+      <div className="section-content min-h-[calc(100vh-48px)] md:flex md:min-h-[calc(100vh-80px)] md:items-center md:justify-center md:px-8">
         <div className="flex flex-col-reverse items-center md:flex-row">
           <div className="flex flex-col gap-4 sm:gap-6">
             <div>

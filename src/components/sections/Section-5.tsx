@@ -12,7 +12,7 @@ export const SectionFive = () => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION5;
   return (
     <div
-      className="section h-screen w-screen shrink-0 overflow-y-auto border-[40px]"
+      className="section h-screen w-screen shrink-0 overflow-y-auto border-[24px] md:border-[40px]"
       id={sectionId}
       style={{
         background: bgColor,
@@ -20,7 +20,7 @@ export const SectionFive = () => {
         color: textColor,
       }}
     >
-      <div className="section-content flex min-h-[calc(100vh-80px)] flex-col items-center justify-center gap-6 text-center sm:gap-10 md:px-8">
+      <div className="section-content flex min-h-[calc(100vh-48px)] flex-col items-center justify-center gap-6 text-center sm:gap-10 md:min-h-[calc(100vh-80px)] md:px-8">
         <div>
           <SectionTitle title="get in touch" />
           <SectionSubtitle subtitle="Need a developer? let’s talk" />

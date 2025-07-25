@@ -14,3 +14,9 @@ export type JourneyCardType = {
   description: string;
   cardIcon: ElementType;
 };
+
+export type ToolsType = {
+  id: number;
+  toolName: string;
+  toolIcon: ElementType;
+};

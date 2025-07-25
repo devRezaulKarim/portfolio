@@ -3,7 +3,7 @@ import { cn } from "../../../lib/utls";
 export const MongoDBIcon = ({ className }: { className?: string }) => {
   return (
     <svg
-      className={cn("w-14", className)}
+      className={cn("h-14", className)}
       viewBox="0 0 50 112"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
