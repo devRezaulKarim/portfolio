@@ -5,8 +5,8 @@ import { SectionThree } from "./Section-3";
 import { SectionFour } from "./Section-4";
 import { SectionFive } from "./Section-5";
 import type { SectionDataType } from "../../lib/custom-types";
-import { originalSections } from "../../lib/constants";
-import { useScrollToTop } from "../../hooks/useScrollToTop";
+import { heroSubtitles, originalSections } from "../../lib/constants";
+import { useSectionScroll } from "../../hooks/useScrollToTop";
 
 // Clone for looping
 const sectionsData: SectionDataType[] = [
@@ -19,12 +19,23 @@ const SectionsContainer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [sectionOneSubtitle, setSectionOneSubtitle] = useState("");
   const isJumpingRef = useRef(false);
-  const resetSectionScroll = useScrollToTop(containerRef);
+  const handleSectionScroll = useSectionScroll(containerRef);
+
+  useEffect(() => {
+    const index = Math.floor(Math.random() * heroSubtitles.length);
+    setSectionOneSubtitle(heroSubtitles[index]);
+  }, []);
 
   // Use refs to hold the latest state for event listeners
-  const stateRef = useRef({ currentIndex, isTransitioning });
-  stateRef.current = { currentIndex, isTransitioning };
+  const stateRef = useRef({
+    currentIndex,
+    isTransitioning,
+    scrollDirection: "down" as "up" | "down",
+  });
+  stateRef.current.currentIndex = currentIndex;
+  stateRef.current.isTransitioning = isTransitioning;
 
   const changeConeColor = (index: number) => {
     const { textColor } = sectionsData[index];
@@ -51,8 +62,8 @@ const SectionsContainer = () => {
       container.style.transition = "none";
       container.style.transform = `translateX(-${currentIndex * 100}vw)`;
 
-      // Reset the scroll position of the new section
-      resetSectionScroll(currentIndex);
+      // Reset/persist the scroll position of the new section
+      handleSectionScroll(currentIndex, stateRef.current.scrollDirection);
 
       // Use a timeout to re-enable transitions after the browser has painted the jump
       setTimeout(() => {
@@ -64,21 +75,22 @@ const SectionsContainer = () => {
         }
       }, 50);
     }
-  }, [currentIndex, resetSectionScroll]);
+  }, [currentIndex, handleSectionScroll]);
 
   // Effect for setting up event listeners once
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    const goToSection = (index: number) => {
+    const goToSection = (index: number, direction: "up" | "down") => {
       // Access latest state from ref
       if (stateRef.current.isTransitioning) return;
 
       setIsTransitioning(true);
       setCurrentIndex(index);
+      stateRef.current.scrollDirection = direction;
 
-      resetSectionScroll(index);
+      handleSectionScroll(index, direction);
       container.style.transform = `translateX(-${index * 100}vw)`;
     };
 
@@ -110,14 +122,14 @@ const SectionsContainer = () => {
       const tolerance = 1;
       const isAtTop = scrollTop <= tolerance;
       const isAtBottom = scrollTop + clientHeight >= scrollHeight - tolerance;
-      const scrollDirection = e.deltaY > 0 ? "down" : "up";
+      const direction = e.deltaY > 0 ? "down" : "up";
 
-      if (scrollDirection === "down" && isAtBottom) {
+      if (direction === "down" && isAtBottom) {
         e.preventDefault();
-        goToSection(stateRef.current.currentIndex + 1);
-      } else if (scrollDirection === "up" && isAtTop) {
+        goToSection(stateRef.current.currentIndex + 1, "down");
+      } else if (direction === "up" && isAtTop) {
         e.preventDefault();
-        goToSection(stateRef.current.currentIndex - 1);
+        goToSection(stateRef.current.currentIndex - 1, "up");
       }
     };
 
@@ -148,18 +160,18 @@ const SectionsContainer = () => {
 
       if (Math.abs(deltaY) > swipeThreshold) {
         if (deltaY > 0 && isAtBottom) {
-          goToSection(stateRef.current.currentIndex + 1);
+          goToSection(stateRef.current.currentIndex + 1, "down");
         } else if (deltaY < 0 && isAtTop) {
-          goToSection(stateRef.current.currentIndex - 1);
+          goToSection(stateRef.current.currentIndex - 1, "up");
         }
       }
     };
 
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
-        goToSection(stateRef.current.currentIndex + 1);
+        goToSection(stateRef.current.currentIndex + 1, "down");
       } else if (e.key === "ArrowLeft") {
-        goToSection(stateRef.current.currentIndex - 1);
+        goToSection(stateRef.current.currentIndex - 1, "up");
       }
     };
 
@@ -194,12 +206,13 @@ const SectionsContainer = () => {
       document.body.removeEventListener("touchend", handleTouchEnd);
       document.removeEventListener("keydown", handleKey);
     };
-  }, [resetSectionScroll]); // Empty dependency array ensures this runs only once
+  }, [handleSectionScroll]); // Empty dependency array ensures this runs only once
 
   return (
     <div className="flex h-screen" ref={containerRef}>
       {sectionsData.map((section, index) => {
-        if (section.id === "section-1") return <SectionOne key={index} />;
+        if (section.id === "section-1")
+          return <SectionOne key={index} subtitle={sectionOneSubtitle} />;
         if (section.id === "section-2") return <SectionTwo key={index} />;
         if (section.id === "section-3") return <SectionThree key={index} />;
         if (section.id === "section-4") return <SectionFour key={index} />;
