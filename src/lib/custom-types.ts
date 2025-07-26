@@ -20,3 +20,12 @@ export type ToolsType = {
   toolName: string;
   toolIcon: ElementType;
 };
+type AspectRatioEnum = "square" | "portrait";
+
+export type ProjectType = {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+  aspect: AspectRatioEnum;
+};

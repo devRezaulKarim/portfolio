@@ -26,8 +26,8 @@ export const SectionThree = () => {
         <div
           style={{ backgroundColor: bgColor }}
           className={cn(
-            "sticky top-0 z-10 flex w-full flex-col items-center text-center transition-all duration-300",
-            isSticky && "pb-4",
+            "sticky top-0 z-10 flex w-full flex-col items-center gap-4 text-center transition-all duration-300",
+            isSticky && "gap-2 pb-4",
           )}
         >
           <SectionTitle
