@@ -1,10 +1,11 @@
 import { useRef } from "react";
-import { SECTION_CONST, projects } from "../../lib/constants";
+import { SECTION_CONST, projects, projects2 } from "../../lib/constants";
 import { useStickyState } from "../../hooks/useStickyState";
 import { cn } from "../../lib/utls";
 import { SectionTitle } from "../shared/section-title";
 import { SectionSubtitle } from "../shared/section-subtitle";
 import { ProjectCard } from "../shared/project-card";
+import { ProjectCardTwo } from "../shared/project-card-two";
 
 export const SectionFour = () => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION4;
@@ -45,7 +46,7 @@ export const SectionFour = () => {
             )}
           />
         </div>
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 pb-20 sm:grid-cols-2 md:grid-cols-4">
+        {/* <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 pb-20 sm:grid-cols-2 md:grid-cols-4">
           {projects.map((column, colIndex) => (
             <div key={colIndex} className="grid gap-4">
               {column.map((project) => (
@@ -62,6 +63,17 @@ export const SectionFour = () => {
                 />
               ))}
             </div>
+          ))}
+        </div> */}
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-4 pb-20">
+          {projects2.map((project, index) => (
+            <ProjectCardTwo
+              key={project.id}
+              title={project.title}
+              subtitle={project.subtitle}
+              image={project.image}
+              index={index}
+            />
           ))}
         </div>
       </div>

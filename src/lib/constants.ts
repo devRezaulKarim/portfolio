@@ -274,3 +274,61 @@ export const projects: ProjectType[][] = [
     },
   ],
 ];
+export const projects2: ProjectType[] = [
+  {
+    id: 1,
+    title: "My Portfolio",
+    subtitle: "Subtitle 1",
+    image: "/projects-img/portfolio.png",
+    aspect: "square",
+  },
+  {
+    id: 2,
+    title: "Travel Vista",
+    subtitle: "Subtitle 2",
+    image: "/projects-img/Travel-vista-long.jpg",
+    aspect: "portrait",
+  },
+  {
+    id: 3,
+    title: "Carz",
+    subtitle: "Subtitle 3",
+    image: "/projects-img/carz-long.png",
+    aspect: "portrait",
+  },
+  {
+    id: 4,
+    title: "Halal Jibica",
+    subtitle: "Subtitle 4",
+    image: "/projects-img/HJ-long.png",
+    aspect: "square",
+  },
+  {
+    id: 5,
+    title: "Fontawesome (clone)",
+    subtitle: "Subtitle 5",
+    image: "/projects-img/font.png",
+    aspect: "square",
+  },
+  {
+    id: 6,
+    title: "Expense Tracker",
+    subtitle: "Subtitle 6",
+    image: "/projects-img/ET-long.png",
+    aspect: "portrait",
+  },
+  {
+    id: 7,
+    title: "Task Management",
+    subtitle: "Subtitle 7",
+    image: "/projects-img/TM-long.png",
+    aspect: "portrait",
+  },
+  {
+    id: 8,
+    title: "Inventory Management",
+    subtitle: "Subtitle 8",
+    image: "/projects-img/IM-long.png",
+    aspect: "square",
+  },
+];
