@@ -34,14 +34,14 @@ export const SectionFour = () => {
             title="Work Showcase"
             className={cn(
               "transition-all duration-300",
-              isSticky && "text-[calc(1.5vw+1rem)]",
+              isSticky && "text-[calc(1vw+1rem)]",
             )}
           />
           <SectionSubtitle
             subtitle="A selection of projects that reflect my skills, creativity, and growth as a developer."
             className={cn(
               "transition-all duration-300",
-              isSticky && "text-[calc(0.5vw+0.75rem)]",
+              isSticky && "text-[calc(0.5vw+0.5rem)]",
             )}
           />
         </div>

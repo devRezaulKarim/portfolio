@@ -34,14 +34,14 @@ export const SectionThree = () => {
             title="DEV TOOLKIT"
             className={cn(
               "transition-all duration-300",
-              isSticky && "text-[calc(1.5vw+1rem)]",
+              isSticky && "text-[calc(1vw+1rem)]",
             )}
           />
           <SectionSubtitle
             subtitle="What powers my code, designs, and everything in between."
             className={cn(
               "transition-all duration-300",
-              isSticky && "text-[calc(0.5vw+0.75rem)]",
+              isSticky && "text-[calc(0.5vw+0.5rem)]",
             )}
           />
         </div>

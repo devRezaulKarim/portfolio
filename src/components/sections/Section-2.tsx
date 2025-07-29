@@ -33,7 +33,7 @@ export const SectionTwo = () => {
             title="How I Got Here"
             className={cn(
               "transition-all duration-300",
-              isSticky && "text-[calc(1.5vw+1rem)]",
+              isSticky && "text-[calc(1vw+1rem)]",
             )}
           />
           <p
