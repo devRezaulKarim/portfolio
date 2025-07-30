@@ -27,7 +27,7 @@ export const SectionFour = () => {
         <div
           style={{ backgroundColor: bgColor }}
           className={cn(
-            "sticky top-0 z-10 flex w-full flex-col items-center gap-4 text-center transition-all duration-300",
+            "sticky top-0 z-20 flex w-full flex-col items-center gap-4 text-center transition-all duration-300",
             isSticky && "gap-2 pb-4",
           )}
         >
@@ -65,7 +65,7 @@ export const SectionFour = () => {
             </div>
           ))}
         </div> */}
-        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-4 pb-20">
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-16 px-4 pb-20">
           {projects2.map((project, index) => (
             <ProjectCardTwo
               key={project.id}
@@ -73,6 +73,7 @@ export const SectionFour = () => {
               subtitle={project.subtitle}
               image={project.image}
               index={index}
+              backgroundColor={bgColor}
             />
           ))}
         </div>
