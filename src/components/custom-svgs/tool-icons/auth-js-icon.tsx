@@ -1,12 +1,26 @@
+import type { CSSProperties } from "react";
 import { cn } from "../../../lib/utls";
 
 export const AuthJSIcon = ({ className }: { className?: string }) => {
+  const neonColor = [
+    "#a6fd29", // bright lime green
+    "#74ee15", // neon green
+    "#ffe700", // bright yellow
+    "#00f0ff", // neon cyan
+    "#ff00ff", // hot pink
+    "#39ff14", // electric green
+    "#ff6ec7", // pastel pink
+    "#f9ff33", // lemon yellow
+    "#ff3131", // bright red
+    "#00ff9f", // mint neon
+  ][Math.floor(Math.random() * 10)];
   return (
     <svg
-      className={cn("w-14", className)}
+      className={cn("w-14 overflow-visible", className)}
       viewBox="0 0 50 58"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ "--neon": neonColor } as CSSProperties}
     >
       <path
         d="M28.868 29.5197C29.2475 28.6796 29.4643 27.7499 29.4643 26.7678C29.4643 23.0696 26.466 20.0713 22.7679 20.0713C19.0698 20.0713 16.0714 23.0696 16.0714 26.7678C16.0714 30.4659 19.0698 33.4642 22.7679 33.4642C23.75 33.4642 24.6797 33.2474 25.5198 32.8679L26.1161 33.4642H28.3482V35.6963H30.5804V37.9285H33.9286V34.5803L28.868 29.5197ZM22.7679 28.9999C21.534 28.9999 20.5357 28.0016 20.5357 26.7678C20.5357 25.5339 21.534 24.5356 22.7679 24.5356C24.0017 24.5356 25 25.5339 25 26.7678C25 28.0016 24.0017 28.9999 22.7679 28.9999Z"
@@ -17,6 +31,7 @@ export const AuthJSIcon = ({ className }: { className?: string }) => {
         clipRule="evenodd"
         d="M50 11.1428V25.0108C50 34.238 45.5439 42.8971 38.0354 48.2603L25 57.5713L11.9646 48.2603C4.45621 42.8971 7.72016e-06 34.238 0 25.0108V11.1428L25 0.428467L50 11.1428ZM25 14.7142C17.1102 14.7142 10.7143 21.1101 10.7143 28.9999C10.7143 36.8897 17.1102 43.2856 25 43.2856C32.8898 43.2856 39.2857 36.8897 39.2857 28.9999C39.2857 21.1101 32.8898 14.7142 25 14.7142Z"
         fill="currentColor"
+        className="duration-[1s] group-hover:drop-shadow-[0_0_8px_var(--neon)]"
       />
     </svg>
   );

@@ -40,7 +40,7 @@ export const ProjectCardTwo = ({
         <BulbIcon
           className={cn("mx-auto", isRight ? "rotate-90" : "-rotate-90")}
           size={64}
-          neonColor={isRight ? "#fffb00" : "#00FF99"}
+          neonColor={isRight ? "#fffb00" : "#a6fd29"}
         />
       </div>
       <div
