@@ -29,7 +29,7 @@ export const ToolsCard = ({ toolName, toolIcon: ToolIcon }: ToolsCardProps) => {
             rotateClass,
           )}
         />
-        <p className="text-base sm:text-lg lg:text-xl">{toolName}</p>
+        <p className="text-base md:text-lg">{toolName}</p>
       </div>
     </div>
   );

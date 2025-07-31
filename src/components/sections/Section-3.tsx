@@ -45,7 +45,7 @@ export const SectionThree = () => {
             )}
           />
         </div>
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 pb-20 sm:grid-cols-3 sm:gap-6 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 pb-20 sm:grid-cols-3 sm:gap-6 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 xl:pb-40">
           {devTools.map((tool) => (
             <ToolsCard key={tool.id} {...tool} />
           ))}

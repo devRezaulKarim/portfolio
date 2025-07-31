@@ -47,7 +47,7 @@ export const SectionTwo = () => {
             dropping out to deploying code—has shaped the developer I am today.”
           </p>
         </div>
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-20 pb-20 lg:gap-10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-20 pb-20 lg:gap-10 xl:pb-40">
           {[...JourneyCards].reverse().map((card, index) => (
             <JourneyCard
               key={card.id}
