@@ -10,6 +10,24 @@ export const SectionThree = () => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION3;
   const scrollRef = useRef<HTMLDivElement>(null);
   const isSticky = useStickyState(scrollRef);
+  const extraNeonColors = [
+    "#ff1aff",
+    "#18dcff",
+    "#00f0ff",
+    "#3ef8b9",
+    "#f000ff",
+    "#ff66ff",
+    "#00f0ff",
+    "#00ffaa",
+    "#00b3ff",
+    "#00f0ff",
+    "#fffb00",
+    "#a6fd29",
+    "#00f0ff",
+  ];
+
+  const neonColor =
+    extraNeonColors[Math.floor(Math.random() * extraNeonColors.length)];
 
   return (
     <div
@@ -45,9 +63,9 @@ export const SectionThree = () => {
             )}
           />
         </div>
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 pb-20 sm:grid-cols-3 sm:gap-6 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 xl:pb-40">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 pb-20 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 xl:pb-40">
           {devTools.map((tool) => (
-            <ToolsCard key={tool.id} {...tool} />
+            <ToolsCard key={tool.id} {...tool} neonColor={neonColor} />
           ))}
         </div>
       </div>
