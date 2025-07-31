@@ -1,16 +1,31 @@
+import type { CSSProperties } from "react";
 import { cn } from "../../../lib/utls";
 
 export const FirebaseIcon = ({ className }: { className?: string }) => {
+  const neonColor = [
+    "#a6fd29", // bright lime green
+    "#74ee15", // neon green
+    "#ffe700", // bright yellow
+    "#00f0ff", // neon cyan
+    "#ff00ff", // hot pink
+    "#39ff14", // electric green
+    "#ff6ec7", // pastel pink
+    "#f9ff33", // lemon yellow
+    "#ff3131", // bright red
+    "#00ff9f", // mint neon
+  ][Math.floor(Math.random() * 10)];
   return (
     <svg
-      className={cn("w-14", className)}
+      className={cn("w-14 overflow-visible", className)}
       viewBox="0 0 50 70"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ "--neon": neonColor } as CSSProperties}
     >
       <path
         d="M31.6218 20.5736L26.3833 10.5506C26.1161 10.0507 25.5978 9.71435 25.0012 9.71435C24.4045 9.71435 23.8862 10.0484 23.6236 10.5413L23.619 10.5506L0.61737 51.7715L31.6218 20.5736ZM50 55.7429L43.5222 15.4411C43.4024 14.6925 42.7597 14.1258 41.9857 14.1258C41.5503 14.1258 41.1587 14.3032 40.8754 14.5911L0 55.7452L22.6146 68.4888C23.2734 68.8643 24.0613 69.0878 24.8998 69.0878C25.7383 69.0878 26.5285 68.8666 27.208 68.4773L27.185 68.4888L50 55.7429ZM1.654 45.1163L8.46118 1.32919C8.57867 0.573601 9.22368 0 10.0046 0C10.5989 0 11.1173 0.331721 11.3799 0.822391L11.3845 0.831606L18.7054 14.5658L1.654 45.1163Z"
         fill="currentColor"
+        className="duration-[1s] group-hover:drop-shadow-[0_0_8px_var(--neon)]"
       />
     </svg>
   );
