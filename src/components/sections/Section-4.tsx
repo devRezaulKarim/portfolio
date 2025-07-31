@@ -1,10 +1,9 @@
 import { useRef } from "react";
-import { SECTION_CONST, projects, projects2 } from "../../lib/constants";
+import { SECTION_CONST, projects2 } from "../../lib/constants";
 import { useStickyState } from "../../hooks/useStickyState";
 import { cn } from "../../lib/utls";
 import { SectionTitle } from "../shared/section-title";
 import { SectionSubtitle } from "../shared/section-subtitle";
-import { ProjectCard } from "../shared/project-card";
 import { ProjectCardTwo } from "../shared/project-card-two";
 
 export const SectionFour = () => {
@@ -46,25 +45,6 @@ export const SectionFour = () => {
             )}
           />
         </div>
-        {/* <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 pb-20 sm:grid-cols-2 md:grid-cols-4">
-          {projects.map((column, colIndex) => (
-            <div key={colIndex} className="grid gap-4">
-              {column.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  title={project.title}
-                  subtitle={project.subtitle}
-                  image={project.image}
-                  className={
-                    project.aspect === "square"
-                      ? "aspect-square"
-                      : "aspect-[1/1.5]"
-                  }
-                />
-              ))}
-            </div>
-          ))}
-        </div> */}
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-16 px-4 pb-20 xl:pb-40">
           {projects2.map((project, index) => (
             <ProjectCardTwo
