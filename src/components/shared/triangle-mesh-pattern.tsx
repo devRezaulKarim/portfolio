@@ -15,7 +15,7 @@ export const TriangleMeshPattern = ({ className }: { className?: string }) => {
           height="40"
           patternUnits="userSpaceOnUse"
         >
-          <g fill="none" stroke="#555" strokeWidth="1">
+          <g fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M0 0 l20 40 l-20 0 Z" />
             <path d="M20 40 l20 -40 l0 40 Z" />
             <path d="M0 0 l40 0 l-20 40 Z" />

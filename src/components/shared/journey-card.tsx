@@ -23,7 +23,9 @@ export const JourneyCard = ({
   const isRight = index % 2 === 0;
   return (
     <div className="relative w-full">
-      <TriangleMeshPattern className={isRight ? "left-0" : "right-0"} />
+      <TriangleMeshPattern
+        className={cn("text-gray-500", isRight ? "left-0" : "right-0")}
+      />
       <div
         className={cn(
           "relative max-w-3xl rounded-2xl p-6 pt-15 lg:pt-6",

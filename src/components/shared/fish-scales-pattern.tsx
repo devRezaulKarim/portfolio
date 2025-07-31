@@ -15,7 +15,7 @@ export const FishScalesPattern = ({ className }: { className?: string }) => {
           height="20"
           patternUnits="userSpaceOnUse"
         >
-          <g fill="none" stroke="#555" strokeWidth="1">
+          <g fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M0 10 C 5 0, 15 0, 20 10 S 15 20, 10 20 S 5 20, 0 10" />
           </g>
         </pattern>

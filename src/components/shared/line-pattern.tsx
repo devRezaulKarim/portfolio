@@ -16,7 +16,14 @@ export const LinePattern = ({ className }: { className?: string }) => {
           patternUnits="userSpaceOnUse"
           patternTransform="rotate(45)"
         >
-          <line x1="0" y1="10" x2="20" y2="10" stroke="#555" strokeWidth="1" />
+          <line
+            x1="0"
+            y1="10"
+            x2="20"
+            y2="10"
+            stroke="currentColor"
+            strokeWidth="1"
+          />
         </pattern>
       </defs>
       <rect

@@ -21,7 +21,7 @@ export const DotPattern = ({ className }: { className?: string }) => {
             cx="20"
             cy="20"
             r="2"
-            fill="#444"
+            fill="currentColor"
           ></circle>
         </pattern>
       </defs>

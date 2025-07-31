@@ -20,19 +20,19 @@ export const HoneycombPattern = ({ className }: { className?: string }) => {
             <path
               d="M10 0 l10 0 l10 17.3 l-10 17.3 l-10 0 l-10 -17.3 Z"
               fill="none"
-              stroke="#666"
+              stroke="currentColor"
               strokeWidth="1"
             />
             <path
               d="M30 0 l10 0 l10 17.3 l-10 17.3 l-10 0 l-10 -17.3 Z"
               fill="none"
-              stroke="#666"
+              stroke="currentColor"
               strokeWidth="1"
             />
             <path
               d="M-10 0 l10 0 l10 17.3 l-10 17.3 l-10 0 l-10 -17.3 Z"
               fill="none"
-              stroke="#666"
+              stroke="currentColor"
               strokeWidth="1"
             />
           </g>

@@ -15,7 +15,7 @@ export const CircuitBoardPattern = ({ className }: { className?: string }) => {
           height="80"
           patternUnits="userSpaceOnUse"
         >
-          <g fill="none" stroke="#555" strokeWidth="1">
+          <g fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M0 10 h20 v20 h-20 Z" />
             <path d="M20 30 h20 v20 h-20 Z" />
             <path d="M40 50 h20 v20 h-20 Z" />
@@ -24,10 +24,10 @@ export const CircuitBoardPattern = ({ className }: { className?: string }) => {
             <path d="M30 20 v10" />
             <path d="M50 40 v10" />
             <path d="M70 60 v10" />
-            <circle cx="10" cy="10" r="2" fill="#555" />
-            <circle cx="30" cy="30" r="2" fill="#555" />
-            <circle cx="50" cy="50" r="2" fill="#555" />
-            <circle cx="70" cy="70" r="2" fill="#555" />
+            <circle cx="10" cy="10" r="2" fill="currentColor" />
+            <circle cx="30" cy="30" r="2" fill="currentColor" />
+            <circle cx="50" cy="50" r="2" fill="currentColor" />
+            <circle cx="70" cy="70" r="2" fill="currentColor" />
           </g>
         </pattern>
       </defs>
