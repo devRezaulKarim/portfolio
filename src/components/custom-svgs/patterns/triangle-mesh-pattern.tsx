@@ -1,6 +1,6 @@
-import { cn } from "../../lib/utls";
+import { cn } from "../../../lib/utls";
 
-export const FishScalesPattern = ({ className }: { className?: string }) => {
+export const TriangleMeshPattern = ({ className }: { className?: string }) => {
   return (
     <svg
       width="100%"
@@ -10,13 +10,15 @@ export const FishScalesPattern = ({ className }: { className?: string }) => {
     >
       <defs>
         <pattern
-          id="fish-scales"
-          width="20"
-          height="20"
+          id="triangle-mesh"
+          width="40"
+          height="40"
           patternUnits="userSpaceOnUse"
         >
           <g fill="none" stroke="currentColor" strokeWidth="1">
-            <path d="M0 10 C 5 0, 15 0, 20 10 S 15 20, 10 20 S 5 20, 0 10" />
+            <path d="M0 0 l20 40 l-20 0 Z" />
+            <path d="M20 40 l20 -40 l0 40 Z" />
+            <path d="M0 0 l40 0 l-20 40 Z" />
           </g>
         </pattern>
       </defs>
@@ -25,7 +27,7 @@ export const FishScalesPattern = ({ className }: { className?: string }) => {
         y="0"
         width="100%"
         height="100%"
-        fill="url(#fish-scales)"
+        fill="url(#triangle-mesh)"
         opacity="0.3"
       ></rect>
     </svg>

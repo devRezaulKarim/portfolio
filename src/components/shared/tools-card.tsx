@@ -1,13 +1,17 @@
 import type { CSSProperties } from "react";
 import type { ToolsType } from "../../lib/custom-types";
 import { cn } from "../../lib/utls";
-import { ThreeDCubesPattern } from "./3d-cubes-pattern";
-import { CircuitBoardPattern } from "./circuit-board-pattern";
-import { DotPattern } from "./dot-pattern";
-import { FishScalesPattern } from "./fish-scales-pattern";
-import { HoneycombPattern } from "./honeycomb-pattern";
-import { LinePattern } from "./line-pattern";
-import { TriangleMeshPattern } from "./triangle-mesh-pattern";
+import { ThreeDCubesPattern } from "../custom-svgs/patterns/3d-cubes-pattern";
+import { CircuitBoardPattern } from "../custom-svgs/patterns/circuit-board-pattern";
+import { DotPattern } from "../custom-svgs/patterns/dot-pattern";
+import { FishScalesPattern } from "../custom-svgs/patterns/fish-scales-pattern";
+import { HoneycombPattern } from "../custom-svgs/patterns/honeycomb-pattern";
+import { LinePattern } from "../custom-svgs/patterns/line-pattern";
+import { TriangleMeshPattern } from "../custom-svgs/patterns/triangle-mesh-pattern";
+import { SnowflakePattern } from "../custom-svgs/patterns/snowflake-pattern";
+import { CurlingVinesPattern } from "../custom-svgs/patterns/curling-vines-pattern";
+import { GameOfLifePattern } from "../custom-svgs/patterns/game-of-life-pattern";
+import { SnowflakeTwoPattern } from "../custom-svgs/patterns/snowflake-two-pattern";
 
 interface ToolsCardProps extends ToolsType {
   className?: string;
@@ -30,7 +34,7 @@ export const ToolsCard = ({
 
   const rotateClass = getRotateClass();
 
-  const Pattern = [
+  const patterns = [
     ThreeDCubesPattern,
     CircuitBoardPattern,
     DotPattern,
@@ -38,7 +42,13 @@ export const ToolsCard = ({
     HoneycombPattern,
     LinePattern,
     TriangleMeshPattern,
-  ][Math.floor(Math.random() * 7)];
+    SnowflakePattern,
+    CurlingVinesPattern,
+    GameOfLifePattern,
+    SnowflakeTwoPattern,
+  ];
+
+  const Pattern = patterns[Math.floor(Math.random() * patterns.length)];
 
   return (
     <div

@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utls";
+import { cn } from "../../../lib/utls";
 
 export const CircuitBoardPattern = ({ className }: { className?: string }) => {
   return (

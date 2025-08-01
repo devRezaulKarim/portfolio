@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utls";
+import { cn } from "../../../lib/utls";
 
 export const LinePattern = ({ className }: { className?: string }) => {
   return (

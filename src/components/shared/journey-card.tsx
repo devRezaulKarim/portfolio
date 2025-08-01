@@ -1,6 +1,16 @@
 import type { ElementType } from "react";
 import { cn } from "../../lib/utls";
-import { TriangleMeshPattern } from "./triangle-mesh-pattern";
+import { TriangleMeshPattern } from "../custom-svgs/patterns/triangle-mesh-pattern";
+import { SnowflakePattern } from "../custom-svgs/patterns/snowflake-pattern";
+import { SnowflakeTwoPattern } from "../custom-svgs/patterns/snowflake-two-pattern";
+import { GameOfLifePattern } from "../custom-svgs/patterns/game-of-life-pattern";
+import { CurlingVinesPattern } from "../custom-svgs/patterns/curling-vines-pattern";
+import { ThreeDCubesPattern } from "../custom-svgs/patterns/3d-cubes-pattern";
+import { CircuitBoardPattern } from "../custom-svgs/patterns/circuit-board-pattern";
+import { DotPattern } from "../custom-svgs/patterns/dot-pattern";
+import { FishScalesPattern } from "../custom-svgs/patterns/fish-scales-pattern";
+import { HoneycombPattern } from "../custom-svgs/patterns/honeycomb-pattern";
+import { LinePattern } from "../custom-svgs/patterns/line-pattern";
 interface JourneyCardProps {
   color: string;
   date: number;
@@ -21,10 +31,25 @@ export const JourneyCard = ({
   cardIcon: CardIcon,
 }: JourneyCardProps) => {
   const isRight = index % 2 === 0;
+  const patterns = [
+    ThreeDCubesPattern,
+    CircuitBoardPattern,
+    DotPattern,
+    FishScalesPattern,
+    HoneycombPattern,
+    LinePattern,
+    TriangleMeshPattern,
+    SnowflakePattern,
+    CurlingVinesPattern,
+    GameOfLifePattern,
+    SnowflakeTwoPattern,
+  ];
+  const Pattern = patterns[Math.floor(Math.random() * patterns.length)];
+
   return (
     <div className="relative w-full">
-      <TriangleMeshPattern
-        className={cn("text-gray-500", isRight ? "left-0" : "right-0")}
+      <Pattern
+        className={cn("text-gray-700", isRight ? "left-0" : "right-0")}
       />
       <div
         className={cn(

@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utls";
+import { cn } from "../../../lib/utls";
 
 export const DotPattern = ({ className }: { className?: string }) => {
   return (

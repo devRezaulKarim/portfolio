@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { cn } from "../../lib/utls";
 import { BulbIcon } from "../custom-svgs/bulb-icon";
-import { DotPattern } from "./dot-pattern";
+import { DotPattern } from "../custom-svgs/patterns/dot-pattern";
 
 interface ProjectCardTwoProps {
   className?: string;

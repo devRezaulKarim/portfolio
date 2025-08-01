@@ -1,10 +1,6 @@
-import { cn } from "../../lib/utls";
+import { cn } from "../../../lib/utls";
 
-interface PatternProps {
-  className?: string;
-}
-
-export const ThreeDCubesPattern = ({ className }: PatternProps) => {
+export const ThreeDCubesPattern = ({ className }: { className?: string }) => {
   return (
     <svg
       width="100%"
