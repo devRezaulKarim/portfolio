@@ -1,6 +1,7 @@
 import { cn } from "../../../lib/utls";
 
 export const LinePattern = ({ className }: { className?: string }) => {
+  const id = `lines-pattern-${Date.now()}`;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +9,7 @@ export const LinePattern = ({ className }: { className?: string }) => {
     >
       <defs>
         <pattern
-          id="pattern-lines"
+          id={id}
           x="0"
           y="0"
           width="20"
@@ -31,7 +32,7 @@ export const LinePattern = ({ className }: { className?: string }) => {
         y="0"
         width="100%"
         height="100%"
-        fill="url(#pattern-lines)"
+        fill={`url(#${id})`}
         opacity="0.3"
       ></rect>
     </svg>

@@ -8,20 +8,18 @@ import { FishScalesPattern } from "../custom-svgs/patterns/fish-scales-pattern";
 import { HoneycombPattern } from "../custom-svgs/patterns/honeycomb-pattern";
 import { LinePattern } from "../custom-svgs/patterns/line-pattern";
 import { TriangleMeshPattern } from "../custom-svgs/patterns/triangle-mesh-pattern";
-import { SnowflakePattern } from "../custom-svgs/patterns/snowflake-pattern";
-import { CurlingVinesPattern } from "../custom-svgs/patterns/curling-vines-pattern";
-import { GameOfLifePattern } from "../custom-svgs/patterns/game-of-life-pattern";
-import { SnowflakeTwoPattern } from "../custom-svgs/patterns/snowflake-two-pattern";
 
 interface ToolsCardProps extends ToolsType {
   className?: string;
   neonColor?: string;
+  index: number;
 }
 
 export const ToolsCard = ({
   toolName,
   toolIcon: ToolIcon,
   neonColor = "#00f0ff",
+  index,
 }: ToolsCardProps) => {
   const getRotateClass = () => {
     const classes = [
@@ -42,13 +40,9 @@ export const ToolsCard = ({
     HoneycombPattern,
     LinePattern,
     TriangleMeshPattern,
-    SnowflakePattern,
-    CurlingVinesPattern,
-    GameOfLifePattern,
-    SnowflakeTwoPattern,
   ];
 
-  const Pattern = patterns[Math.floor(Math.random() * patterns.length)];
+  const Pattern = patterns[index % patterns.length];
 
   return (
     <div

@@ -1,6 +1,7 @@
 import { cn } from "../../../lib/utls";
 
 export const CircuitBoardPattern = ({ className }: { className?: string }) => {
+  const id = `circuit-board-${Date.now()}`;
   return (
     <svg
       width="100%"
@@ -9,12 +10,7 @@ export const CircuitBoardPattern = ({ className }: { className?: string }) => {
       className={cn("absolute top-0 h-full w-1/2", className)}
     >
       <defs>
-        <pattern
-          id="circuit-board"
-          width="80"
-          height="80"
-          patternUnits="userSpaceOnUse"
-        >
+        <pattern id={id} width="80" height="80" patternUnits="userSpaceOnUse">
           <g fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M0 10 h20 v20 h-20 Z" />
             <path d="M20 30 h20 v20 h-20 Z" />
@@ -36,7 +32,7 @@ export const CircuitBoardPattern = ({ className }: { className?: string }) => {
         y="0"
         width="100%"
         height="100%"
-        fill="url(#circuit-board)"
+        fill={`url(#${id})`}
         opacity="0.3"
       ></rect>
     </svg>

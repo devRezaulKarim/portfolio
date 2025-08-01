@@ -2,9 +2,6 @@ import type { ElementType } from "react";
 import { cn } from "../../lib/utls";
 import { TriangleMeshPattern } from "../custom-svgs/patterns/triangle-mesh-pattern";
 import { SnowflakePattern } from "../custom-svgs/patterns/snowflake-pattern";
-import { SnowflakeTwoPattern } from "../custom-svgs/patterns/snowflake-two-pattern";
-import { GameOfLifePattern } from "../custom-svgs/patterns/game-of-life-pattern";
-import { CurlingVinesPattern } from "../custom-svgs/patterns/curling-vines-pattern";
 import { ThreeDCubesPattern } from "../custom-svgs/patterns/3d-cubes-pattern";
 import { CircuitBoardPattern } from "../custom-svgs/patterns/circuit-board-pattern";
 import { DotPattern } from "../custom-svgs/patterns/dot-pattern";
@@ -40,16 +37,13 @@ export const JourneyCard = ({
     LinePattern,
     TriangleMeshPattern,
     SnowflakePattern,
-    CurlingVinesPattern,
-    GameOfLifePattern,
-    SnowflakeTwoPattern,
   ];
   const Pattern = patterns[Math.floor(Math.random() * patterns.length)];
 
   return (
     <div className="relative w-full">
       <Pattern
-        className={cn("text-gray-700", isRight ? "left-0" : "right-0")}
+        className={cn("text-gray-600", isRight ? "left-0" : "right-0")}
       />
       <div
         className={cn(

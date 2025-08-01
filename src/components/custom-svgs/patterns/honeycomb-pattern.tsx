@@ -1,6 +1,7 @@
 import { cn } from "../../../lib/utls";
 
 export const HoneycombPattern = ({ className }: { className?: string }) => {
+  const id = `honeycomb-${Date.now()}`;
   return (
     <svg
       width="100%"
@@ -10,7 +11,7 @@ export const HoneycombPattern = ({ className }: { className?: string }) => {
     >
       <defs>
         <pattern
-          id="honeycomb"
+          id={id}
           width="40"
           height="23"
           patternUnits="userSpaceOnUse"
@@ -43,7 +44,7 @@ export const HoneycombPattern = ({ className }: { className?: string }) => {
         y="0"
         width="100%"
         height="100%"
-        fill="url(#honeycomb)"
+        fill={`url(#${id})`}
         opacity="0.3"
       ></rect>
     </svg>

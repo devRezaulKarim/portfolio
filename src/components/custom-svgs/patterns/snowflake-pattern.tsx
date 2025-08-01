@@ -1,11 +1,12 @@
 import { cn } from "../../../lib/utls";
 
 export const SnowflakePattern = ({ className }: { className?: string }) => {
+  const id = `snowflake-${Date.now()}`;
   return (
     <svg className={cn("absolute top-0 h-full w-1/2", className)}>
       <defs>
         <pattern
-          id="snowflake"
+          id={id}
           x="0"
           y="0"
           width="50"
@@ -41,7 +42,7 @@ export const SnowflakePattern = ({ className }: { className?: string }) => {
           </g>
         </pattern>
       </defs>
-      <rect x="0" y="0" width="100%" height="100%" fill="url(#snowflake)" />
+      <rect x="0" y="0" width="100%" height="100%" fill={`url(#${id})`} />
     </svg>
   );
 };

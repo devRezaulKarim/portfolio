@@ -1,6 +1,7 @@
 import { cn } from "../../../lib/utls";
 
 export const ThreeDCubesPattern = ({ className }: { className?: string }) => {
+  const id = `3d-cubes-${Date.now()}`;
   return (
     <svg
       width="100%"
@@ -9,12 +10,7 @@ export const ThreeDCubesPattern = ({ className }: { className?: string }) => {
       className={cn("absolute top-0 left-0 h-full w-full", className)}
     >
       <defs>
-        <pattern
-          id="3d-cubes"
-          width="50"
-          height="86.6"
-          patternUnits="userSpaceOnUse"
-        >
+        <pattern id={id} width="50" height="86.6" patternUnits="userSpaceOnUse">
           <g fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M25 0 l25 14.43 v28.86 l-25 14.43 l-25 -14.43 v-28.86 Z" />
             <path d="M25 0 l0 28.86" />
@@ -28,7 +24,7 @@ export const ThreeDCubesPattern = ({ className }: { className?: string }) => {
         y="0"
         width="100%"
         height="100%"
-        fill="url(#3d-cubes)"
+        fill={`url(#${id})`}
         opacity="0.3"
       ></rect>
     </svg>

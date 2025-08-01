@@ -1,6 +1,7 @@
 import { cn } from "../../../lib/utls";
 
 export const FishScalesPattern = ({ className }: { className?: string }) => {
+  const id = `fish-scales-${Date.now()}`;
   return (
     <svg
       width="100%"
@@ -9,12 +10,7 @@ export const FishScalesPattern = ({ className }: { className?: string }) => {
       className={cn("absolute top-0 h-full w-1/2", className)}
     >
       <defs>
-        <pattern
-          id="fish-scales"
-          width="20"
-          height="20"
-          patternUnits="userSpaceOnUse"
-        >
+        <pattern id={id} width="20" height="20" patternUnits="userSpaceOnUse">
           <g fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M0 10 C 5 0, 15 0, 20 10 S 15 20, 10 20 S 5 20, 0 10" />
           </g>
@@ -25,7 +21,7 @@ export const FishScalesPattern = ({ className }: { className?: string }) => {
         y="0"
         width="100%"
         height="100%"
-        fill="url(#fish-scales)"
+        fill={`url(#${id})`}
         opacity="0.3"
       ></rect>
     </svg>

@@ -1,6 +1,7 @@
 import { cn } from "../../../lib/utls";
 
 export const DotPattern = ({ className }: { className?: string }) => {
+  const id = `dot-pattern-${Date.now()}`;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +9,7 @@ export const DotPattern = ({ className }: { className?: string }) => {
     >
       <defs>
         <pattern
-          id="pattern-circles"
+          id={id}
           x="0"
           y="0"
           width="40"
@@ -25,13 +26,7 @@ export const DotPattern = ({ className }: { className?: string }) => {
           ></circle>
         </pattern>
       </defs>
-      <rect
-        x="0"
-        y="0"
-        width="100%"
-        height="100%"
-        fill="url(#pattern-circles)"
-      ></rect>
+      <rect x="0" y="0" width="100%" height="100%" fill={`url(#${id})`}></rect>
     </svg>
   );
 };

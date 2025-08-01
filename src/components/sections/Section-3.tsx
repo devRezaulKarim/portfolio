@@ -64,8 +64,8 @@ export const SectionThree = () => {
           />
         </div>
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 pb-20 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 xl:pb-40">
-          {devTools.map((tool) => (
-            <ToolsCard key={tool.id} {...tool} neonColor={neonColor} />
+          {devTools.map((tool, i) => (
+            <ToolsCard key={tool.id} {...tool} neonColor={neonColor} index={i} />
           ))}
         </div>
       </div>
