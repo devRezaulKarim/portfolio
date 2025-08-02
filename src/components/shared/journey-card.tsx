@@ -43,7 +43,7 @@ export const JourneyCard = ({
   return (
     <div className="relative w-full">
       <Pattern
-        className={cn("text-gray-600", isRight ? "left-0" : "right-0")}
+        className={cn("text-gray-600 w-1/3", isRight ? "left-0" : "right-0")}
       />
       <div
         className={cn(

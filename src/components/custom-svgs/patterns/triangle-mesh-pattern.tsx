@@ -7,7 +7,7 @@ export const TriangleMeshPattern = ({ className }: { className?: string }) => {
       width="100%"
       height="100%"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("absolute top-0 h-full w-1/2", className)}
+      className={cn("absolute top-0 h-full w-full", className)}
     >
       <defs>
         <pattern id={id} width="40" height="40" patternUnits="userSpaceOnUse">

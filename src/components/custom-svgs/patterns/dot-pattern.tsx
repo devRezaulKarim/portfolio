@@ -5,7 +5,7 @@ export const DotPattern = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("absolute top-0 h-full w-1/2", className)}
+      className={cn("absolute top-0 h-full w-full", className)}
     >
       <defs>
         <pattern

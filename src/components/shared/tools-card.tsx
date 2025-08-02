@@ -52,7 +52,7 @@ export const ToolsCard = ({
         "hover:shadow-[0_0_10px_0_var(--shadowColor),_inset_0_0_10px_2px_var(--shadowColor)]",
       )}
     >
-      <Pattern className="left-0 w-full text-gray-500" />
+      <Pattern className="left-0 w-full text-gray-400" />
       <div className="z-[1] flex flex-col items-center gap-2">
         <ToolIcon
           className={cn(

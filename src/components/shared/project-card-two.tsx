@@ -29,7 +29,9 @@ export const ProjectCardTwo = ({
         isRight ? "justify-end" : "justify-start",
       )}
     >
-      <DotPattern className={isRight ? "left-0" : "right-0"} />
+      <DotPattern
+        className={cn("w-1/2 text-gray-400", isRight ? "left-0" : "right-0")}
+      />
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
