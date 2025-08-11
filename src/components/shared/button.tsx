@@ -15,7 +15,7 @@ export const Button = ({
   return (
     <button
       className={cn(
-        "flex cursor-pointer items-center justify-center gap-x-2 rounded-lg px-4 py-2 text-sm font-semibold capitalize transition-all duration-200 hover:scale-90 sm:w-fit sm:text-base md:text-lg lg:text-xl",
+        "flex cursor-pointer items-center justify-center gap-x-2 rounded-lg px-4 py-2 text-sm font-semibold capitalize transition-all duration-200 hover:scale-95 sm:w-fit sm:text-base md:text-lg lg:text-xl",
         className,
       )}
       {...props}

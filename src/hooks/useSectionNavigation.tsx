@@ -22,7 +22,7 @@ export const useSectionNavigation = (
 
   const changeConeColor = useCallback(
     (index: number) => {
-      const { textColor } = sectionsData[index];
+      const { textColor, bgColor } = sectionsData[index];
       const icons = document.querySelectorAll(".cone-icon");
       const social = document.querySelector(".social-icons") as HTMLDivElement;
       icons.forEach((icon) => {
@@ -37,6 +37,8 @@ export const useSectionNavigation = (
       });
       if (social) {
         social.style.color = textColor;
+        social.style.setProperty("--shadow-color", bgColor);
+        social.style.setProperty("--shadow-color-2", textColor);
       }
     },
     [sectionsData],

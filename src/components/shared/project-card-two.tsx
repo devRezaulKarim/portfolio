@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { cn } from "../../lib/utls";
 import { BulbIcon } from "../custom-svgs/bulb-icon";
 import { DotPattern } from "../custom-svgs/patterns/dot-pattern";
@@ -27,7 +27,7 @@ export const ProjectCardTwo = ({
 
   return (
     <div
-      style={{ "--shadow-color": backgroundColor } as React.CSSProperties}
+      style={{ "--shadow-color": backgroundColor } as CSSProperties}
       className={cn("relative flex", isRight ? "justify-end" : "justify-start")}
     >
       <DotPattern
@@ -92,7 +92,7 @@ export const ProjectCardTwo = ({
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border px-4 py-1 text-base text-white transition hover:text-white hover:shadow-[0_0_4px_4px_var(--shadow-color),_0_0_8px_4px_#fff]"
+                className="inline-flex items-center gap-2 rounded-md border px-4 py-1 text-base text-white transition hover:text-white hover:shadow-[0_0_4px_3px_var(--shadow-color),_0_0_8px_4px_#fff]"
                 aria-label="Open live project"
                 title="Open live project"
               >
@@ -106,7 +106,7 @@ export const ProjectCardTwo = ({
                 href={sourceLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border px-4 py-1 text-base text-white transition hover:text-white hover:shadow-[0_0_4px_4px_var(--shadow-color),_0_0_8px_4px_#fff]"
+                className="inline-flex items-center gap-2 rounded-md border px-4 py-1 text-base text-white transition hover:text-white hover:shadow-[0_0_4px_3px_var(--shadow-color),_0_0_8px_4px_#fff]"
                 aria-label="View source code"
                 title="View source code"
               >
