@@ -1,8 +1,5 @@
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import { SECTION_CONST } from "../../lib/constants";
-import { FacebookIcon } from "../custom-svgs/facebook-icon";
-import { LinkedinIcon } from "../custom-svgs/linkedin-icon";
-import { TwitterIcon } from "../custom-svgs/twitter-icon";
 import { Button } from "../shared/button";
 import { Input } from "../shared/input";
 import { SectionSubtitle } from "../shared/section-subtitle";
@@ -46,7 +43,7 @@ export const SectionFive = () => {
           </form>
           <div className="flex flex-col items-center justify-end gap-y-4 sm:gap-y-6 md:col-span-2 lg:col-span-1">
             <div className="text-left text-lg lg:text-justify lg:text-xl">
-              <address>
+              <address className="flex flex-col gap-y-2">
                 <a
                   href="tel:+8801540652375"
                   className="flex items-center gap-x-1"
@@ -68,7 +65,7 @@ export const SectionFive = () => {
                 </p>
               </address>
             </div>
-            <div className="flex items-center gap-x-2">
+            {/* <div className="flex items-center gap-x-2">
               <a href="#">
                 <FacebookIcon className="w-6 duration-200 hover:scale-90 sm:w-8" />
               </a>
@@ -78,7 +75,7 @@ export const SectionFive = () => {
               <a href="#">
                 <TwitterIcon className="w-6 duration-200 hover:scale-90 sm:w-8" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

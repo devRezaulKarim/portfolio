@@ -161,7 +161,7 @@ export const ProjectCardTwo = ({
                   <span
                     key={i}
                     style={{ color: backgroundColor }}
-                    className="rounded-full bg-white px-2 py-1 text-sm font-medium"
+                    className="rounded-full bg-white px-4 py-1 text-sm font-medium"
                   >
                     {t}
                   </span>

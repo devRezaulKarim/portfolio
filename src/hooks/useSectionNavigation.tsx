@@ -24,6 +24,7 @@ export const useSectionNavigation = (
     (index: number) => {
       const { textColor } = sectionsData[index];
       const icons = document.querySelectorAll(".cone-icon");
+      const social = document.querySelector(".social-icons") as HTMLDivElement;
       icons.forEach((icon) => {
         const mask = icon.querySelector("mask");
         if (mask) {
@@ -34,6 +35,9 @@ export const useSectionNavigation = (
           stop.style.stopColor = textColor;
         });
       });
+      if (social) {
+        social.style.color = textColor;
+      }
     },
     [sectionsData],
   );
