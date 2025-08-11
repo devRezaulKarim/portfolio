@@ -49,11 +49,9 @@ export const SectionFour = () => {
           {projects2.map((project, index) => (
             <ProjectCardTwo
               key={project.id}
-              title={project.title}
-              subtitle={project.subtitle}
-              image={project.image}
               index={index}
               backgroundColor={bgColor}
+              {...project}
             />
           ))}
         </div>
