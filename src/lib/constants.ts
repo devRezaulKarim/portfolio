@@ -318,22 +318,6 @@ export const projects2: Project2Type[] = [
   },
   {
     id: 3,
-    title: "Fontawesome (clone)",
-    liveLink: "https://fontawesome-clone.vercel.app/",
-    image: "/projects-img/fa.png",
-    sourceLink: "https://github.com/devRezaulKarim/fontawesome-clone",
-    desc: "This is a clone of the popular Font Awesome icons library's search icon page, built to provide a seamless icon browsing experience. Users can explore thousands of icons with powerful filtering options by style, family, and category, along with a fast and responsive search.",
-    features: [
-      "See all icons",
-      "Style filtration",
-      "Icon Family filtration",
-      "Category filtration",
-      "Search icon",
-    ],
-    techs: ["React", "Redux", "JSON API", "Axios", "React-paginate"],
-  },
-  {
-    id: 4,
     title: "Travel Vista",
     liveLink: "https://travel-vista-rkz.netlify.app/",
     image: "/projects-img/tv.png",
@@ -353,6 +337,23 @@ export const projects2: Project2Type[] = [
       "Firebase",
     ],
   },
+  {
+    id: 4,
+    title: "Fontawesome (clone)",
+    liveLink: "https://fontawesome-clone.vercel.app/",
+    image: "/projects-img/fa.png",
+    sourceLink: "https://github.com/devRezaulKarim/fontawesome-clone",
+    desc: "This is a clone of the popular Font Awesome icons library's search icon page, built to provide a seamless icon browsing experience. Users can explore thousands of icons with powerful filtering options by style, family, and category, along with a fast and responsive search.",
+    features: [
+      "See all icons",
+      "Style filtration",
+      "Icon Family filtration",
+      "Category filtration",
+      "Search icon",
+    ],
+    techs: ["React", "Redux", "JSON API", "Axios", "React-paginate"],
+  },
+
   {
     id: 5,
     title: "Halal Jibika",

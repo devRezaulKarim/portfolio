@@ -28,24 +28,27 @@ export const ProjectCardTwo = ({
   return (
     <div
       style={{ "--shadow-color": backgroundColor } as CSSProperties}
-      className={cn("relative flex", isRight ? "justify-end" : "justify-start")}
+      className={cn(
+        "relative flex pb-16 lg:pb-0",
+        isRight ? "justify-end" : "justify-start",
+      )}
     >
       <DotPattern
-        className={cn("w-1/2 text-gray-400", isRight ? "left-0" : "right-0")}
+        className={cn("text-gray-400 lg:w-1/2", isRight ? "left-0" : "right-0")}
       />
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={cn(
-          "flex items-center gap-6 transition-all duration-500",
-          isHovered ? "group w-full" : "w-3/5",
-          isRight ? "flex-row-reverse" : "flex-row",
+          "flex flex-col items-center gap-6 transition-all duration-500",
+          isHovered ? "group w-full" : "lg:w-3/5",
+          isRight ? "lg:flex-row-reverse" : "lg:flex-row",
         )}
       >
         <div
           className={cn(
             `relative overflow-hidden rounded-lg bg-gray-800 transition-all duration-500`,
-            isHovered ? "basis-2/5" : "basis-0",
+            isHovered ? "basis-full lg:basis-2/5" : "basis-full lg:basis-0",
             isHovered &&
               "shadow-[0_0_10px_4px_var(--shadow-color),_0_0_20px_10px_#fff]",
           )}
@@ -55,19 +58,22 @@ export const ProjectCardTwo = ({
             alt={title}
             className={cn(
               "relative inset-0 w-full object-cover transition-opacity duration-500",
-              isHovered ? "opacity-100" : "opacity-0",
+              isHovered ? "opacity-100" : "lg:opacity-0",
             )}
           />
         </div>
 
         <div
           className={cn(
-            "grid scale-0 place-items-center duration-500 group-hover:scale-100",
+            "grid place-items-center duration-500 group-hover:scale-100 lg:scale-0",
             isRight ? "-ml-4" : "-mr-4",
           )}
         >
           <BulbIcon
-            className={cn("mx-auto", isRight ? "rotate-90" : "-rotate-90")}
+            className={cn(
+              "mx-auto",
+              isRight ? "lg:rotate-90" : "lg:-rotate-90",
+            )}
             size={64}
             neonColor={isRight ? "#fffb00" : "#a6fd29"}
           />
@@ -75,24 +81,24 @@ export const ProjectCardTwo = ({
         <div
           style={{ backgroundColor }}
           className={cn(
-            "z-10 flex h-full flex-col justify-center rounded-lg border p-4 text-justify transition-all duration-500",
-            isHovered ? "basis-3/5" : "basis-full",
+            "z-10 flex h-full flex-col justify-center rounded-lg border p-4 text-left transition-all duration-500 md:text-justify",
+            isHovered ? "lg:basis-3/5" : "lg:basis-full",
           )}
         >
-          <h2 className="text-2xl font-semibold tracking-tight text-white">
+          <h2 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
             {title}
           </h2>
 
-          <p className="mt-3 text-lg text-white">{desc}</p>
+          <p className="mt-3 text-white md:text-lg">{desc}</p>
 
           {/* links (Live / Source) */}
-          <div className="mt-4 flex items-center gap-3 text-sm">
+          <div className="mt-4 flex items-center gap-3">
             {liveLink && (
               <a
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border px-4 py-1 text-base text-white transition hover:text-white hover:shadow-[0_0_4px_3px_var(--shadow-color),_0_0_8px_4px_#fff]"
+                className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-base text-white transition hover:text-white hover:shadow-[0_0_4px_3px_var(--shadow-color),_0_0_8px_4px_#fff] md:py-1"
                 aria-label="Open live project"
                 title="Open live project"
               >
@@ -106,7 +112,7 @@ export const ProjectCardTwo = ({
                 href={sourceLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border px-4 py-1 text-base text-white transition hover:text-white hover:shadow-[0_0_4px_3px_var(--shadow-color),_0_0_8px_4px_#fff]"
+                className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-base text-white transition hover:text-white hover:shadow-[0_0_4px_3px_var(--shadow-color),_0_0_8px_4px_#fff] md:py-1"
                 aria-label="View source code"
                 title="View source code"
               >

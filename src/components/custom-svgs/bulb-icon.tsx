@@ -28,7 +28,7 @@ export const BulbIcon = ({
       <g className="transition-all duration-500">
         <path
           d="M16,7a8.36,8.36,0,0,0-8,8,8.4,8.4,0,0,0,2.29,5.7A4.56,4.56,0,0,1,12,24a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1,4.46,4.46,0,0,1,1.69-3.28A7.87,7.87,0,0,0,24,15a8.17,8.17,0,0,0-2.44-5.83A7.67,7.67,0,0,0,16,7Zm4.34,12.28A6.87,6.87,0,0,0,18.09,23H13.91a7,7,0,0,0-2.2-3.71A6.41,6.41,0,0,1,10,15a6.29,6.29,0,0,1,6-6,5.63,5.63,0,0,1,4.13,1.6A6.16,6.16,0,0,1,22,15,5.93,5.93,0,0,1,20.31,19.28Z"
-          className="transition-all duration-500 group-hover:fill-[var(--neon)] group-hover:drop-shadow-[0_0_4px_var(--neon)]"
+          className="fill-[var(--neon)] drop-shadow-[0_0_4px_var(--neon)] transition-all duration-500 group-hover:fill-[var(--neon)] group-hover:drop-shadow-[0_0_4px_var(--neon)] lg:fill-current lg:drop-shadow-none"
         />
         <path d="M19,26H13a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z" />
         <path d="M18,29H14a1,1,0,0,0,0,2h4a1,1,0,0,0,0-2Z" />
@@ -39,7 +39,7 @@ export const BulbIcon = ({
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
-        className="transition-all duration-500 group-hover:stroke-[var(--neon)]"
+        className="stroke-[var(--neon)] transition-all duration-500 group-hover:stroke-[var(--neon)] lg:stroke-current"
       >
         {[
           { x1: 5, y1: 14, x2: 3, y2: 14 },
@@ -51,7 +51,7 @@ export const BulbIcon = ({
           <line
             key={i}
             {...line}
-            className="origin-center scale-0 transition-transform duration-200 group-hover:scale-100 group-hover:drop-shadow-[0_0_2px_var(--neon)]"
+            className="origin-center drop-shadow-[0_0_2px_var(--neon)] transition-transform duration-200 group-hover:scale-100 group-hover:drop-shadow-[0_0_2px_var(--neon)] lg:scale-0 lg:drop-shadow-none"
           />
         ))}
       </g>

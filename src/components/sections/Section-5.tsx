@@ -1,9 +1,10 @@
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, MapPinIcon, PhoneIcon, SendIcon } from "lucide-react";
 import { SECTION_CONST } from "../../lib/constants";
 import { Button } from "../shared/button";
 import { Input } from "../shared/input";
 import { SectionSubtitle } from "../shared/section-subtitle";
 import { SectionTitle } from "../shared/section-title";
+import type { CSSProperties } from "react";
 
 export const SectionFive = () => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION5;
@@ -11,11 +12,14 @@ export const SectionFive = () => {
     <div
       className="section h-screen w-screen shrink-0 overflow-y-auto border-[24px] md:border-[40px]"
       id={sectionId}
-      style={{
-        background: bgColor,
-        borderColor: bgColor,
-        color: textColor,
-      }}
+      style={
+        {
+          "--shadow-color": textColor,
+          background: bgColor,
+          borderColor: bgColor,
+          color: textColor,
+        } as CSSProperties
+      }
     >
       <div className="section-content flex min-h-[calc(100vh-48px)] flex-col items-center justify-center gap-6 text-center sm:gap-10 md:min-h-[calc(100vh-80px)] md:px-8">
         <div>
@@ -37,8 +41,9 @@ export const SectionFive = () => {
             />
             <Button
               text="Send"
+              icon={SendIcon}
               style={{ backgroundColor: textColor, color: bgColor }}
-              className="inline-block sm:w-full"
+              className="hover:shadow-[0_0_4px_2px_#fff,_0_0_8px_6px_var(--shadow-color)] sm:w-full"
             />
           </form>
           <div className="flex flex-col items-center justify-end gap-y-4 sm:gap-y-6 md:col-span-2 lg:col-span-1">

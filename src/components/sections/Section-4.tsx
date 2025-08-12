@@ -45,7 +45,7 @@ export const SectionFour = () => {
             )}
           />
         </div>
-        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-16 px-4 pb-20 xl:pb-40">
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-16 divide-y-2 divide-white px-4 pb-20 lg:divide-y-0 xl:pb-40">
           {projects2.map((project, index) => (
             <ProjectCardTwo
               key={project.id}
