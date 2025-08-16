@@ -23,7 +23,7 @@ export const SectionOne = ({ subtitle }: { subtitle: string }) => {
     >
       <div className="section-content min-h-[calc(100vh-48px)] md:flex md:min-h-[calc(100vh-80px)] md:items-center md:justify-center md:px-8">
         <div className="flex flex-col-reverse items-center md:flex-row">
-          <div className="flex flex-col gap-4 sm:gap-6">
+          <div className="flex flex-col gap-4 pl-2 sm:gap-6 md:pl-0">
             <div>
               <SectionTitle title="Md. Rezaul Karim" />
               <h2 className="text-[calc(1.5vw+1rem)] leading-[1.2] font-bold">
@@ -32,12 +32,17 @@ export const SectionOne = ({ subtitle }: { subtitle: string }) => {
             </div>
             <SectionSubtitle subtitle={subtitle} />
             <div className="flex items-center gap-3 sm:mt-4">
-              <Button
-                text="Resume"
-                icon={DownloadIcon}
-                style={{ backgroundColor: textColor, color: bgColor }}
-                className="hover:shadow-[0_0_4px_4px_var(--shadow-color),_0_0_8px_4px_#fff]"
-              />
+              <a
+                href="https://drive.google.com/file/d/1gp7RzBUxeWx-4OxgLtCy3Cq2pm6yHnli/view"
+                target="_blank"
+              >
+                <Button
+                  text="Resume"
+                  icon={DownloadIcon}
+                  style={{ backgroundColor: textColor, color: bgColor }}
+                  className="hover:shadow-[0_0_4px_4px_var(--shadow-color),_0_0_8px_4px_#fff]"
+                />
+              </a>
             </div>
           </div>
           <div className="ml-auto md:max-w-2/5">
