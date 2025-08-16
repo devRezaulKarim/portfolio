@@ -10,7 +10,7 @@ function App() {
         <ConeIcon color="#bdc3c7" />
       </div>
       <SectionsContainer />
-      <div className="pointer-events-none absolute right-2 bottom-2 isolate z-50 md:right-3.5 md:bottom-3.5 lg:right-5 lg:bottom-5">
+      <div className="pointer-events-none absolute right-2 bottom-2 isolate z-50 hidden sm:block md:right-3.5 md:bottom-3.5 lg:right-5 lg:bottom-5">
         <ConeIcon className="-z-10 rotate-180" color="#bdc3c7" />
       </div>
       <SocialIcons />

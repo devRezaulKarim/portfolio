@@ -71,7 +71,7 @@ export const ProjectCardTwo = ({
         >
           <BulbIcon
             className={cn(
-              "mx-auto",
+              "z-10 mx-auto",
               isRight ? "lg:rotate-90" : "lg:-rotate-90",
             )}
             size={64}
