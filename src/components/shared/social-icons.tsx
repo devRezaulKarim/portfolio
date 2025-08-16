@@ -4,7 +4,7 @@ import { GithubIcon } from "../custom-svgs/github-icon";
 
 const SocialIcons = () => {
   return (
-    <div className="social-icons absolute right-8 bottom-8 z-10 flex items-center gap-x-2 md:right-9.5 md:bottom-9.5 lg:right-13 lg:bottom-13">
+    <div className="social-icons absolute right-8 bottom-8 z-10 hidden items-center gap-x-2 sm:flex md:right-9.5 md:bottom-9.5 lg:right-13 lg:bottom-13">
       <a
         href="https://www.facebook.com/muha.rezaulkarim"
         target="_blank"

@@ -12,6 +12,9 @@ import { SectionSubtitle } from "../shared/section-subtitle";
 import { SectionTitle } from "../shared/section-title";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { ValidationError, useForm } from "@formspree/react";
+import { FacebookIcon } from "../custom-svgs/facebook-icon";
+import { LinkedinIcon } from "../custom-svgs/linkedin-icon";
+import { GithubIcon } from "../custom-svgs/github-icon";
 
 export const SectionFive = () => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION5;
@@ -128,6 +131,23 @@ export const SectionFive = () => {
                   <span>Dhaka, bangladesh</span>
                 </p>
               </address>
+            </div>
+            <div className="flex items-center gap-x-2">
+              <a
+                href="https://www.facebook.com/muha.rezaulkarim"
+                target="_blank"
+              >
+                <FacebookIcon className="w-6 duration-200 hover:scale-90 sm:w-8" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dev-rezaul-karim/"
+                target="_blank"
+              >
+                <LinkedinIcon className="w-6 duration-200 hover:scale-90 sm:w-8" />
+              </a>
+              <a href="https://github.com/devRezaulKarim" target="_blank">
+                <GithubIcon className="w-6 duration-200 hover:scale-90 sm:w-8" />
+              </a>
             </div>
           </div>
         </div>

@@ -4,6 +4,9 @@ import { Button } from "../shared/button";
 import { SectionTitle } from "../shared/section-title";
 import { SectionSubtitle } from "../shared/section-subtitle";
 import type { CSSProperties } from "react";
+import { FacebookIcon } from "../custom-svgs/facebook-icon";
+import { LinkedinIcon } from "../custom-svgs/linkedin-icon";
+import { GithubIcon } from "../custom-svgs/github-icon";
 
 export const SectionOne = ({ subtitle }: { subtitle: string }) => {
   const { sectionId, bgColor, textColor } = SECTION_CONST.SECTION1;
@@ -22,6 +25,20 @@ export const SectionOne = ({ subtitle }: { subtitle: string }) => {
       }
     >
       <div className="section-content min-h-[calc(100vh-48px)] md:flex md:min-h-[calc(100vh-80px)] md:items-center md:justify-center md:px-8">
+        <div className="flex items-center gap-x-2 sm:hidden">
+          <a href="https://www.facebook.com/muha.rezaulkarim" target="_blank">
+            <FacebookIcon className="w-6 duration-200 hover:scale-90 sm:w-8" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dev-rezaul-karim/"
+            target="_blank"
+          >
+            <LinkedinIcon className="w-6 duration-200 hover:scale-90 sm:w-8" />
+          </a>
+          <a href="https://github.com/devRezaulKarim" target="_blank">
+            <GithubIcon className="w-6 duration-200 hover:scale-90 sm:w-8" />
+          </a>
+        </div>
         <div className="flex flex-col-reverse items-center md:flex-row">
           <div className="flex flex-col gap-4 pl-2 sm:gap-6 md:pl-0">
             <div>
