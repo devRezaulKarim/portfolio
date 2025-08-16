@@ -26,16 +26,18 @@ const SectionsContainer = () => {
   }, []);
 
   return (
-    <div className="flex h-screen" ref={containerRef}>
-      {sectionsData.map((section, index) => {
-        if (section.id === "section-1")
-          return <SectionOne key={index} subtitle={sectionOneSubtitle} />;
-        if (section.id === "section-2") return <SectionTwo key={index} />;
-        if (section.id === "section-3") return <SectionThree key={index} />;
-        if (section.id === "section-4") return <SectionFour key={index} />;
-        if (section.id === "section-5") return <SectionFive key={index} />;
-        return null;
-      })}
+    <div className="h-screen overflow-x-hidden">
+      <div className="flex h-full" ref={containerRef}>
+        {sectionsData.map((section, index) => {
+          if (section.id === "section-1")
+            return <SectionOne key={index} subtitle={sectionOneSubtitle} />;
+          if (section.id === "section-2") return <SectionTwo key={index} />;
+          if (section.id === "section-3") return <SectionThree key={index} />;
+          if (section.id === "section-4") return <SectionFour key={index} />;
+          if (section.id === "section-5") return <SectionFive key={index} />;
+          return null;
+        })}
+      </div>
     </div>
   );
 };
