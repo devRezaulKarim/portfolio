@@ -1,4 +1,4 @@
-import { DownloadIcon, MailPlusIcon } from "lucide-react";
+import { DownloadIcon } from "lucide-react";
 import { SECTION_CONST } from "../../lib/constants";
 import { Button } from "../shared/button";
 import { SectionTitle } from "../shared/section-title";

@@ -1,9 +1,6 @@
 import "./App.css";
 import SectionsContainer from "./components/sections/SectionsContainer";
 import { ConeIcon } from "./components/custom-svgs/cone-icon";
-import { FacebookIcon } from "./components/custom-svgs/facebook-icon";
-import { LinkedinIcon } from "./components/custom-svgs/linkedin-icon";
-import { GithubIcon } from "./components/custom-svgs/github-icon";
 import SocialIcons from "./components/shared/social-icons";
 
 function App() {

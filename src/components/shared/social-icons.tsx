@@ -1,4 +1,3 @@
-import React from "react";
 import { FacebookIcon } from "../custom-svgs/facebook-icon";
 import { LinkedinIcon } from "../custom-svgs/linkedin-icon";
 import { GithubIcon } from "../custom-svgs/github-icon";
