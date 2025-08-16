@@ -132,7 +132,7 @@ export const SectionFive = () => {
                 </p>
               </address>
             </div>
-            <div className="flex items-center gap-x-2">
+            <div className="flex sm:hidden items-center gap-x-2">
               <a
                 href="https://www.facebook.com/muha.rezaulkarim"
                 target="_blank"
