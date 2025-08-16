@@ -4,12 +4,14 @@ import { cn } from "../../lib/utls";
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
   icon?: ElementType;
+  iconClass?: string;
 }
 
 export const Button = ({
   text = "Button",
   icon: Icon,
   className,
+  iconClass,
   ...props
 }: ButtonProps) => {
   return (
@@ -20,7 +22,11 @@ export const Button = ({
       )}
       {...props}
     >
-      {Icon && <Icon className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6" />}
+      {Icon && (
+        <Icon
+          className={cn("h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6", iconClass)}
+        />
+      )}
       <span> {text}</span>
     </button>
   );
