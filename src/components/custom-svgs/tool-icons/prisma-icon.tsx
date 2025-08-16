@@ -1,0 +1,33 @@
+import type { CSSProperties } from "react";
+import { cn } from "../../../lib/utls";
+
+export const PrismaIcon = ({ className }: { className?: string }) => {
+  const neonColor = [
+    "#a6fd29",
+    "#74ee15",
+    "#ffe700",
+    "#00f0ff",
+    "#ff00ff",
+    "#39ff14",
+    "#ff6ec7",
+    "#f9ff33",
+    "#ff3131",
+    "#00ff9f",
+  ][Math.floor(Math.random() * 10)];
+
+  return (
+    <svg
+      className={cn("w-14 overflow-visible", className)}
+      viewBox="0 0 50 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ "--neon": neonColor } as CSSProperties}
+    >
+      <path
+        d="M49.6706 46.0001L28.9066 1.90464C28.381 0.799073 27.2915 0.0706613 26.069 0.00739778C24.8437 -0.0747018 23.6744 0.531476 23.0352 1.58013L0.514312 38.0564C-0.184839 39.1809 -0.170129 40.6083 0.552046 41.7181L11.5627 58.7692C12.4182 60.0837 14.0365 60.6788 15.5398 60.2317L47.4926 50.7802C48.4661 50.4956 49.2683 49.803 49.6918 48.8815C50.1095 47.9644 50.1023 46.9099 49.6721 45.9986L49.6706 46.0001ZM45.0219 47.8913L17.908 55.909C17.0809 56.155 16.287 55.4381 16.459 54.6034L26.146 8.21974C26.3271 7.35187 27.5255 7.21452 27.9044 8.01749L45.8369 46.0982C45.9974 46.4417 45.9993 46.8381 45.8422 47.1831C45.6851 47.5281 45.3847 47.7869 45.0203 47.8913H45.0219Z"
+        fill="currentColor"
+        className="duration-[1s] group-hover:drop-shadow-[0_0_8px_var(--neon)]"
+      />
+    </svg>
+  );
+};
