@@ -42,51 +42,51 @@ export const SECTION_CONST = {
   },
   SECTION2: {
     sectionId: "section-2",
-    bgColor: "#143232", // Similar contrast to #2c3e50
-    textColor: "#ffffff",
+    bgColor: "#001a26", // Similar contrast to #2c3e50
+    textColor: "#bdc3c7",
   },
   SECTION3: {
     sectionId: "section-3",
-    bgColor: "#245050", // Similar contrast to #34495e
-    textColor: "#ffffff",
+    bgColor: "#1C1C1C", // Similar contrast to #34495e
+    textColor: "#bdc3c7",
   },
   SECTION4: {
     sectionId: "section-4",
-    bgColor: "#5c7f7f", // Similar contrast to #7f8c8d
-    textColor: "#ffffff",
+    bgColor: "#0C1622", // Similar contrast to #7f8c8d
+    textColor: "#bdc3c7",
   },
   SECTION5: {
     sectionId: "section-5",
-    bgColor: "#bcdada", // Similar contrast to #bdc3c7
-    textColor: "#1a2a2a", // Dark for contrast
+    bgColor: "#021526", // Similar contrast to #bdc3c7
+    textColor: "#bdc3c7", // Dark for contrast
   },
 };
 
 export const originalSections: SectionDataType[] = [
   {
     id: "section-1",
-    bgColor: "#061515", // Darkest
-    textColor: "#bdc3c7", // Soft light gray
+    bgColor: SECTION_CONST.SECTION1.bgColor, // Darkest
+    textColor: SECTION_CONST.SECTION1.textColor, // Soft light gray
   },
   {
     id: "section-2",
-    bgColor: "#143232", // Similar contrast to #2c3e50
-    textColor: "#ffffff",
+    bgColor: SECTION_CONST.SECTION2.bgColor, // Darkest
+    textColor: SECTION_CONST.SECTION2.textColor, // Soft light gray
   },
   {
     id: "section-3",
-    bgColor: "#245050", // Similar contrast to #34495e
-    textColor: "#ffffff",
+    bgColor: SECTION_CONST.SECTION3.bgColor, // Darkest
+    textColor: SECTION_CONST.SECTION3.textColor, // Soft light gray
   },
   {
     id: "section-4",
-    bgColor: "#5c7f7f", // Similar contrast to #7f8c8d
-    textColor: "#ffffff",
+    bgColor: SECTION_CONST.SECTION4.bgColor, // Darkest
+    textColor: SECTION_CONST.SECTION4.textColor, // Soft light gray
   },
   {
     id: "section-5",
-    bgColor: "#bcdada", // Similar contrast to #bdc3c7
-    textColor: "#1a2a2a", // Dark for contrast
+    bgColor: SECTION_CONST.SECTION5.bgColor, // Darkest
+    textColor: SECTION_CONST.SECTION5.textColor, // Soft light gray
   },
 ];
 
