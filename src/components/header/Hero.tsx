@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <section className="bg-bg-2">
+    <section className="bg-bg-1">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos,
       aperiam minus officiis expedita enim sed. Atque, architecto corrupti a
       iure sunt libero cum! Minus non necessitatibus, corrupti earum deleniti

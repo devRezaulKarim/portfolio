@@ -11,3 +11,7 @@ export type SocialType = {
   name: string;
   url: string;
 };
+export type NavLinkType = {
+  icon: FC<SVGProps<SVGSVGElement>>;
+  to: string;
+};
