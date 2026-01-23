@@ -89,3 +89,26 @@
 @utility code-text-ibm {
   @apply font-ibm text-[14px] leading-4.5 font-normal;
 }
+
+.social-links {
+  anchor-name: --social;
+  &::after {
+    content: "";
+    position-anchor: --social;
+    position: absolute;
+    bottom: anchor(bottom);
+    left: anchor(left);
+    right: anchor(right);
+    background-color: transparent;
+    height: 2px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+  }
+  a:hover span {
+    anchor-name: --social;
+  }
+
+  &:has(a:hover)::after {
+    background-color: #ff5200;
+  }
+}
