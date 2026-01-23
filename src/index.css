@@ -9,64 +9,83 @@
   --color-bg-2: #231c1a;
 }
 
+@utility container {
+  width: 100%;
+  @media (width >= 40rem /* 640px */) {
+    max-width: 40rem /* 640px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    max-width: 48rem /* 768px */;
+  }
+  @media (width >= 64rem /* 1024px */) {
+    max-width: 64rem /* 1024px */;
+  }
+  @media (width >= 80rem /* 1280px */) {
+    max-width: 80rem /* 1280px */;
+  }
+  @media (width >= 96rem /* 1536px */) {
+    max-width: 96rem /* 1536px */;
+  }
+  @apply mx-auto;
+}
 @utility bg-text-u {
-  @apply font-normal text-[117px] leading-33.5 font-u;
+  @apply font-u text-[117px] leading-33.5 font-normal;
 }
 
 @utility h1-text-u {
-  @apply font-normal text-[64px] leading-18 font-u;
+  @apply font-u text-[64px] leading-18 font-normal;
 }
 
 @utility h2-text-u {
-  @apply font-normal text-[32px] leading-9 font-u;
+  @apply font-u text-[32px] leading-9 font-normal;
 }
 
 @utility button-text-u {
-  @apply font-normal text-[20px] leading-6 font-u;
+  @apply font-u text-[20px] leading-6 font-normal;
 }
 
 @utility article-text-u {
-  @apply font-light text-[16px] leading-8 font-u;
+  @apply font-u text-[16px] leading-8 font-light;
 }
 
 @utility para-text-u {
-  @apply font-light text-[16px] leading-4.5 font-u;
+  @apply font-u text-[16px] leading-4.5 font-light;
 }
 
 @utility label-text-um {
-  @apply font-medium text-[14px] leading-4 font-u;
+  @apply font-u text-[14px] leading-4 font-medium;
 }
 
 @utility label-text-ul {
-  @apply font-light text-[14px] leading-4 font-u;
+  @apply font-u text-[14px] leading-4 font-light;
 }
 
 /* ================= IBM ================= */
 
 @utility number-text-ibm {
-  @apply font-medium text-[48px] leading-15.5 font-ibm;
+  @apply font-ibm text-[48px] leading-15.5 font-medium;
 }
 
 @utility h2-text-ibm {
-  @apply font-medium text-[32px] leading-10.5 font-ibm;
+  @apply font-ibm text-[32px] leading-10.5 font-medium;
 }
 
 @utility logo-text-ibm {
-  @apply font-medium text-[32px] leading-10.5 font-ibm;
+  @apply font-ibm text-[32px] leading-10.5 font-medium;
 }
 
 @utility menu-text-ibm {
-  @apply font-normal text-[24px] leading-8 font-ibm;
+  @apply font-ibm text-[24px] leading-8 font-normal;
 }
 
 @utility media-text-ibm {
-  @apply font-normal text-[16px] leading-5 font-ibm;
+  @apply font-ibm text-[16px] leading-5 font-normal;
 }
 
 @utility para-text-ibm {
-  @apply font-normal text-[16px] leading-5 font-ibm;
+  @apply font-ibm text-[16px] leading-5 font-normal;
 }
 
 @utility code-text-ibm {
-  @apply font-normal text-[14px] leading-4.5 font-ibm;
+  @apply font-ibm text-[14px] leading-4.5 font-normal;
 }
