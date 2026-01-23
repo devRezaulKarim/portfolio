@@ -29,11 +29,11 @@
   @apply mx-auto;
 }
 @utility bg-text-u {
-  @apply font-u text-[117px] leading-33.5 font-normal;
+  @apply font-u text-[100px] leading-33.5 font-normal;
 }
 
 @utility h1-text-u {
-  @apply font-u text-[64px] leading-18 font-normal;
+  @apply font-u text-[52px] leading-16 font-normal;
 }
 
 @utility h2-text-u {
@@ -83,11 +83,15 @@
 }
 
 @utility para-text-ibm {
-  @apply font-ibm text-[16px] leading-5 font-normal;
+  @apply font-ibm text-[16px] leading-6 font-normal;
 }
 
 @utility code-text-ibm {
   @apply font-ibm text-[14px] leading-4.5 font-normal;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .social-links {
