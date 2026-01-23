@@ -1,1 +1,72 @@
 @import "tailwindcss";
+
+@theme {
+  --font-u: Ubuntu, sans-serif;
+  --font-ibm: "IBM Plex Mono", monospace;
+  --color-primary: #ff5200;
+  --color-secondary: #ff9664;
+  --color-bg-1: #362d29;
+  --color-bg-2: #231c1a;
+}
+
+@utility bg-text-u {
+  @apply font-normal text-[117px] leading-33.5 font-u;
+}
+
+@utility h1-text-u {
+  @apply font-normal text-[64px] leading-18 font-u;
+}
+
+@utility h2-text-u {
+  @apply font-normal text-[32px] leading-9 font-u;
+}
+
+@utility button-text-u {
+  @apply font-normal text-[20px] leading-6 font-u;
+}
+
+@utility article-text-u {
+  @apply font-light text-[16px] leading-8 font-u;
+}
+
+@utility para-text-u {
+  @apply font-light text-[16px] leading-4.5 font-u;
+}
+
+@utility label-text-um {
+  @apply font-medium text-[14px] leading-4 font-u;
+}
+
+@utility label-text-ul {
+  @apply font-light text-[14px] leading-4 font-u;
+}
+
+/* ================= IBM ================= */
+
+@utility number-text-ibm {
+  @apply font-medium text-[48px] leading-15.5 font-ibm;
+}
+
+@utility h2-text-ibm {
+  @apply font-medium text-[32px] leading-10.5 font-ibm;
+}
+
+@utility logo-text-ibm {
+  @apply font-medium text-[32px] leading-10.5 font-ibm;
+}
+
+@utility menu-text-ibm {
+  @apply font-normal text-[24px] leading-8 font-ibm;
+}
+
+@utility media-text-ibm {
+  @apply font-normal text-[16px] leading-5 font-ibm;
+}
+
+@utility para-text-ibm {
+  @apply font-normal text-[16px] leading-5 font-ibm;
+}
+
+@utility code-text-ibm {
+  @apply font-normal text-[14px] leading-4.5 font-ibm;
+}
