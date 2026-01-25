@@ -1,6 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
-import { cn } from "../../lib/utils";
-import type { NavLinkType } from "../../types/types";
+import { cn } from "@/lib/utils";
+import type { NavLinkType } from "@/types/types";
 
 interface NavLinkProps extends NavLinkType {
   isActive: boolean;

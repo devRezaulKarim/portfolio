@@ -1,4 +1,5 @@
 import { MailIcon } from "lucide-react";
+import { ProfileCard } from "../ui/ProfileCard";
 
 export const Hero = () => {
   return (
@@ -12,7 +13,9 @@ export const Hero = () => {
           </div>
         </div>{" "}
         <div className="grid xl:grid-cols-11">
-          <div className="xl:col-span-4"></div>
+          <div className="xl:col-span-4">
+            <ProfileCard />
+          </div>
           <div className="xl:col-span-7 xl:space-y-6 2xl:space-y-8">
             <div>
               <span className="text-secondary code-text-ibm">&lt;h1&gt;</span>

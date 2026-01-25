@@ -1,4 +1,4 @@
-import { socials } from "../../lib/constants";
+import { socials } from "@/lib/constants";
 import { Social } from "../ui/Social";
 
 export const Socials = () => {

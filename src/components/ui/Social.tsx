@@ -1,4 +1,4 @@
-import type { SocialType } from "../../types/types";
+import type { SocialType } from "@/types/types";
 
 export const Social = ({ icon: Icon, name, url }: SocialType) => {
   return (

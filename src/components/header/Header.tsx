@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "../ui/Logo";
 import { Socials } from "./Socials";
-import { cn } from "../../lib/utils";
+import { cn } from "@/lib/utils";
 import { Navbar } from "./Navbar";
 
 export const Header = () => {

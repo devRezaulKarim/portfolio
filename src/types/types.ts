@@ -15,3 +15,7 @@ export type NavLinkType = {
   icon: FC<SVGProps<SVGSVGElement>>;
   to: string;
 };
+export type ContactDetailsType = {
+  icon: FC<SVGProps<SVGSVGElement>>;
+  name: string;
+};
