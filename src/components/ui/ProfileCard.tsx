@@ -1,17 +1,17 @@
-import user from "@/assets/user.png";
+import user from "@/assets/md-rezaul-karim.png";
 import { contactDetails } from "@/lib/constants";
 import { DownloadIcon } from "lucide-react";
 
 export const ProfileCard = () => {
   return (
-    <div className="profile-card-wrapper relative min-h-full max-w-4/5">
+    <div className="profile-card-wrapper relative min-h-full max-w-4/5 2xl:max-w-[70%]">
       <div className="profile-card-border-glow"></div>
       <div className="profile-card flex flex-col gap-8 px-6 py-10">
         <div className="flex flex-col items-center gap-4">
           <img
             src={user}
             alt="Profile picture"
-            className="border-primary size-24 rounded-full border-2"
+            className="border-primary size-24 rounded-full border-2 object-cover"
           />
           <div className="text-center text-white">
             <p className="logo-text-ibm">Rezaul Karim</p>
