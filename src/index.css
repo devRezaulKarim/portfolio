@@ -43,7 +43,7 @@
 }
 
 @utility button-text-u {
-  @apply font-u text-[20px] leading-6 font-normal;
+  @apply font-u text-[18px] leading-5 font-normal 2xl:text-[20px] 2xl:leading-6;
 }
 
 @utility article-text-u {
@@ -194,4 +194,58 @@ html {
 }
 .talk-btn:not(:hover) .talk-icon {
   anchor-name: --talk-button;
+}
+
+.profile-card,
+.profile-card-border-glow {
+  height: 100%;
+  width: 100%;
+  min-height: fit-content;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 150px 0;
+}
+.profile-card-border-glow {
+  overflow: hidden;
+  filter: blur(10px);
+}
+
+.profile-card:before,
+.profile-card-border-glow:before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  width: 99999px;
+  height: 99999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(
+    rgba(255, 255, 255, 0.1),
+    #ff5200,
+    rgba(255, 255, 255, 0.1) 25%
+  );
+  animation: rotate 4s linear infinite;
+}
+
+.profile-card:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 3px;
+  top: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background: #362d29;
+  border-radius: 147px 0;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
 }

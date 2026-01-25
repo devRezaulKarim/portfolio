@@ -12,7 +12,7 @@ export const Hero = () => {
             Developer
           </div>
         </div>{" "}
-        <div className="grid xl:grid-cols-11">
+        <div className="grid items-center xl:grid-cols-11">
           <div className="xl:col-span-4">
             <ProfileCard />
           </div>
