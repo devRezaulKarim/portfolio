@@ -8,10 +8,10 @@ import {
   BriefcaseIcon,
   GlobeIcon,
 } from "lucide-react";
-import Discord from "../social-icons/Discord";
-import Github from "../social-icons/Github";
-import { Linkedin } from "../social-icons/Linkedin";
-import Slack from "../social-icons/Slack";
+import Discord from "../custom-icons/Discord";
+import Github from "../custom-icons/Github";
+import { Linkedin } from "../custom-icons/Linkedin";
+import Slack from "../custom-icons/Slack";
 
 import type {
   SocialType,
