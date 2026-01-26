@@ -1,7 +1,6 @@
 import aboutBG from "@/assets/about-bg.svg";
 import about from "@/assets/Rezaul.png";
-import VerticalLine from "@/custom-icons/VerticalLine";
-import { MouseIcon } from "lucide-react";
+import { SectionTop } from "../ui/SectionTop";
 
 export const About = () => {
   return (
@@ -18,12 +17,8 @@ export const About = () => {
       id="about"
       className="py-20"
     >
-      <div className="flex flex-col items-center gap-2">
-        <MouseIcon className="text-primary size-10" />
-        <VerticalLine className="text-white" />
-      </div>
-
-      <div className="container my-25 grid grid-cols-11 items-center px-16">
+      <SectionTop />
+      <div className="container mt-15 grid grid-cols-11 items-center px-16">
         <div className="col-span-7 flex flex-col items-start gap-10">
           <div className="h1-text-u bg-bg-1 border-primary rounded-tl-4xl rounded-br-4xl border-2 px-10 py-4 text-white">
             About me
@@ -31,7 +26,7 @@ export const About = () => {
           <div className="bg-bg-1 rounded-4xl px-10 py-6">
             <span className="logo-text-ibm text-primary">Hello!</span>
             <p className="para-text-ibm mt-1 text-white">
-              My name is Sinan and I specialize in web developement that
+              My name is Rezaul Karim and I specialize in web developement that
               utilizes HTML, CSS, JS, and REACT etc. I am a highly motivated
               individual and eternal optimist dedicated to writing clear,
               concise, robust code that works. Striving to never stop learning

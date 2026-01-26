@@ -19,3 +19,14 @@ export type ContactDetailsType = {
   icon: FC<SVGProps<SVGSVGElement>>;
   name: string;
 };
+
+export type EnvironmentType = {
+  icon: FC<SVGProps<SVGSVGElement>>;
+  name: string;
+  stacks: string[];
+};
+export type TechType = {
+  icon: FC<SocialIconType>;
+  name: string;
+  color: string;
+};
