@@ -249,3 +249,20 @@ html {
     transform: translate(-50%, -50%) rotate(1turn);
   }
 }
+.mockup-wrapper {
+  perspective: 1200px;
+}
+
+.tablet-mock {
+  transform-style: preserve-3d;
+  transform: translateX(calc(-100% - 40px)) rotateY(25deg) rotateZ(-3deg);
+}
+
+.mobile-mock {
+  transform-style: preserve-3d;
+  transform: translateX(calc(100% + 40px)) rotateY(-25deg) rotateZ(3deg);
+}
+
+.mockup-wrapper .mockup {
+  filter: drop-shadow(0 20px 40px rgba(255, 255, 255, 0.25));
+}

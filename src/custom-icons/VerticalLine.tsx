@@ -22,8 +22,8 @@ export default function VerticalLine({
         x2="4.48382"
         y2="29.0522"
         stroke="currentColor"
-        stroke-width="2.12132"
-        stroke-linecap="round"
+        strokeWidth="2.12132"
+        strokeLinecap="round"
       />
       <line
         x1="4.48382"
@@ -31,8 +31,8 @@ export default function VerticalLine({
         x2="4.48382"
         y2="84.055"
         stroke="currentColor"
-        stroke-width="2.12132"
-        stroke-linecap="round"
+        strokeWidth="2.12132"
+        strokeLinecap="round"
       />
       <line
         x1="4.48382"
@@ -40,8 +40,8 @@ export default function VerticalLine({
         x2="4.48382"
         y2="10.718"
         stroke="currentColor"
-        stroke-width="2.12132"
-        stroke-linecap="round"
+        strokeWidth="2.12132"
+        strokeLinecap="round"
       />
       <line
         x1="4.48382"
@@ -49,8 +49,8 @@ export default function VerticalLine({
         x2="4.48382"
         y2="47.3865"
         stroke="currentColor"
-        stroke-width="2.12132"
-        stroke-linecap="round"
+        strokeWidth="2.12132"
+        strokeLinecap="round"
       />
       <line
         x1="4.48382"
@@ -58,8 +58,8 @@ export default function VerticalLine({
         x2="4.48382"
         y2="65.7207"
         stroke="currentColor"
-        stroke-width="2.12132"
-        stroke-linecap="round"
+        strokeWidth="2.12132"
+        strokeLinecap="round"
       />
       <rect
         y="95.8356"

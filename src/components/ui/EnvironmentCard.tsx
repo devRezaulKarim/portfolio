@@ -1,4 +1,5 @@
 import type { EnvironmentType } from "@/types/types";
+import { Fragment } from "react/jsx-runtime";
 
 export const EnvironmentCard = ({
   icon: Icon,
@@ -16,10 +17,10 @@ export const EnvironmentCard = ({
       <p className="menu-text-ibm text-bg-1">{name}</p>
       <ul className="para-text-ibm flex text-gray-700">
         {stacks.map((stack, i) => (
-          <>
+          <Fragment key={stack}>
             {i !== 0 && <span>-</span>}
-            <li key={stack}>{stack}</li>
-          </>
+            <li>{stack}</li>
+          </Fragment>
         ))}
       </ul>
     </div>
