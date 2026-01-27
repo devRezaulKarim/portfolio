@@ -1,6 +1,6 @@
 import type { CustomIconType } from "@/types/types";
 
-export default function CSS({
+export default function Mongo({
   className,
   width = 24,
   height = 24,
@@ -17,7 +17,9 @@ export default function CSS({
     >
       <path
         fill="currentColor"
-        d="m3 2l1.578 17.834L12 22l7.468-2.165L21 2zm13.3 14.722l-4.293 1.204H12l-4.297-1.204l-.297-3.167h2.108l.15 1.526l2.335.639l2.34-.64l.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506z"
+        fill-rule="evenodd"
+        d="M7.294 11.804c0-3.966 2.14-6.417 3.533-8.014C11.501 3.02 12 2.447 12 2c0 .447.5 1.019 1.172 1.79c1.394 1.597 3.534 4.048 3.534 8.014c0 4.326-2.75 6.95-4.077 7.765L12.37 22h-.707l-.29-2.43c-1.326-.813-4.079-3.437-4.079-7.766m4.064 6.7L12 9.06l.649 9.446l-.65.75z"
+        clip-rule="evenodd"
       />
     </svg>
   );

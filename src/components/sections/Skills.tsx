@@ -10,7 +10,7 @@ export const Skills = () => {
         backgroundImage: `
         url(${skillBG})
         `,
-        backgroundSize: "100%",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
@@ -36,7 +36,7 @@ export const Skills = () => {
             />
           ))}
         </div>
-        <div className="flex items-center justify-center gap-20">
+        <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-10">
           {techs.map((tech) => (
             <TechCard
               key={tech.name}

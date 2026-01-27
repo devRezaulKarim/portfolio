@@ -1,13 +1,13 @@
 import type { FC, SVGProps } from "react";
 
-export type SocialIconType = SVGProps<SVGSVGElement> & {
+export type CustomIconType = SVGProps<SVGSVGElement> & {
   className?: string;
   width?: number;
   height?: number;
 };
 
 export type SocialType = {
-  icon: FC<SocialIconType>;
+  icon: FC<CustomIconType>;
   name: string;
   url: string;
 };
@@ -26,7 +26,7 @@ export type EnvironmentType = {
   stacks: string[];
 };
 export type TechType = {
-  icon: FC<SocialIconType>;
+  icon: FC<CustomIconType>;
   name: string;
   color: string;
 };

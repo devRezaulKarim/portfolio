@@ -1,11 +1,11 @@
-import type { SocialIconType } from "@/types/types";
+import type { CustomIconType } from "@/types/types";
 
 export default function VerticalLine({
   className,
   width = 9,
   height = 100,
   ...rest
-}: SocialIconType) {
+}: CustomIconType) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

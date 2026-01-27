@@ -1,11 +1,11 @@
-import type { SocialIconType } from "../types/types";
+import type { CustomIconType } from "../types/types";
 
 export default function Slack({
   className,
   width = 20,
   height = 20,
   ...rest
-}: SocialIconType) {
+}: CustomIconType) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

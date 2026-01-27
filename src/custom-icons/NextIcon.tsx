@@ -1,6 +1,6 @@
 import type { CustomIconType } from "@/types/types";
 
-export default function CSS({
+export default function NextIcon({
   className,
   width = 24,
   height = 24,
@@ -17,7 +17,7 @@ export default function CSS({
     >
       <path
         fill="currentColor"
-        d="m3 2l1.578 17.834L12 22l7.468-2.165L21 2zm13.3 14.722l-4.293 1.204H12l-4.297-1.204l-.297-3.167h2.108l.15 1.526l2.335.639l2.34-.64l.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506z"
+        d="M17.664 17.65L10.26 8H8v8h2v-5.054l6.087 7.933a8 8 0 1 1 1.578-1.23M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10m2-10V8h2v4z"
       />
     </svg>
   );

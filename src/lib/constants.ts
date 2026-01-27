@@ -25,6 +25,12 @@ import HTML from "@/custom-icons/HTML";
 import CSS from "@/custom-icons/CSS";
 import JS from "@/custom-icons/JS";
 import ReactIcon from "@/custom-icons/React";
+import TS from "@/custom-icons/TS";
+import NextIcon from "@/custom-icons/NextIcon";
+import Express from "@/custom-icons/Express";
+import Mongo from "@/custom-icons/Mongo";
+import MySQL from "@/custom-icons/MySQL";
+import PostgreSQL from "@/custom-icons/PostgreSQL";
 
 export const socials: SocialType[] = [
   { icon: Linkedin, name: "Linkedin", url: "#" },
@@ -77,8 +83,38 @@ export const techs: TechType[] = [
     color: "#E7A020",
   },
   {
+    icon: TS,
+    name: "TS",
+    color: "#007ACC",
+  },
+  {
     icon: ReactIcon,
     name: "React",
     color: "#28A9E0",
+  },
+  {
+    icon: NextIcon,
+    name: "Next",
+    color: "#000000",
+  },
+  {
+    icon: Express,
+    name: "Express",
+    color: "#000000",
+  },
+  {
+    icon: Mongo,
+    name: "MongoDB",
+    color: "#3f9143",
+  },
+  {
+    icon: MySQL,
+    name: "MySql",
+    color: "#00678c",
+  },
+  {
+    icon: PostgreSQL,
+    name: "PostgreSQL",
+    color: "#336791",
   },
 ];
