@@ -4,7 +4,12 @@ import mobileMockup from "@/assets/mobile-mockup.png";
 import workBG from "@/assets/works-bg.png";
 
 import { SectionTop } from "../ui/SectionTop";
-import { MousePointer2Icon } from "lucide-react";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  MousePointer2Icon,
+} from "lucide-react";
+import { WorkNavBtn } from "../ui/WorkNavBtn";
 
 export const Works = () => {
   return (
@@ -18,7 +23,7 @@ export const Works = () => {
       className="after:bg-bg-2/95 relative isolate py-20 after:absolute after:inset-0 after:-z-10"
     >
       <SectionTop />
-      <div className="container mt-15">
+      <div className="container mt-15 px-16">
         <div className="flex flex-col items-center">
           <span className="text-primary h1-text-u underline decoration-3 underline-offset-12">
             Works
@@ -27,7 +32,13 @@ export const Works = () => {
             I had the pleasure of working with these awesome projects
           </p>
         </div>
-        <div className="mt-10 flex flex-col items-center justify-center">
+        <div className="relative mt-10 flex flex-col items-center justify-center">
+          <WorkNavBtn className="left-0">
+            <ChevronLeftIcon className="size-8" />
+          </WorkNavBtn>
+          <WorkNavBtn className="right-0">
+            <ChevronRightIcon className="size-8" />
+          </WorkNavBtn>
           <div className="mockup-wrapper relative w-sm">
             <div className="tablet-mock absolute bottom-0 left-0 w-44">
               <img src={tabletMockup} alt="" className="mockup" />
