@@ -10,6 +10,29 @@ import {
   MousePointer2Icon,
 } from "lucide-react";
 import { WorkNavBtn } from "../ui/WorkNavBtn";
+import { WorkImages } from "../ui/WorkImages";
+
+const tabletWorkImg: { src: string; alt: string }[] = [
+  { src: "https://picsum.photos/id/111/200/300", alt: "car" },
+  { src: "https://picsum.photos/id/222/200/300", alt: "hill" },
+  { src: "https://picsum.photos/id/50/200/300", alt: "bird" },
+  { src: "https://picsum.photos/id/60/200/300", alt: "desk" },
+  { src: "https://picsum.photos/id/70/200/300", alt: "road" },
+];
+const desktopWorkImg: { src: string; alt: string }[] = [
+  { src: "https://picsum.photos/id/111/200/300", alt: "car desktop" },
+  { src: "https://picsum.photos/id/222/200/300", alt: "hill desktop" },
+  { src: "https://picsum.photos/id/50/200/300", alt: "bird desktop" },
+  { src: "https://picsum.photos/id/60/200/300", alt: "desk desktop" },
+  { src: "https://picsum.photos/id/70/200/300", alt: "road desktop" },
+];
+const mobileWorkImg: { src: string; alt: string }[] = [
+  { src: "https://picsum.photos/id/111/200/300", alt: "car mobile" },
+  { src: "https://picsum.photos/id/222/200/300", alt: "hill mobile" },
+  { src: "https://picsum.photos/id/50/200/300", alt: "bird mobile" },
+  { src: "https://picsum.photos/id/60/200/300", alt: "desk mobile" },
+  { src: "https://picsum.photos/id/70/200/300", alt: "road mobile" },
+];
 
 export const Works = () => {
   return (
@@ -42,129 +65,27 @@ export const Works = () => {
           <div className="mockup-wrapper relative w-sm">
             <div className="tablet-mock absolute bottom-0 left-0 w-44">
               <img src={tabletMockup} alt="" className="mockup" />
-              <div className="absolute top-2 z-[-1] max-w-full overflow-hidden">
-                <div className="flex items-center">
-                  <div className="h-58 w-45 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-58 w-45 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-58 w-45 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-58 w-45 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-58 w-45 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
+              <WorkImages
+                heightClass="h-58"
+                widthClass="w-45"
+                images={tabletWorkImg}
+              />
             </div>
             <div className="desktop-mock relative isolate w-full">
               <img src={desktopMockup} alt="" className="mockup" />
-              <div className="absolute top-2 z-[-1] max-w-full overflow-hidden">
-                <div className="flex items-center">
-                  <div className="h-52 w-sm shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-52 w-sm shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-52 w-sm shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-52 w-sm shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-52 w-sm shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
+              <WorkImages
+                heightClass="h-52"
+                widthClass="w-sm"
+                images={desktopWorkImg}
+              />
             </div>
             <div className="mobile-mock absolute right-0 bottom-0 w-28">
               <img src={mobileMockup} alt="" className="mockup" />
-              <div className="absolute top-1 z-[-1] max-w-full overflow-hidden">
-                <div className="flex items-center">
-                  <div className="h-52 w-28.5 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-52 w-28.5 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-52 w-28.5 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-52 w-28.5 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                  <div className="h-52 w-28.5 shrink-0 px-2">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://picsum.photos/seed/picsum/365/250"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
+              <WorkImages
+                heightClass="h-52"
+                widthClass="w-28.5"
+                images={mobileWorkImg}
+              />
             </div>
           </div>
           <div className="group relative mt-8">
