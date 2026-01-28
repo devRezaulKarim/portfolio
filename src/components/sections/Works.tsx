@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { WorkNavBtn } from "../ui/WorkNavBtn";
 import { WorkImages } from "../ui/WorkImages";
+import { useState } from "react";
 
 const tabletWorkImg: { src: string; alt: string }[] = [
   { src: "https://picsum.photos/id/111/200/300", alt: "car" },
@@ -35,6 +36,14 @@ const mobileWorkImg: { src: string; alt: string }[] = [
 ];
 
 export const Works = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev > 0 ? prev - 1 : tabletWorkImg.length - 1));
+  };
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev < tabletWorkImg.length - 1 ? prev + 1 : 0));
+  };
   return (
     <section
       style={{
@@ -56,35 +65,42 @@ export const Works = () => {
           </p>
         </div>
         <div className="relative mt-10 flex flex-col items-center justify-center">
-          <WorkNavBtn className="left-0">
+          <WorkNavBtn onClick={handlePrev} className="left-0">
             <ChevronLeftIcon className="size-8" />
           </WorkNavBtn>
-          <WorkNavBtn className="right-0">
+          <WorkNavBtn onClick={handleNext} className="right-0">
             <ChevronRightIcon className="size-8" />
           </WorkNavBtn>
           <div className="mockup-wrapper relative w-sm">
             <div className="tablet-mock absolute bottom-0 left-0 w-44">
-              <img src={tabletMockup} alt="" className="mockup" />
+              <img
+                src={tabletMockup}
+                alt=""
+                className="mockup h-full w-full object-cover"
+              />
               <WorkImages
                 heightClass="h-58"
-                widthClass="w-45"
+                widthClass="w-43"
                 images={tabletWorkImg}
+                activeIndex={activeIndex}
               />
             </div>
             <div className="desktop-mock relative isolate w-full">
-              <img src={desktopMockup} alt="" className="mockup" />
+              <img src={desktopMockup} alt="" className="mockup w-[101%]" />
               <WorkImages
-                heightClass="h-52"
+                heightClass="h-54"
                 widthClass="w-sm"
                 images={desktopWorkImg}
+                activeIndex={activeIndex}
               />
             </div>
             <div className="mobile-mock absolute right-0 bottom-0 w-28">
               <img src={mobileMockup} alt="" className="mockup" />
               <WorkImages
-                heightClass="h-52"
-                widthClass="w-28.5"
+                heightClass="h-54"
+                widthClass="w-26.5"
                 images={mobileWorkImg}
+                activeIndex={activeIndex}
               />
             </div>
           </div>
