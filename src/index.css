@@ -91,6 +91,14 @@
 @utility code-text-ibm {
   @apply font-ibm text-[14px] leading-4.5 font-normal;
 }
+@utility scrollbar-hidden {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+}
 
 html {
   scroll-behavior: smooth;
