@@ -31,8 +31,9 @@ export const Hero = () => {
             <div>
               <span className="text-secondary code-text-ibm">&lt;p&gt;</span>
               <p className="para-text-ibm pl-6 text-white">
-                I help business grow by crafting amazing web experiences. If
-                you’re looking for a developer that likes to get stuff done,
+                I help businesses build modern, responsive web interfaces with a
+                strong focus on performance and usability. Turning complex ideas
+                into clean, scalable UI that supports real growth.
               </p>
               <span className="text-secondary code-text-ibm">&lt;/p&gt;</span>
             </div>

@@ -13,7 +13,7 @@ export const Contact = () => {
             Contact
           </span>
           <p className="para-text-ibm mt-4 text-white">
-            I’m currently available for freelance work
+            Got an idea? I’d love to hear from you!
           </p>
         </div>
         <div className="mt-10 flex items-center justify-center">
