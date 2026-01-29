@@ -12,21 +12,21 @@
 }
 
 @utility container {
-  width: 100%;
+  width: 95%;
   @media (width >= 40rem /* 640px */) {
-    max-width: 40rem /* 640px */;
+    max-width: 36rem /* 576px */;
   }
   @media (width >= 48rem /* 768px */) {
-    max-width: 48rem /* 768px */;
+    max-width: 44rem /* 704px */;
   }
   @media (width >= 64rem /* 1024px */) {
-    max-width: 64rem /* 1024px */;
+    max-width: 60rem /* 960px */;
   }
   @media (width >= 80rem /* 1280px */) {
-    max-width: 80rem /* 1280px */;
+    max-width: 75rem /* 1200px */;
   }
   @media (width >= 96rem /* 1536px */) {
-    max-width: 96rem /* 1536px */;
+    max-width: 90rem /* 1440px */;
   }
   @apply mx-auto;
 }

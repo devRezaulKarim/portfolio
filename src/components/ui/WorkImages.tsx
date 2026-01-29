@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useId } from "react";
+import { v4 as uuid } from "uuid";
 
 interface WorkImagesProps {
   heightClass: string;
@@ -14,7 +14,6 @@ export const WorkImages = ({
   images,
   activeIndex,
 }: WorkImagesProps) => {
-  const key = useId();
   return (
     <div
       className={cn(
@@ -27,7 +26,7 @@ export const WorkImages = ({
         className="flex items-center duration-300"
       >
         {images.map((img) => (
-          <div key={key} className={cn("w-full shrink-0", heightClass)}>
+          <div key={uuid()} className={cn("w-full shrink-0", heightClass)}>
             <img
               className="h-full w-full rounded-xl object-cover"
               src={img.src}
