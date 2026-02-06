@@ -3,6 +3,18 @@ import { environments, techs } from "@/lib/constants";
 import { EnvironmentCard } from "../ui/EnvironmentCard";
 import { TechCard } from "../ui/TechCard";
 import { SectionName } from "../ui/SectionName";
+import { motion } from "motion/react";
+
+const skillsContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
 
 export const Skills = () => {
   return (
@@ -31,20 +43,31 @@ export const Skills = () => {
               key={env.name}
               icon={env.icon}
               name={env.name}
-              stacks={env.stacks} idx={idx}
+              stacks={env.stacks}
+              idx={idx}
             />
           ))}
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-10">
-          {techs.map((tech) => (
+        <motion.div
+          variants={skillsContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
+          className="flex flex-wrap items-center justify-center gap-x-20 gap-y-10"
+        >
+          {techs.map((tech, idx) => (
             <TechCard
               key={tech.name}
               icon={tech.icon}
               name={tech.name}
               color={tech.color}
+              idx={idx + 1}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

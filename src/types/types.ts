@@ -30,4 +30,5 @@ export type TechType = {
   icon: FC<CustomIconType>;
   name: string;
   color: string;
+  idx: number;
 };
