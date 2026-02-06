@@ -15,9 +15,9 @@ export const Skills = () => {
         backgroundPosition: "center",
       }}
       id="skills"
-      className="after:bg-bg-1/90 relative isolate py-20 after:absolute after:inset-0 after:-z-10"
+      className="after:bg-bg-1/90 relative isolate py-8 after:absolute after:inset-0 after:-z-10 sm:py-20"
     >
-      <div className="container px-16">
+      <div className="container px-6 sm:px-16">
         <div className="flex flex-col items-center">
           <span className="text-primary h1-text-u underline decoration-3 underline-offset-12">
             &lt;Skills/&gt;
@@ -26,7 +26,7 @@ export const Skills = () => {
             I am striving to never stop learning and improving
           </p>
         </div>
-        <div className="my-16 flex flex-wrap items-center justify-center gap-20">
+        <div className="my-16 flex flex-wrap items-center justify-center gap-10 sm:gap-20">
           {environments.map((env) => (
             <EnvironmentCard
               key={env.name}

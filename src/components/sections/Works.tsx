@@ -52,10 +52,10 @@ export const Works = () => {
         backgroundPosition: "left top",
       }}
       id="works"
-      className="after:bg-bg-2/95 relative isolate py-20 after:absolute after:inset-0 after:-z-10"
+      className="after:bg-bg-2/95 relative isolate py-8 after:absolute after:inset-0 after:-z-10 sm:py-20"
     >
       <SectionTop />
-      <div className="container mt-15 px-16">
+      <div className="container mt-15 px-6 sm:px-16">
         <div className="flex flex-col items-center">
           <span className="text-primary h1-text-u underline decoration-3 underline-offset-12">
             Works

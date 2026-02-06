@@ -5,7 +5,7 @@ export const TechCard = ({ color, icon: Icon, name }: TechType) => {
     <div className="flex flex-col items-center gap-6">
       <div
         style={{ backgroundColor: color }}
-        className="flex size-35 items-center justify-center rounded-full"
+        className="flex size-24 items-center justify-center rounded-full sm:size-35"
       >
         <Icon className="size-16 text-white" />
       </div>
