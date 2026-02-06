@@ -5,7 +5,21 @@ import { SectionName } from "../ui/SectionName";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="bg-bg-1 py-20">
+    <section
+      style={{
+        backgroundImage: `linear-gradient(
+      135deg,
+      transparent 0px,
+      transparent 10px,
+      rgba(255, 82, 0, 0.1) 2px,
+      rgba(255, 82, 0, 0.1) 12px,
+      transparent 12px
+    )`,
+        backgroundSize: "28px 28px",
+      }}
+      id="contact"
+      className="bg-bg-1 py-20"
+    >
       <div className="container px-6 sm:px-16">
         <div className="flex flex-col items-center space-y-8 text-center sm:space-y-6">
           <SectionName name="Contact" />
