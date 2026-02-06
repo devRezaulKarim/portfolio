@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 import user from "@/assets/md-rezaul-karim.png";
 import { contactDetails } from "@/lib/constants";
 import { DownloadIcon } from "lucide-react";
@@ -42,12 +44,23 @@ export const ProfileCard = () => {
             ))}
           </ul>
         </div>
-        <a
+        <motion.a
           href="#"
-          className="button-text-u flex w-fit items-center gap-4 rounded-full bg-white px-6 py-3"
+          className="font-u hover:text-primary bg-bg-2 relative flex w-fit items-center gap-4 rounded-full px-6 py-3 text-base text-white transition-colors duration-300"
+          whileHover={{
+            rotateX: 15,
+            rotateY: 8,
+            boxShadow: "0px 8px 20px rgba(255, 82, 0, 0.7)",
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
         >
-          Download Resume <DownloadIcon className="size-5" />
-        </a>
+          Download Resume <DownloadIcon className="size-4" />
+          <span className="via-primary absolute inset-x-0 bottom-px mx-auto h-px w-3/4 bg-linear-to-r from-transparent to-transparent" />
+          <span className="via-primary absolute inset-x-0 bottom-px mx-auto h-1 bg-linear-to-r from-transparent to-transparent opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100" />
+        </motion.a>
       </div>
       <div
         aria-hidden="true"
@@ -90,8 +103,8 @@ export const ProfileCard = () => {
             ))}
           </ul>
         </div>
-        <span className="button-text-u flex w-fit items-center gap-4 rounded-full bg-white px-6 py-3">
-          Download Resume <DownloadIcon className="size-5" />
+        <span className="font-u flex w-fit items-center gap-4 rounded-full bg-white px-6 py-3 text-base">
+          Download Resume <DownloadIcon className="size-4" />
         </span>
       </div>
     </div>
