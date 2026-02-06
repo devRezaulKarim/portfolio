@@ -40,7 +40,7 @@ export const socials: SocialType[] = [
 ];
 
 export const navLinks: NavLinkType[] = [
-  { icon: LayoutGridIcon, to: "#" },
+  { icon: LayoutGridIcon, to: "#hero" },
   { icon: UserIcon, to: "#about" },
   { icon: CodeIcon, to: "#skills" },
   { icon: MonitorIcon, to: "#works" },

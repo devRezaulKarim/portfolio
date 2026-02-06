@@ -1,12 +1,10 @@
 import { motion } from "motion/react";
 
-import type { Dispatch, SetStateAction } from "react";
 import { cn } from "@/lib/utils";
 import type { NavLinkType } from "@/types/types";
 
 interface NavLinkProps extends NavLinkType {
   isActive: boolean;
-  setIsActive: Dispatch<SetStateAction<string>>;
 }
 const itemVariants = {
   hidden: { opacity: 0, filter: "blur(20px)", y: -10 },
@@ -20,17 +18,11 @@ const itemVariants = {
     },
   },
 };
-export const NavLink = ({
-  icon: Icon,
-  to,
-  isActive,
-  setIsActive,
-}: NavLinkProps) => {
+export const NavLink = ({ icon: Icon, to, isActive }: NavLinkProps) => {
   return (
     <motion.a
       variants={itemVariants}
       href={to}
-      onClick={() => setIsActive(to)}
       className={cn(
         "relative z-10 rounded-full p-3 transition-colors duration-300",
         isActive ? "active text-neutral-300" : "text-primary",

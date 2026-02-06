@@ -8,7 +8,7 @@ export const EnvironmentCard = ({
   stacks,
   idx,
 }: EnvironmentType) => {
-  const isOdd = idx % 2 !== 0;
+  const isOdd = idx ?? 1 % 2 !== 0;
   return (
     <motion.div
       initial={{

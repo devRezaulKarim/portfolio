@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
-import { useState } from "react";
 import { navLinks } from "@/lib/constants";
 import { NavLink } from "../ui/NavLink";
+import { useScrollSpy } from "@/hooks/isActive";
 
 const navVariants = {
   hidden: { opacity: 0 },
@@ -14,7 +14,9 @@ const navVariants = {
 };
 
 export const Navbar = () => {
-  const [isActive, setIsActive] = useState("#");
+  const activeId = useScrollSpy(
+    navLinks.map((link) => link.to.replace("#", "")),
+  );
   return (
     <div
       style={{ top: "calc(100% + 48px)" }}
@@ -33,8 +35,7 @@ export const Navbar = () => {
             key={link.to}
             icon={link.icon}
             to={link.to}
-            isActive={link.to === isActive}
-            setIsActive={setIsActive}
+            isActive={link.to === activeId}
           />
         ))}
       </motion.nav>

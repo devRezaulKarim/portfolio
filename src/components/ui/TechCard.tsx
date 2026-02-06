@@ -20,7 +20,7 @@ export const TechCard = ({ color, icon: Icon, name, idx }: TechType) => {
     <motion.div
       variants={itemVariants}
       className="flex flex-col items-center gap-6"
-      style={{ zIndex: idx * -1 }}
+      style={{ zIndex: idx ?? 1 * -1 }}
     >
       <div
         style={{ backgroundColor: color }}

@@ -24,11 +24,11 @@ export type EnvironmentType = {
   icon: FC<SVGProps<SVGSVGElement>>;
   name: string;
   stacks: string[];
-  idx: number;
+  idx?: number;
 };
 export type TechType = {
   icon: FC<CustomIconType>;
   name: string;
   color: string;
-  idx: number;
+  idx?: number;
 };

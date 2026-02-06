@@ -43,6 +43,7 @@ export const Hero = () => {
 
   return (
     <section
+      id="hero"
       ref={ref}
       style={{
         backgroundImage: `radial-gradient(circle at 0.5px 0.5px, rgba(255, 82, 0, 0.3) 0.5px, transparent 0)`,
