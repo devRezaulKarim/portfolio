@@ -38,7 +38,7 @@ export const EnvironmentCard = ({
     >
       <Icon className="text-bg-1 size-8" />
       <p className="menu-text-ibm text-bg-1">{name}</p>
-      <ul className="para-text-ibm flex text-gray-700">
+      <ul className="para-text-ibm flex text-gray-600">
         {stacks.map((stack, i) => (
           <Fragment key={stack}>
             {i !== 0 && <span>-</span>}
