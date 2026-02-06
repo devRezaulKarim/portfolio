@@ -1,9 +1,38 @@
 import aboutBG from "@/assets/about-bg.svg";
 import about from "@/assets/Rezaul.png";
+import {
+  motion,
+  useMotionTemplate,
+  useScroll,
+  useTransform,
+} from "motion/react";
+import { useRef } from "react";
 
 export const About = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const translateProfileImage = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [200, -200],
+  );
+  const imgOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.5, 0.8, 1],
+    [0, 0, 1, 0, 0],
+  );
+  const textBlur = useTransform(
+    scrollYProgress,
+    [0, 0.15, 0.35, 0.5, 0.65, 0.85, 1],
+    [10, 5, 0, 0, 0, 5, 10],
+  );
   return (
     <section
+      ref={ref}
       style={{
         backgroundImage: `
         url(${aboutBG}),
@@ -22,7 +51,12 @@ export const About = () => {
           About me
         </div>
         <div className="grid grid-cols-11 items-center">
-          <div className="col-span-7 flex flex-col items-start gap-10">
+          <motion.div
+            style={{
+              filter: useMotionTemplate`blur(${textBlur}px)`,
+            }}
+            className="col-span-7 flex flex-col items-start gap-10"
+          >
             <div className="bg-bg-1 rounded-4xl px-10 py-6">
               <span className="logo-text-ibm text-primary">Hello!</span>
               <p className="para-text-ibm mt-1 text-sm text-white">
@@ -44,14 +78,17 @@ export const About = () => {
                 that make life easier for your users.
               </p>
             </div>
-          </div>
-          <div className="col-span-4">
+          </motion.div>
+          <motion.div
+            style={{ y: translateProfileImage, opacity: imgOpacity }}
+            className="col-span-4"
+          >
             <img
               className="ml-auto aspect-[1/1.1] max-w-4/5 rounded-2xl object-cover"
               src={about}
               alt=""
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
