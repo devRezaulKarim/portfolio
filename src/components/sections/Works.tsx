@@ -71,7 +71,7 @@ export const Works = () => {
           <WorkNavBtn onClick={handleNext} className="right-0">
             <ChevronRightIcon className="size-8" />
           </WorkNavBtn>
-          <div className="mockup-wrapper relative w-sm">
+          <div className="mockup-wrapper relative hidden w-sm lg:block">
             <div className="tablet-mock absolute bottom-0 left-0 w-44">
               <img
                 src={tabletMockup}

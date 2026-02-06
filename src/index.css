@@ -31,11 +31,11 @@
   @apply mx-auto;
 }
 @utility bg-text-u {
-  @apply font-u font-normal xl:text-[64px] xl:leading-25 2xl:text-[100px] 2xl:leading-33.5;
+  @apply font-u font-normal text-[48px] leading-20 xl:text-[64px] xl:leading-25 2xl:text-[100px] 2xl:leading-33.5;
 }
 
 @utility h1-text-u {
-  @apply font-u font-normal xl:text-[40px] xl:leading-12 2xl:text-[52px] 2xl:leading-16;
+  @apply font-u font-normal text-[32px] leading-10 xl:text-[40px] xl:leading-12 2xl:text-[52px] 2xl:leading-16;
 }
 
 @utility h2-text-u {

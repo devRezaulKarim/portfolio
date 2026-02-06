@@ -26,7 +26,7 @@ export const Skills = () => {
             I am striving to never stop learning and improving
           </p>
         </div>
-        <div className="my-16 flex items-center justify-center gap-20">
+        <div className="my-16 flex flex-wrap items-center justify-center gap-20">
           {environments.map((env) => (
             <EnvironmentCard
               key={env.name}

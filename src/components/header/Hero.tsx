@@ -47,7 +47,7 @@ export const Hero = () => {
       }}
       className="bg-bg-1"
     >
-      <div className="container px-16 py-20">
+      <div className="container px-6 py-6 sm:px-16 sm:py-20">
         <div className="grid xl:grid-cols-11">
           <div className="xl:col-span-4" />
           <motion.div
@@ -56,7 +56,7 @@ export const Hero = () => {
             transition={{
               duration: 0.3,
             }}
-            className="bg-text-u text-primary text-left xl:col-span-7"
+            className="bg-text-u text-primary text-center xl:col-span-7 xl:text-left"
           >
             Developer
           </motion.div>
@@ -74,7 +74,7 @@ export const Hero = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="xl:col-span-7 xl:space-y-6 2xl:space-y-8"
+            className="pt-20 sm:pt-0 xl:col-span-7 xl:space-y-6 2xl:space-y-8"
           >
             <motion.div variants={itemVariants}>
               <span className="text-secondary code-text-ibm">&lt;h1&gt;</span>
@@ -99,13 +99,12 @@ export const Hero = () => {
             <motion.div variants={itemVariants}>
               <a
                 href="#contact"
-                className="text-primary h2-text-ibm talk-btn ml-4 flex w-fit items-stretch py-1 xl:pr-2 xl:pl-3 2xl:pr-3 2xl:pl-4"
+                className="text-primary h2-text-ibm talk-btn ml-6 flex w-fit items-center py-1 pr-2 pl-3 sm:ml-4 sm:items-stretch xl:pr-2 xl:pl-3 2xl:pr-3 2xl:pl-4"
               >
-                <span className="xl:mr-3 2xl:mr-4">let’s talk</span>
+                <span className="mr-2 xl:mr-3 2xl:mr-4">let’s talk</span>
                 <span className="talk-icon inline-flex items-center justify-center p-2">
-                  <MailIcon className="xl:size-4.5 2xl:size-6" />
+                  <MailIcon className="size-4 xl:size-4.5 2xl:size-6" />
                 </span>
-                <span className="talk-bubble"></span>
               </a>
             </motion.div>
           </motion.div>

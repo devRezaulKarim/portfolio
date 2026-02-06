@@ -20,7 +20,7 @@ export const ProfileCard = () => {
       transition={{
         duration: 0.5,
       }}
-      className="profile-card-wrapper relative min-h-full max-w-4/5 2xl:max-w-[70%]"
+      className="profile-card-wrapper relative min-h-full sm:max-w-4/5 2xl:max-w-[70%]"
     >
       <div className="profile-card-border-glow"></div>
       <div className="profile-card flex flex-col gap-8 px-6 py-10">
