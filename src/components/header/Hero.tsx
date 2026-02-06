@@ -1,6 +1,7 @@
 import { MailIcon } from "lucide-react";
 import { ProfileCard } from "../ui/ProfileCard";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -17,8 +18,21 @@ const itemVariants = {
 };
 
 export const Hero = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const translateProfileCard = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [200, -200],
+  );
+
   return (
     <section
+      ref={ref}
       style={{
         backgroundImage: `radial-gradient(circle at 0.5px 0.5px, rgba(255, 82, 0, 0.3) 0.5px, transparent 0)`,
         backgroundSize: "12px 12px",
@@ -40,9 +54,14 @@ export const Hero = () => {
           </motion.div>
         </div>{" "}
         <div className="grid items-center xl:grid-cols-11">
-          <div className="xl:col-span-4">
+          <motion.div
+            style={{
+              y: translateProfileCard,
+            }}
+            className="xl:col-span-4"
+          >
             <ProfileCard />
-          </div>
+          </motion.div>
           <motion.div
             variants={containerVariants}
             initial="hidden"
