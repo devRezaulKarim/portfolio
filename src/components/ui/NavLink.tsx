@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 import type { Dispatch, SetStateAction } from "react";
 import { cn } from "@/lib/utils";
 import type { NavLinkType } from "@/types/types";
@@ -6,7 +8,10 @@ interface NavLinkProps extends NavLinkType {
   isActive: boolean;
   setIsActive: Dispatch<SetStateAction<string>>;
 }
-
+const itemVariants = {
+  hidden: { opacity: 0, filter: "blur(20px)", y: -10 },
+  visible: { opacity: 1, filter: "blur(0px)", y: 0 },
+};
 export const NavLink = ({
   icon: Icon,
   to,
@@ -14,7 +19,8 @@ export const NavLink = ({
   setIsActive,
 }: NavLinkProps) => {
   return (
-    <a
+    <motion.a
+      variants={itemVariants}
       href={to}
       onClick={() => setIsActive(to)}
       className={cn(
@@ -23,6 +29,6 @@ export const NavLink = ({
       )}
     >
       <Icon className="size-5" />
-    </a>
+    </motion.a>
   );
 };

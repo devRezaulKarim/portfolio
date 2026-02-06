@@ -1,6 +1,17 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 import { navLinks } from "@/lib/constants";
 import { NavLink } from "../ui/NavLink";
+
+const navVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState("#");
@@ -11,7 +22,12 @@ export const Navbar = () => {
     >
       <div className="bubble active"></div>
       <div className="bubble hover"></div>
-      <nav className="nav flex flex-col gap-1 p-1">
+      <motion.nav
+        variants={navVariants}
+        initial="hidden"
+        animate="visible"
+        className="nav flex flex-col gap-1 p-1"
+      >
         {navLinks.map((link) => (
           <NavLink
             key={link.to}
@@ -21,7 +37,7 @@ export const Navbar = () => {
             setIsActive={setIsActive}
           />
         ))}
-      </nav>
+      </motion.nav>
     </div>
   );
 };
