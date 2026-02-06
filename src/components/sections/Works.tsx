@@ -3,7 +3,6 @@ import tabletMockup from "@/assets/tablet-mockup.png";
 import mobileMockup from "@/assets/mobile-mockup.png";
 import workBG from "@/assets/works-bg.png";
 
-import { SectionTop } from "../ui/SectionTop";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -12,6 +11,7 @@ import {
 import { WorkNavBtn } from "../ui/WorkNavBtn";
 import { WorkImages } from "../ui/WorkImages";
 import { useState } from "react";
+import { SectionName } from "../ui/SectionName";
 
 const tabletWorkImg: { src: string; alt: string }[] = [
   { src: "https://picsum.photos/id/111/200/300", alt: "car" },
@@ -52,19 +52,16 @@ export const Works = () => {
         backgroundPosition: "left top",
       }}
       id="works"
-      className="after:bg-bg-2/95 relative isolate py-8 after:absolute after:inset-0 after:-z-10 sm:py-20"
+      className="after:bg-bg-2/95 relative isolate py-20 after:absolute after:inset-0 after:-z-10"
     >
-      <SectionTop />
-      <div className="container mt-15 px-6 sm:px-16">
-        <div className="flex flex-col items-center">
-          <span className="text-primary h1-text-u underline decoration-3 underline-offset-12">
-            Works
-          </span>
-          <p className="para-text-ibm mt-4 text-white">
+      <div className="container px-6 sm:px-16">
+        <div className="flex flex-col items-center space-y-8 text-center sm:space-y-6">
+          <SectionName name="Works" />
+          <p className="para-text-ibm text-neutral-300">
             I had the pleasure of working with these awesome projects
           </p>
         </div>
-        <div className="relative mt-10 flex flex-col items-center justify-center">
+        <div className="relative mt-16 flex flex-col items-center justify-center">
           <WorkNavBtn onClick={handlePrev} className="left-0">
             <ChevronLeftIcon className="size-8" />
           </WorkNavBtn>

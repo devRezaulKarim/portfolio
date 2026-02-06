@@ -17,7 +17,7 @@ export const Input = ({ label, id, required, ...props }: InputProps) => {
 
       <input
         id={id}
-        className="border-primary para-text-u border-b-2 bg-transparent py-1 text-white outline-0"
+        className="border-primary para-text-u border-b-2 bg-transparent py-1 text-neutral-300 outline-0"
         required={required}
         {...props}
       />

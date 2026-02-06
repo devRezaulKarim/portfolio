@@ -31,11 +31,11 @@
   @apply mx-auto;
 }
 @utility bg-text-u {
-  @apply font-u font-normal text-[48px] leading-20 xl:text-[64px] xl:leading-25 2xl:text-[100px] 2xl:leading-33.5;
+  @apply font-u text-[48px] leading-20 font-normal xl:text-[64px] xl:leading-25 2xl:text-[100px] 2xl:leading-33.5;
 }
 
 @utility h1-text-u {
-  @apply font-u font-normal text-[32px] leading-10 xl:text-[40px] xl:leading-12 2xl:text-[52px] 2xl:leading-16;
+  @apply font-u text-[32px] leading-10 font-normal xl:text-[40px] xl:leading-12 2xl:text-[52px] 2xl:leading-16;
 }
 
 @utility h2-text-u {
@@ -73,7 +73,7 @@
 }
 
 @utility logo-text-ibm {
-  @apply font-ibm font-medium xl:text-[24px] xl:leading-8 2xl:text-[32px] 2xl:leading-10.5;
+  @apply font-ibm text-[22px] leading-7 font-medium xl:text-[24px] xl:leading-8 2xl:text-[32px] 2xl:leading-10.5;
 }
 
 @utility menu-text-ibm {
@@ -85,7 +85,7 @@
 }
 
 @utility para-text-ibm {
-  @apply font-ibm text-[16px] leading-6 font-normal;
+  @apply font-ibm text-[14px] leading-5 font-normal sm:text-[16px] sm:leading-6;
 }
 
 @utility code-text-ibm {

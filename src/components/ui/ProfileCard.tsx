@@ -30,7 +30,7 @@ export const ProfileCard = () => {
             alt="Profile picture"
             className="border-primary size-24 rounded-full border-2 object-cover"
           />
-          <div className="text-center text-white">
+          <div className="text-center text-neutral-300">
             <p className="logo-text-ibm">Rezaul Karim</p>
             <p className="code-text-ibm">Front-end developer</p>
           </div>
@@ -42,7 +42,7 @@ export const ProfileCard = () => {
               return (
                 <li key={contact.name} className="flex items-center gap-3">
                   <Icon className="text-primary size-3.5" />
-                  <span className="code-text-ibm text-white">
+                  <span className="code-text-ibm text-neutral-300">
                     {contact.name}
                   </span>
                 </li>
@@ -61,7 +61,7 @@ export const ProfileCard = () => {
         </div>
         <motion.a
           href="#"
-          className="font-u hover:text-primary bg-bg-2 relative flex w-fit items-center gap-4 rounded-full px-6 py-3 text-base text-white transition-colors duration-300"
+          className="font-u hover:text-primary bg-bg-2 relative flex w-fit items-center gap-4 rounded-full px-6 py-3 text-base text-neutral-300 transition-colors duration-300"
           whileHover={{
             rotateX: 15,
             rotateY: 8,
@@ -93,7 +93,7 @@ export const ProfileCard = () => {
             aria-hidden="true"
             className="border-primary size-24 rounded-full border-2"
           />
-          <div className="text-center text-white">
+          <div className="text-center text-neutral-300">
             <p className="logo-text-ibm">Rezaul Karim</p>
             <p className="code-text-ibm">Front-end developer</p>
           </div>
@@ -105,7 +105,7 @@ export const ProfileCard = () => {
               return (
                 <li key={contact.name} className="flex items-center gap-3">
                   <Icon className="text-primary size-3.5" />
-                  <span className="code-text-ibm text-white">
+                  <span className="code-text-ibm text-neutral-300">
                     {contact.name}
                   </span>
                 </li>

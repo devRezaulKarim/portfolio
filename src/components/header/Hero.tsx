@@ -50,7 +50,7 @@ export const Hero = () => {
       }}
       className="bg-bg-1"
     >
-      <div className="container px-6 py-6 sm:px-16 sm:py-20">
+      <div className="container px-6 pt-4 pb-20 sm:px-16 sm:pt-8">
         <div className="grid xl:grid-cols-11">
           <div className="xl:col-span-4" />
           <motion.div
@@ -81,7 +81,7 @@ export const Hero = () => {
           >
             <motion.div variants={itemVariants}>
               <span className="text-secondary code-text-ibm">&lt;h1&gt;</span>
-              <h1 className="h1-text-u flex flex-col pl-6 text-white">
+              <h1 className="h1-text-u flex flex-col pl-6 text-neutral-300">
                 <span>Hey</span>
                 <span>
                   I’m <span className="text-primary">Rezaul Karim</span>,
@@ -92,7 +92,7 @@ export const Hero = () => {
             </motion.div>
             <motion.div variants={itemVariants}>
               <span className="text-secondary code-text-ibm">&lt;p&gt;</span>
-              <p className="para-text-ibm pl-6 text-white">
+              <p className="para-text-ibm pl-6 text-neutral-300">
                 I help businesses build modern, responsive web interfaces with a
                 strong focus on performance and usability. Turning complex ideas
                 into clean, scalable UI that supports real growth.

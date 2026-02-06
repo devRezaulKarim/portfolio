@@ -33,7 +33,7 @@ export const NavLink = ({
       onClick={() => setIsActive(to)}
       className={cn(
         "relative z-10 rounded-full p-3 transition-colors duration-300",
-        isActive ? "active text-white" : "text-primary",
+        isActive ? "active text-neutral-300" : "text-primary",
       )}
     >
       <Icon className="size-5" />

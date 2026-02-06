@@ -2,6 +2,7 @@ import skillBG from "@/assets/Skills.png";
 import { environments, techs } from "@/lib/constants";
 import { EnvironmentCard } from "../ui/EnvironmentCard";
 import { TechCard } from "../ui/TechCard";
+import { SectionName } from "../ui/SectionName";
 
 export const Skills = () => {
   return (
@@ -15,14 +16,12 @@ export const Skills = () => {
         backgroundPosition: "center",
       }}
       id="skills"
-      className="after:bg-bg-1/90 relative isolate py-8 after:absolute after:inset-0 after:-z-10 sm:py-20"
+      className="after:bg-bg-1/90 relative isolate py-20 after:absolute after:inset-0 after:-z-10"
     >
       <div className="container px-6 sm:px-16">
-        <div className="flex flex-col items-center">
-          <span className="text-primary h1-text-u underline decoration-3 underline-offset-12">
-            &lt;Skills/&gt;
-          </span>
-          <p className="para-text-ibm mt-4 text-white">
+        <div className="flex flex-col items-center space-y-8 text-center sm:space-y-6">
+          <SectionName name="Skills" />
+          <p className="para-text-ibm text-neutral-300">
             I am striving to never stop learning and improving
           </p>
         </div>
