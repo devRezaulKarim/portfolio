@@ -3,10 +3,16 @@ import { ProfileCard } from "../ui/ProfileCard";
 
 export const Hero = () => {
   return (
-    <section className="bg-bg-1">
+    <section
+      style={{
+        backgroundImage: `radial-gradient(circle at 0.5px 0.5px, rgba(255, 82, 0, 0.3) 0.5px, transparent 0)`,
+        backgroundSize: "12px 12px",
+      }}
+      className="bg-bg-1"
+    >
       <div className="container px-16 py-20">
         <div className="grid xl:grid-cols-11">
-          <div className="xl:col-span-4"></div>
+          <div className="xl:col-span-4" />
 
           <div className="bg-text-u text-primary text-left xl:col-span-7">
             Developer
