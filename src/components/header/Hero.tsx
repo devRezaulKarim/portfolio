@@ -2,6 +2,7 @@ import { MailIcon } from "lucide-react";
 import { ProfileCard } from "../ui/ProfileCard";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,6 +27,8 @@ const itemVariants = {
 };
 
 export const Hero = () => {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -35,7 +38,7 @@ export const Hero = () => {
   const translateProfileCard = useTransform(
     scrollYProgress,
     [0, 1],
-    [200, -200],
+    isDesktop ? [200, -200] : [100, -100],
   );
 
   return (

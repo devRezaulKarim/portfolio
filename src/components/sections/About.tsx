@@ -1,5 +1,6 @@
 import aboutBG from "@/assets/about-bg.svg";
 import about from "@/assets/Rezaul.png";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import {
   motion,
   useMotionTemplate,
@@ -9,6 +10,7 @@ import {
 import { useRef } from "react";
 
 export const About = () => {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -18,17 +20,17 @@ export const About = () => {
   const translateProfileImage = useTransform(
     scrollYProgress,
     [0, 1],
-    [200, -200],
+    isDesktop ? [200, -200] : [20, -100],
   );
   const imgOpacity = useTransform(
     scrollYProgress,
     [0, 0.2, 0.5, 0.8, 1],
-    [0, 0, 1, 0, 0],
+    isDesktop ? [0, 0, 1, 0, 0] : [0, 0.4, 1, 0.2, 0],
   );
   const textBlur = useTransform(
     scrollYProgress,
     [0, 0.15, 0.35, 0.5, 0.65, 0.85, 1],
-    [10, 5, 0, 0, 0, 5, 10],
+    isDesktop ? [10, 5, 0, 0, 0, 5, 10] : [10, 5, 0, 0, 0, 0, 10],
   );
   return (
     <section
