@@ -3,7 +3,7 @@ import { Social } from "../ui/Social";
 
 export const Socials = () => {
   return (
-    <div className="social-links hidden items-center gap-2 md:flex">
+    <div className="social-links flex items-center gap-2">
       {socials.map((social) => (
         <Social
           key={social.name}
