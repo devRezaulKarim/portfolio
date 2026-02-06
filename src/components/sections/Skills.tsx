@@ -28,7 +28,7 @@ export const Skills = () => {
         backgroundPosition: "center",
       }}
       id="skills"
-      className="after:bg-bg-1/90 relative isolate py-20 after:absolute after:inset-0 after:-z-10"
+      className="after:bg-bg-1/90 relative isolate overflow-x-clip py-20 after:absolute after:inset-0 after:-z-10"
     >
       <div className="container px-6 sm:px-16">
         <div className="flex flex-col items-center space-y-8 text-center sm:space-y-6">

@@ -60,7 +60,7 @@ export const About = () => {
           >
             <div className="bg-bg-1 rounded-4xl px-4 py-6 sm:px-10">
               <span className="logo-text-ibm text-primary">Hello!</span>
-              <p className="para-text-ibm mt-1 text-xs text-neutral-300 sm:text-sm">
+              <p className="para-text-ibm mt-1 text-sm text-neutral-300">
                 I’m Rezaul Karim, a frontend-focused full-stack developer who
                 loves helping businesses bring their ideas to life on the web. I
                 build clean, responsive interfaces that are fast, accessible,
