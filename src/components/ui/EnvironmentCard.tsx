@@ -1,13 +1,36 @@
 import type { EnvironmentType } from "@/types/types";
 import { Fragment } from "react/jsx-runtime";
+import { motion } from "motion/react";
 
 export const EnvironmentCard = ({
   icon: Icon,
   name,
   stacks,
+  idx,
 }: EnvironmentType) => {
+  const isOdd = idx % 2 !== 0;
   return (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+        filter: "blur(20px)",
+        y: 100,
+        x: isOdd ? 200 : -200,
+      }}
+      whileInView={{
+        opacity: 1,
+        filter: "blur(0px)",
+        y: 0,
+        x: 0,
+      }}
+      viewport={{
+        once: true,
+        margin: "-100px",
+      }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+      }}
       style={{
         background: "linear-gradient(to right, #ff5200 2.5%, #ff9664 2.5%)",
       }}
@@ -23,6 +46,6 @@ export const EnvironmentCard = ({
           </Fragment>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };

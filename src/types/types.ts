@@ -24,6 +24,7 @@ export type EnvironmentType = {
   icon: FC<SVGProps<SVGSVGElement>>;
   name: string;
   stacks: string[];
+  idx: number;
 };
 export type TechType = {
   icon: FC<CustomIconType>;

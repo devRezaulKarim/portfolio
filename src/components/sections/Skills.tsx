@@ -26,12 +26,12 @@ export const Skills = () => {
           </p>
         </div>
         <div className="my-16 flex flex-wrap items-center justify-center gap-10 sm:gap-20">
-          {environments.map((env) => (
+          {environments.map((env, idx) => (
             <EnvironmentCard
               key={env.name}
               icon={env.icon}
               name={env.name}
-              stacks={env.stacks}
+              stacks={env.stacks} idx={idx}
             />
           ))}
         </div>
