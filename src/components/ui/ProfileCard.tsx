@@ -6,7 +6,22 @@ import { DownloadIcon } from "lucide-react";
 
 export const ProfileCard = () => {
   return (
-    <div className="profile-card-wrapper relative min-h-full max-w-4/5 2xl:max-w-[70%]">
+    <motion.div
+      initial={{
+        filter: "blur(20px)",
+        x: -100,
+        opacity: 0,
+      }}
+      animate={{
+        filter: "blur(0)",
+        x: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.5,
+      }}
+      className="profile-card-wrapper relative min-h-full max-w-4/5 2xl:max-w-[70%]"
+    >
       <div className="profile-card-border-glow"></div>
       <div className="profile-card flex flex-col gap-8 px-6 py-10">
         <div className="flex flex-col items-center gap-4">
@@ -111,6 +126,6 @@ export const ProfileCard = () => {
           Download Resume <DownloadIcon className="size-4" />
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 };
