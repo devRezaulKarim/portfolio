@@ -50,11 +50,15 @@ export const ProfileCard = () => {
           whileHover={{
             rotateX: 15,
             rotateY: 8,
+            y: -5,
             boxShadow: "0px 8px 20px rgba(255, 82, 0, 0.7)",
           }}
           transition={{
             duration: 0.3,
             ease: "easeInOut",
+          }}
+          whileTap={{
+            y: 0,
           }}
         >
           Download Resume <DownloadIcon className="size-4" />
