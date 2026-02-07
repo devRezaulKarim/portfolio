@@ -56,7 +56,7 @@ export const About = () => {
             style={{
               filter: useMotionTemplate`blur(${textBlur}px)`,
             }}
-            className="order-2 flex flex-col items-start gap-10 sm:order-1 md:col-span-6 lg:col-end-7"
+            className="order-2 flex flex-col items-start gap-10 sm:order-1 md:col-span-6 xl:col-span-7"
           >
             <div className="bg-bg-1 rounded-4xl px-4 py-6 sm:px-10">
               <span className="logo-text-ibm text-primary">Hello!</span>
@@ -82,7 +82,7 @@ export const About = () => {
           </motion.div>
           <motion.div
             style={{ y: translateProfileImage, opacity: imgOpacity }}
-            className="z-10 order-1 sm:order-2 md:col-span-5 lg:col-span-4"
+            className="z-10 order-1 sm:order-2 md:col-span-5 xl:col-span-4"
           >
             <img
               className="ml-auto aspect-[1/1.1] rounded-2xl object-cover lg:max-w-4/5"

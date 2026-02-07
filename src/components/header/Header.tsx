@@ -36,7 +36,7 @@ export const Header = () => {
         <div
           className={cn(
             "relative container flex items-center justify-between border-b border-gray-800 transition-[padding,background-color] duration-300 ease-out",
-            isSticky ? "py-4" : "py-12",
+            isSticky ? "py-4" : "py-10",
           )}
         >
           <Logo />
