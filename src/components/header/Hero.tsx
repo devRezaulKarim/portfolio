@@ -51,26 +51,26 @@ export const Hero = () => {
       }}
       className="bg-bg-1"
     >
-      <div className="container px-6 pt-4 pb-20 sm:px-16 sm:pt-8">
-        <div className="grid xl:grid-cols-11">
-          <div className="xl:col-span-4" />
+      <div className="container px-6 pt-4 pb-20 sm:pt-8 md:px-0 lg:px-16">
+        <div className="grid md:grid-cols-11">
+          <div className="md:col-span-5 lg:col-span-4" />
           <motion.div
             initial={{ filter: "blur(20px)", scale: 0.5 }}
             animate={{ filter: "blur(0px)", scale: 1 }}
             transition={{
               duration: 0.3,
             }}
-            className="bg-text-u text-primary text-center xl:col-span-7 xl:text-left"
+            className="bg-text-u text-primary text-center md:col-span-6 md:text-left lg:col-end-7 xl:text-left"
           >
             Developer
           </motion.div>
         </div>{" "}
-        <div className="grid items-center xl:grid-cols-11">
+        <div className="grid items-center md:mt-6 md:grid-cols-11 md:gap-8 lg:mt-0 lg:gap-0">
           <motion.div
             style={{
               y: translateProfileCard,
             }}
-            className="xl:col-span-4"
+            className="md:col-span-5 lg:col-span-4"
           >
             <ProfileCard />
           </motion.div>
@@ -78,7 +78,7 @@ export const Hero = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="pt-20 sm:pt-0 xl:col-span-7 xl:space-y-6 2xl:space-y-8"
+            className="pt-20 sm:pt-0 md:col-span-6 lg:col-end-7 xl:space-y-6 2xl:space-y-8"
           >
             <motion.div variants={itemVariants}>
               <span className="text-secondary code-text-ibm">&lt;h1&gt;</span>

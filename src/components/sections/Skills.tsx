@@ -30,14 +30,14 @@ export const Skills = () => {
       id="skills"
       className="after:bg-bg-1/90 relative isolate overflow-x-clip py-20 after:absolute after:inset-0 after:-z-10"
     >
-      <div className="container px-6 sm:px-16">
+      <div className="container px-6 lg:px-16">
         <div className="flex flex-col items-center space-y-8 text-center sm:space-y-6">
           <SectionName name="Skills" />
           <p className="para-text-ibm text-neutral-300">
             I am striving to never stop learning and improving
           </p>
         </div>
-        <div className="my-16 flex flex-wrap items-center justify-center gap-10 sm:gap-20">
+        <div className="my-16 flex flex-wrap items-center justify-center gap-10 lg:gap-20">
           {environments.map((env, idx) => (
             <EnvironmentCard
               key={env.name}

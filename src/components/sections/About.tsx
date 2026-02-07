@@ -49,14 +49,14 @@ export const About = () => {
       className="py-20"
     >
       {/* <SectionTop /> */}
-      <div className="container space-y-16 px-6 sm:px-16">
+      <div className="container space-y-16 px-6 md:px-0 lg:px-16">
         <SectionName name="About me" />
-        <div className="grid grid-cols-1 items-center lg:grid-cols-11">
+        <div className="grid grid-cols-1 items-center md:grid-cols-11 md:gap-8 lg:gap-0">
           <motion.div
             style={{
               filter: useMotionTemplate`blur(${textBlur}px)`,
             }}
-            className="order-2 flex flex-col items-start gap-10 sm:order-1 lg:col-span-7"
+            className="order-2 flex flex-col items-start gap-10 sm:order-1 md:col-span-6 lg:col-end-7"
           >
             <div className="bg-bg-1 rounded-4xl px-4 py-6 sm:px-10">
               <span className="logo-text-ibm text-primary">Hello!</span>
@@ -82,10 +82,10 @@ export const About = () => {
           </motion.div>
           <motion.div
             style={{ y: translateProfileImage, opacity: imgOpacity }}
-            className="z-10 order-1 sm:order-2 lg:col-span-4"
+            className="z-10 order-1 sm:order-2 md:col-span-5 lg:col-span-4"
           >
             <img
-              className="ml-auto aspect-[1/1.1] rounded-2xl object-cover sm:max-w-4/5"
+              className="ml-auto aspect-[1/1.1] rounded-2xl object-cover lg:max-w-4/5"
               src={about}
               alt=""
             />
