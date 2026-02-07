@@ -1,13 +1,22 @@
 import type { EnvironmentType } from "@/types/types";
 import { Fragment } from "react/jsx-runtime";
-import { motion } from "motion/react";
+import { motion, type MotionValue, useMotionTemplate } from "motion/react";
+
+type EnvironmentCardProps = EnvironmentType & {
+  translateEnvCard: MotionValue<number>;
+  scale: MotionValue<number>;
+  cardBlur: MotionValue<number>;
+};
 
 export const EnvironmentCard = ({
   icon: Icon,
   name,
   stacks,
   idx,
-}: EnvironmentType) => {
+  translateEnvCard,
+  scale,
+  cardBlur,
+}: EnvironmentCardProps) => {
   const isOdd = idx ?? 1 % 2 !== 0;
   return (
     <motion.div
@@ -32,6 +41,9 @@ export const EnvironmentCard = ({
         ease: "easeOut",
       }}
       style={{
+        scale,
+        y: translateEnvCard,
+        filter: useMotionTemplate`blur(${cardBlur}px)`,
         background: "linear-gradient(to right, #ff5200 2.5%, #ff9664 2.5%)",
       }}
       className="flex w-fit flex-col items-center gap-2 rounded-lg px-8 py-6"

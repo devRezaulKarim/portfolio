@@ -1,5 +1,9 @@
 import type { TechType } from "@/types/types";
-import { motion } from "motion/react";
+import { motion, type MotionValue } from "motion/react";
+
+type TechCardProps = TechType & {
+  translateTechCard: MotionValue<number>;
+};
 
 const itemVariants = {
   hidden: { opacity: 0, filter: "blur(20px)", x: -200, scale: 0 },
@@ -15,12 +19,18 @@ const itemVariants = {
   },
 };
 
-export const TechCard = ({ color, icon: Icon, name, idx }: TechType) => {
+export const TechCard = ({
+  color,
+  icon: Icon,
+  name,
+  idx,
+  translateTechCard,
+}: TechCardProps) => {
   return (
     <motion.div
       variants={itemVariants}
       className="flex flex-col items-center gap-6"
-      style={{ zIndex: idx ?? 1 * -1 }}
+      style={{ zIndex: idx ?? 1 * -1, y: translateTechCard }}
     >
       <div
         style={{ backgroundColor: color }}

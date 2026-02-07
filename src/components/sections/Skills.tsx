@@ -3,7 +3,9 @@ import { environments, techs } from "@/lib/constants";
 import { EnvironmentCard } from "../ui/EnvironmentCard";
 import { TechCard } from "../ui/TechCard";
 import { SectionName } from "../ui/SectionName";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const skillsContainer = {
   hidden: { opacity: 0 },
@@ -17,6 +19,31 @@ const skillsContainer = {
 };
 
 export const Skills = () => {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const translateEnvCard = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isDesktop ? [200, -200] : [20, -100],
+  );
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const cardBlur = useTransform(
+    scrollYProgress,
+    [0, 0.15, 0.35, 0.5, 0.65, 0.75, 1],
+    isDesktop ? [0, 0, 0, 0, 0, 5, 10] : [0, 0, 0, 0, 0, 10, 10],
+  );
+
+  const translateTechCard = useTransform(
+    scrollYProgress,
+    [0, 0.8],
+    isDesktop ? [-150, 50] : [20, -100],
+  );
+
   return (
     <section
       style={{
@@ -30,7 +57,7 @@ export const Skills = () => {
       id="skills"
       className="after:bg-bg-1/90 relative isolate overflow-x-clip py-20 after:absolute after:inset-0 after:-z-10"
     >
-      <div className="container px-6 lg:px-16">
+      <div ref={ref} className="container px-6 lg:px-16">
         <div className="flex flex-col items-center space-y-8 text-center sm:space-y-6">
           <SectionName name="Skills" />
           <p className="para-text-ibm text-neutral-300">
@@ -45,6 +72,9 @@ export const Skills = () => {
               name={env.name}
               stacks={env.stacks}
               idx={idx}
+              translateEnvCard={translateEnvCard}
+              scale={scale}
+              cardBlur={cardBlur}
             />
           ))}
         </div>
@@ -65,6 +95,7 @@ export const Skills = () => {
               name={tech.name}
               color={tech.color}
               idx={idx + 1}
+              translateTechCard={translateTechCard}
             />
           ))}
         </motion.div>
