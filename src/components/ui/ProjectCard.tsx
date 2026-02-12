@@ -5,7 +5,7 @@ export const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
     <article
       key={project.id}
-      className="group relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5 duration-500 hover:shadow-[0_4px_20px_rgba(255,82,0,0.7)]"
+      className="group relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5 duration-500 hover:shadow-[0_4px_20px_rgba(255,82,0,0.7),inset_0_0_10px_rgba(255,255,255,0.5)]"
     >
       <div
         style={{
