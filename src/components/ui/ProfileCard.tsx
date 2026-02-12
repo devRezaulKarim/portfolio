@@ -60,7 +60,8 @@ export const ProfileCard = () => {
           </ul>
         </div>
         <motion.a
-          href="#"
+          href="https://drive.google.com/uc?export=download&id=1gp7RzBUxeWx-4OxgLtCy3Cq2pm6yHnli"
+          rel="noopener noreferrer"
           className="font-u hover:text-primary bg-bg-2 relative flex w-fit items-center gap-4 rounded-full px-6 py-3 text-base text-neutral-300 transition-colors duration-300"
           whileHover={{
             rotateX: 15,
