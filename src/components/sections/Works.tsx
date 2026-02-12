@@ -2,6 +2,14 @@ import worksBG from "@/assets/works-bg.png";
 import { projects } from "@/lib/constants";
 import { SectionName } from "../ui/SectionName";
 import { ProjectCard } from "../ui/ProjectCard";
+import { motion } from "motion/react";
+const worksContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+  },
+};
 
 export const Works = () => {
   return (
@@ -21,11 +29,20 @@ export const Works = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+        <motion.div
+          variants={worksContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{
+            once: true,
+            margin: "-50px",
+          }}
+          className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3"
+        >
+          {projects.map((project, idx) => (
+            <ProjectCard key={project.id} project={project} idx={idx + 1} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

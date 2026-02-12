@@ -1,11 +1,45 @@
 import { ExternalLink, Github } from "lucide-react";
 import type { ProjectType } from "@/types/types";
+import { motion } from "motion/react";
 
-export const ProjectCard = ({ project }: { project: ProjectType }) => {
+const buildVariants = (direction: "left" | "right" | "bottom") => {
+  const axis =
+    direction === "bottom"
+      ? { x: 0, y: 500 }
+      : direction === "right"
+        ? { x: 500, y: 500 }
+        : { x: -500, y: 500 };
+
+  return {
+    hidden: { opacity: 0, scale: 0.5, ...axis },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.3,
+      },
+    },
+  };
+};
+
+export const ProjectCard = ({
+  project,
+  idx,
+}: {
+  project: ProjectType;
+  idx: number;
+}) => {
+  const directions = ["left", "bottom", "right"] as const;
+  const direction = directions[(idx - 1) % directions.length];
+  const itemVariants = buildVariants(direction);
+
   return (
-    <article
+    <motion.article
       key={project.id}
-      className="group relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5 duration-500 hover:shadow-[0_4px_20px_rgba(255,82,0,0.7),inset_0_0_10px_rgba(255,255,255,0.5)]"
+      className="group relative flex h-full w-full origin-center flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5 duration-500 hover:shadow-[0_4px_20px_rgba(255,82,0,0.7),inset_0_0_10px_rgba(255,255,255,0.5)]"
+      variants={itemVariants}
     >
       <div
         style={{
@@ -57,6 +91,6 @@ export const ProjectCard = ({ project }: { project: ProjectType }) => {
           </a>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };

@@ -29,7 +29,7 @@ export const Skills = () => {
   const translateEnvCard = useTransform(
     scrollYProgress,
     [0, 1],
-    isDesktop ? [200, -200] : [20, -100],
+    isDesktop ? [0, -100] : [20, -100],
   );
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const cardBlur = useTransform(
