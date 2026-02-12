@@ -32,3 +32,14 @@ export type TechType = {
   color: string;
   idx?: number;
 };
+
+export type ProjectType = {
+  id: number;
+  title: string;
+  desc: string;
+  image: string;
+  liveLink: string;
+  sourceLink: string;
+  features: string[];
+  techs: string[];
+};
