@@ -36,7 +36,7 @@ export const TechCard = ({
         style={{ backgroundColor: color }}
         className="flex size-24 items-center justify-center rounded-full sm:size-30"
       >
-        <Icon className="size-16 text-neutral-300" />
+        <Icon className="size-14 text-neutral-300" />
       </div>
       <span style={{ color }} className="h2-text-ibm uppercase">
         {name}

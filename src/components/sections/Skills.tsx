@@ -29,7 +29,7 @@ export const Skills = () => {
   const translateEnvCard = useTransform(
     scrollYProgress,
     [0, 1],
-    isDesktop ? [0, -100] : [20, -100],
+    isDesktop ? [0, -100] : [1, -100],
   );
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const cardBlur = useTransform(
@@ -86,7 +86,7 @@ export const Skills = () => {
             once: true,
             margin: "-100px",
           }}
-          className="flex flex-wrap items-center justify-center gap-x-20 gap-y-10"
+          className="flex flex-wrap items-center justify-center gap-x-14 gap-y-10"
         >
           {techs.map((tech, idx) => (
             <TechCard

@@ -35,7 +35,7 @@ export const Works = () => {
           whileInView="visible"
           viewport={{
             once: true,
-            margin: "-50px",
+            margin: "-100px",
           }}
           className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3"
         >

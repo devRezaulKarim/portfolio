@@ -12,7 +12,6 @@ import {
 import Discord from "../custom-icons/Discord";
 import Github from "../custom-icons/Github";
 import { Linkedin } from "../custom-icons/Linkedin";
-import Slack from "../custom-icons/Slack";
 
 import type {
   SocialType,
@@ -27,17 +26,24 @@ import CSS from "@/custom-icons/CSS";
 import JS from "@/custom-icons/JS";
 import ReactIcon from "@/custom-icons/React";
 import TS from "@/custom-icons/TS";
-// import NextIcon from "@/custom-icons/NextIcon";
+import NextIcon from "@/custom-icons/NextIcon";
 // import Express from "@/custom-icons/Express";
 // import Mongo from "@/custom-icons/Mongo";
 // import MySQL from "@/custom-icons/MySQL";
 // import PostgreSQL from "@/custom-icons/PostgreSQL";
 
 export const socials: SocialType[] = [
-  { icon: Linkedin, name: "Linkedin", url: "#" },
-  { icon: Github, name: "Github", url: "#" },
-  { icon: Slack, name: "Slack", url: "#" },
-  { icon: Discord, name: "Discord", url: "#" },
+  {
+    icon: Linkedin,
+    name: "Linkedin",
+    url: "https://www.linkedin.com/in/dev-rezaul-karim/",
+  },
+  { icon: Github, name: "Github", url: "https://github.com/devRezaulKarim" },
+  {
+    icon: Discord,
+    name: "Discord",
+    url: "https://discord.com/users/rezaulkarim18",
+  },
 ];
 
 export const navLinks: NavLinkType[] = [
@@ -93,11 +99,11 @@ export const techs: TechType[] = [
     name: "React",
     color: "#28A9E0",
   },
-  // {
-  //   icon: NextIcon,
-  //   name: "Next",
-  //   color: "#000000",
-  // },
+  {
+    icon: NextIcon,
+    name: "Next",
+    color: "#000000",
+  },
   // {
   //   icon: Express,
   //   name: "Express",

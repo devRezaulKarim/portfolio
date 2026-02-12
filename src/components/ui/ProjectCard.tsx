@@ -5,10 +5,10 @@ import { motion } from "motion/react";
 const buildVariants = (direction: "left" | "right" | "bottom") => {
   const axis =
     direction === "bottom"
-      ? { x: 0, y: 500 }
+      ? { x: 0, y: 300 }
       : direction === "right"
-        ? { x: 500, y: 500 }
-        : { x: -500, y: 500 };
+        ? { x: 300, y: 300 }
+        : { x: -300, y: 300 };
 
   return {
     hidden: { opacity: 0, scale: 0.5, ...axis },
@@ -18,7 +18,7 @@ const buildVariants = (direction: "left" | "right" | "bottom") => {
       x: 0,
       y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.5,
       },
     },
   };
@@ -50,12 +50,32 @@ export const ProjectCard = ({
         }}
         className="relative aspect-square w-full overflow-hidden duration-500 group-hover:blur-lg"
       >
-        <div className="bg-bg-2/80 absolute bottom-4 left-4 rounded-full border border-white/10 px-3 py-1 text-sm tracking-[0.2em] text-neutral-200">
-          {project.title}
+        <div className="absolute right-4 bottom-4 left-4 flex items-center justify-between gap-2">
+          <div className="bg-bg-2/80 rounded-full border border-white/10 px-3 py-1 text-sm tracking-[0.2em] text-neutral-200">
+            {project.title}
+          </div>
+          <div className="flex gap-2 lg:hidden">
+            <a
+              className="button-text-u bg-primary flex size-7 items-center justify-center rounded-full text-neutral-100 shadow-[inset_0_2px_7px_#ffffff90]"
+              href={project.liveLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ExternalLink className="size-4" />
+            </a>
+            <a
+              className="button-text-u text-primary bg-bg-1 flex size-7 items-center justify-center rounded-full border border-white/15"
+              href={project.sourceLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github className="size-4" />
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="bg-bg-1/50 absolute inset-0 flex flex-1 flex-col gap-6 rounded-[10px] p-6 opacity-0 duration-500 group-hover:opacity-100">
+      <div className="bg-bg-1/50 absolute inset-0 hidden flex-1 flex-col gap-6 rounded-[10px] p-6 opacity-0 duration-500 group-hover:opacity-100 lg:flex">
         <div>
           <p className="code-text-ibm text-neutral-200">Tech stack</p>
           <div className="mt-3 flex flex-wrap gap-2">
