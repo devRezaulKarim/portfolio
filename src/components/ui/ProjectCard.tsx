@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLinkIcon, GithubIcon } from "lucide-react";
 import type { ProjectType } from "@/types/types";
 import { motion } from "motion/react";
 
@@ -61,7 +61,7 @@ export const ProjectCard = ({
               target="_blank"
               rel="noreferrer"
             >
-              <ExternalLink className="size-4" />
+              <ExternalLinkIcon className="size-4" />
             </a>
             <a
               className="button-text-u text-primary bg-bg-1 flex size-7 items-center justify-center rounded-full border border-white/15"
@@ -69,7 +69,7 @@ export const ProjectCard = ({
               target="_blank"
               rel="noreferrer"
             >
-              <Github className="size-4" />
+              <GithubIcon className="size-4" />
             </a>
           </div>
         </div>
@@ -92,22 +92,22 @@ export const ProjectCard = ({
 
         <div className="mt-auto flex flex-wrap gap-3">
           <a
-            className="button-text-u bg-primary flex items-center gap-2 rounded-full px-5 py-2.5 text-sm text-neutral-100 shadow-[inset_0_2px_7px_#ffffff90] duration-300 hover:translate-y-0.5"
+            className="button-text-u bg-primary flex items-center gap-2 rounded-full px-4 py-2 text-sm text-neutral-100 shadow-[inset_0_2px_7px_#ffffff90] duration-300 hover:translate-y-0.5"
             href={project.liveLink}
             target="_blank"
             rel="noreferrer"
           >
             Live
-            <ExternalLink className="size-4" />
+            <ExternalLinkIcon className="size-4" />
           </a>
           <a
-            className="button-text-u flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm text-neutral-200 duration-300 hover:border-white/30"
+            className="button-text-u flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm text-neutral-200 duration-300 hover:translate-y-0.5 hover:border-white/30"
             href={project.sourceLink}
             target="_blank"
             rel="noreferrer"
           >
             Code
-            <Github className="size-4" />
+            <GithubIcon className="size-4" />
           </a>
         </div>
       </div>

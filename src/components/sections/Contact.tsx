@@ -2,8 +2,47 @@ import { SendIcon } from "lucide-react";
 import { Input } from "../ui/Input";
 import { Textarea } from "../ui/Textarea";
 import { SectionName } from "../ui/SectionName";
+import { useForm } from "@formspree/react";
+import { useState } from "react";
 
 export const Contact = () => {
+  const [state, handleSubmit] = useForm("mvgqnpjg");
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
+
+  const validate = (form: HTMLFormElement) => {
+    const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+
+    const nextErrors: typeof errors = {};
+
+    if (!name) nextErrors.name = "Name is required.";
+    if (!email) {
+      nextErrors.email = "Email is required.";
+    } else if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+      nextErrors.email = "Enter a valid email address.";
+    }
+    if (!message) nextErrors.message = "Message is required.";
+    if (message && message.length < 10) {
+      nextErrors.message = "Message should be at least 10 characters.";
+    }
+
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
+  };
+
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!validate(form)) return;
+    handleSubmit(event);
+  };
+
   return (
     <section
       style={{
@@ -28,19 +67,23 @@ export const Contact = () => {
           </p>
         </div>
         <div className="mt-16 flex items-center justify-center">
-          <form action="" className="w-3xl space-y-8">
+          <form onSubmit={onSubmit} method="POST" className="w-3xl space-y-8">
             <div className="grid items-center gap-8 sm:grid-cols-2 sm:gap-20">
               <Input
                 label="Your name"
                 id="name"
                 required
                 placeholder="Enter your name"
+                state={state}
+                error={errors.name}
               />
               <Input
                 label="Your email"
                 id="email"
                 required
                 placeholder="Enter your email"
+                state={state}
+                error={errors.email}
               />
             </div>
             <div>
@@ -49,11 +92,19 @@ export const Contact = () => {
                 id="message"
                 required
                 placeholder="Enter your needs"
+                state={state}
+                error={errors.message}
               />
             </div>
+            {state.succeeded && (
+              <p className="animate-fade-in text-sm font-medium text-green-500 sm:text-base">
+                ✅ Thanks! Your message has been sent.
+              </p>
+            )}
             <div className="flex justify-center">
               <button
                 type="submit"
+                disabled={state.submitting}
                 className="bg-primary button-text-u group flex items-center gap-2 rounded-full px-16 py-4 text-neutral-300 shadow-[inset_0_2px_7px_#ffffff90] duration-300 active:scale-95"
               >
                 Send Message{" "}
