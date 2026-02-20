@@ -28,7 +28,13 @@ export const Hero = ({
     <div className="border-y">
       <Container>
         <div ref={heroRef} className="flex flex-col border-x sm:flex-row">
-          <div className="grow border-r p-4">Content</div>
+          <div className="flex grow flex-col justify-end border-r py-4">
+            <h1 className="group overflow-clip border-y px-4 text-3xl font-semibold">
+              <span className="inline-block drop-shadow-[0px_2.3ex_0px_#f00] duration-300 group-hover:-translate-y-full">
+                REZAUL KARIM
+              </span>
+            </h1>
+          </div>
           <div className="flex shrink-0 items-center justify-center p-4">
             <div ref={startRef} className="size-85 sm:size-62.5" />
             <motion.img
