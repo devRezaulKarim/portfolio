@@ -1,49 +1,14 @@
-import { useEffect, useRef, useState } from "react";
-import { Logo } from "../ui/Logo";
-import { Socials } from "./Socials";
-import { cn } from "@/lib/utils";
+import React from "react";
 import { Navbar } from "./Navbar";
+import { SpacerPattern } from "../common/SpacerPattern";
+import { Hero } from "./Hero";
 
-export const Header = () => {
-  const sentinelRef = useRef<HTMLDivElement | null>(null);
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsSticky(!entry.isIntersecting);
-      },
-      { threshold: 0 },
-    );
-
-    if (sentinelRef.current) {
-      observer.observe(sentinelRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
+export default function Header() {
   return (
     <>
-      <div ref={sentinelRef} className="-mb-10 h-10" />
-      <header
-        style={{
-          backgroundImage: `radial-gradient(circle at 0.5px 0.5px, rgba(255, 82, 0, 0.3) 0.5px, transparent 0)`,
-          backgroundSize: "12px 12px",
-        }}
-        className="bg-bg-1 sticky top-0 z-50"
-      >
-        <div
-          className={cn(
-            "relative container flex items-center justify-between border-b border-gray-800 transition-[padding,background-color] duration-300 ease-out",
-            isSticky ? "py-4" : "py-10",
-          )}
-        >
-          <Logo />
-          <Socials />
-          <Navbar />
-        </div>
-      </header>
+      <Navbar />
+      <SpacerPattern />
+      <Hero />
     </>
   );
-};
+}
