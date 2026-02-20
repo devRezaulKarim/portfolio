@@ -1,14 +1,110 @@
-import React from "react";
+"use client";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Navbar } from "./Navbar";
 import { SpacerPattern } from "../common/SpacerPattern";
 import { Hero } from "./Hero";
+import { useScroll, useSpring, useTransform } from "motion/react";
 
 export default function Header() {
+  const heroRef = useRef<HTMLDivElement | null>(null);
+  const startRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
+
+  const [positions, setPositions] = useState({
+    startX: 0,
+    startY: 0,
+    deltaX: 0,
+    deltaY: 0,
+  });
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  const borderRadius = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    ["0", "0", "200px"],
+  );
+
+  const x = useTransform(scrollYProgress, [0, 1], [0, positions.deltaX]);
+
+  const y = useTransform(
+    scrollYProgress,
+    [0, 0.25, 1],
+    [0, positions.deltaY / 1.5, positions.deltaY],
+  );
+
+  const size = useTransform(scrollYProgress, [0, 1], [250, 48]);
+  const rotate = useTransform(scrollYProgress, [0, 0.8, 1], [0, -18, 0]);
+
+  const smoothSize = useSpring(size, { stiffness: 100, damping: 25 });
+  const smoothX = useSpring(x, { stiffness: 100, damping: 25 });
+  const smoothY = useSpring(y, { stiffness: 100, damping: 25 });
+  const smoothRotate = useSpring(rotate, { stiffness: 100, damping: 25 });
+  const smoothBorderRadius = useSpring(borderRadius, {
+    stiffness: 100,
+    damping: 25,
+  });
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, []);
+
+  useLayoutEffect(() => {
+    let frame: number;
+
+    const measure = () => {
+      if (!startRef.current || !targetRef.current) return;
+
+      const startRect = startRef.current.getBoundingClientRect();
+      const targetRect = targetRef.current.getBoundingClientRect();
+
+      const startX = startRect.left + window.scrollX;
+      const startY = startRect.top + window.scrollY;
+
+      const targetX = targetRect.left;
+      const targetY = targetRect.top;
+
+      setPositions({
+        startX,
+        startY,
+        deltaX: targetX - startX,
+        deltaY: targetY - startY,
+      });
+    };
+
+    const handleResize = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(measure);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      cancelAnimationFrame(frame);
+    };
+  }, []);
   return (
     <>
-      <Navbar />
+      <Navbar targetRef={targetRef} />
       <SpacerPattern />
-      <Hero />
+      <SpacerPattern direction="right" />
+      <Hero
+        heroRef={heroRef}
+        startRef={startRef}
+        smoothBorderRadius={smoothBorderRadius}
+        smoothRotate={smoothRotate}
+        smoothSize={smoothSize}
+        smoothX={smoothX}
+        smoothY={smoothY}
+        startX={positions.startX}
+        startY={positions.startY}
+      />
     </>
   );
 }

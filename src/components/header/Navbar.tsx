@@ -1,7 +1,5 @@
-"use client";
-
 import { IconMoon, IconSun, IconUser } from "@tabler/icons-react";
-import { useSyncExternalStore } from "react";
+import { RefObject, useSyncExternalStore } from "react";
 import Container from "../wrappers/Container";
 
 function subscribe(callback: () => void) {
@@ -22,7 +20,11 @@ function getServerSnapshot() {
   return false;
 }
 
-export const Navbar = () => {
+export const Navbar = ({
+  targetRef,
+}: {
+  targetRef: RefObject<HTMLDivElement | null>;
+}) => {
   const isDark = useSyncExternalStore(
     subscribe,
     getSnapshot,
@@ -37,7 +39,10 @@ export const Navbar = () => {
     <div className="sticky top-0 w-full border-y">
       <Container>
         <div className="flex items-center justify-between border-r border-l p-2">
-          <div className="logo flex size-12 items-center justify-center">
+          <div
+            ref={targetRef}
+            className="logo flex size-12 items-center justify-center"
+          >
             <IconUser />
           </div>
 
