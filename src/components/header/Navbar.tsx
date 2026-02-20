@@ -51,7 +51,7 @@ export const Navbar = ({
             style={{ x: smoothNavLinksX }}
             className="absolute left-0 px-4"
           >
-            <ul className="flex items-center justify-center gap-4">
+            <ul className="flex items-center justify-center gap-4 duration-200">
               <li>Home</li>
               <li>Component</li>
               <li>Blogs</li>
@@ -67,7 +67,11 @@ export const Navbar = ({
               onClick={toggleTheme}
               className="cursor-pointer"
             >
-              {isDark ? <IconMoon size={20} /> : <IconSun size={20} />}
+              {isDark ? (
+                <IconMoon size={20} />
+              ) : (
+                <IconSun size={20} color="#ff5200" />
+              )}
             </button>
           </div>
         </div>

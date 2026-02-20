@@ -29,10 +29,16 @@ export const Hero = ({
       <Container>
         <div ref={heroRef} className="flex flex-col border-x sm:flex-row">
           <div className="flex grow flex-col justify-end border-r py-4">
-            <h1 className="group overflow-clip border-y px-4 text-3xl font-semibold">
-              <span className="inline-block drop-shadow-[0px_2.3ex_0px_#f00] duration-300 group-hover:-translate-y-full">
-                REZAUL KARIM
-              </span>
+            <h1 className="group overflow-clip border-y px-4 text-3xl font-semibold select-none">
+              {"REZAUL KARIM".split("").map((char, idx) => (
+                <span
+                  key={idx}
+                  className="inline-block drop-shadow-[0px_2.3ex_0px_#ff5200] duration-200 group-hover:-translate-y-full"
+                  style={{ transitionDelay: `${idx * 30}ms` }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </span>
+              ))}
             </h1>
           </div>
           <div className="flex shrink-0 items-center justify-center p-4">
