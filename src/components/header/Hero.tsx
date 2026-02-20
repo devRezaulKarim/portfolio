@@ -2,6 +2,13 @@ import { motion, type MotionValue } from "motion/react";
 
 import Container from "../wrappers/Container";
 import { RefObject } from "react";
+import { IconCode, IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
+import {
+  ProfileItem,
+  ProfileItemContent,
+  ProfileItemIcon,
+  ProfileItemLink,
+} from "../common/ProfileItem";
 
 export const Hero = ({
   heroRef,
@@ -40,6 +47,63 @@ export const Hero = ({
                 </span>
               ))}
             </h1>
+            <h2 className="border-b px-4 text-lg">Frontend Developer</h2>
+            <div className="h-4 border-b" />
+            <div className="space-y-3.25 border-b px-4 py-4">
+              <ProfileItem>
+                <ProfileItemIcon>
+                  <IconCode />
+                </ProfileItemIcon>
+                <ProfileItemContent>
+                  <span>Frontend Developer</span>{" "}
+                  <ProfileItemLink
+                    href="https://debuggersstudio.com/"
+                    aria-label="Debuggers Studio"
+                  >
+                    @DebuggersStudio
+                  </ProfileItemLink>
+                </ProfileItemContent>
+              </ProfileItem>{" "}
+              <ProfileItem>
+                <ProfileItemIcon>
+                  <IconMapPin />
+                </ProfileItemIcon>
+                <ProfileItemContent>
+                  <ProfileItemLink
+                    href="https://maps.app.goo.gl/MAL6pasSuRThWimn7"
+                    aria-label="Dhaka, Bangladesh"
+                  >
+                    Dhaka, Bangladesh
+                  </ProfileItemLink>
+                </ProfileItemContent>
+              </ProfileItem>
+              <ProfileItem>
+                <ProfileItemIcon>
+                  <IconPhone />
+                </ProfileItemIcon>
+                <ProfileItemContent>
+                  <ProfileItemLink
+                    href="tel:+880 1540 652375"
+                    aria-label="+880 1540 652375"
+                  >
+                    +880 1540 652375
+                  </ProfileItemLink>
+                </ProfileItemContent>
+              </ProfileItem>
+              <ProfileItem>
+                <ProfileItemIcon>
+                  <IconMail />
+                </ProfileItemIcon>
+                <ProfileItemContent>
+                  <ProfileItemLink
+                    href="mailto:dev.rezaulkarim@gmail.com"
+                    aria-label="dev.rezaulkarim@gmail.com"
+                  >
+                    dev.rezaulkarim@gmail.com
+                  </ProfileItemLink>
+                </ProfileItemContent>
+              </ProfileItem>
+            </div>
           </div>
           <div className="flex shrink-0 items-center justify-center p-4">
             <div ref={startRef} className="size-85 sm:size-62.5" />
