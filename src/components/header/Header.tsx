@@ -19,13 +19,13 @@ export default function Header() {
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "end start"],
+    offset: ["start 100px", "end start"],
   });
 
   const borderRadius = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    ["0", "0", "200px"],
+    ["0", "0", "28px"],
   );
 
   const x = useTransform(scrollYProgress, [0, 1], [0, positions.deltaX]);
@@ -33,11 +33,11 @@ export default function Header() {
   const y = useTransform(
     scrollYProgress,
     [0, 0.25, 1],
-    [0, positions.deltaY / 1.5, positions.deltaY],
+    [0, positions.deltaY / 2, positions.deltaY],
   );
 
   const size = useTransform(scrollYProgress, [0, 1], [250, 48]);
-  const rotate = useTransform(scrollYProgress, [0, 0.8, 1], [0, -18, 0]);
+  const rotate = useTransform(scrollYProgress, [0, 0.8, 1], [0, -25, 0]);
 
   const smoothSize = useSpring(size, { stiffness: 100, damping: 25 });
   const smoothX = useSpring(x, { stiffness: 100, damping: 25 });
@@ -47,6 +47,13 @@ export default function Header() {
     stiffness: 100,
     damping: 25,
   });
+
+  const navLinksX = useTransform(scrollYProgress, [0, 1], [0, 250]);
+  const smoothNavLinksX = useSpring(navLinksX, {
+    stiffness: 80,
+    damping: 25,
+  });
+
   useEffect(() => {
     window.history.scrollRestoration = "manual";
     window.scrollTo(0, 0);
@@ -91,7 +98,7 @@ export default function Header() {
   }, []);
   return (
     <>
-      <Navbar targetRef={targetRef} />
+      <Navbar targetRef={targetRef} smoothNavLinksX={smoothNavLinksX} />
       <SpacerPattern />
       <SpacerPattern direction="right" />
       <Hero

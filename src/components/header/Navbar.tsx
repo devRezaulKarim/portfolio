@@ -1,6 +1,7 @@
-import { IconMoon, IconSun, IconUser } from "@tabler/icons-react";
+import { IconBrandGithub, IconMoon, IconSun } from "@tabler/icons-react";
 import { RefObject, useSyncExternalStore } from "react";
 import Container from "../wrappers/Container";
+import { motion, type MotionValue } from "motion/react";
 
 function subscribe(callback: () => void) {
   const observer = new MutationObserver(callback);
@@ -22,8 +23,10 @@ function getServerSnapshot() {
 
 export const Navbar = ({
   targetRef,
+  smoothNavLinksX,
 }: {
   targetRef: RefObject<HTMLDivElement | null>;
+  smoothNavLinksX: MotionValue<number>;
 }) => {
   const isDark = useSyncExternalStore(
     subscribe,
@@ -36,31 +39,37 @@ export const Navbar = ({
   };
 
   return (
-    <div className="sticky top-0 w-full border-y">
+    <div className="bg-background sticky top-0 w-full border-y">
       <Container>
-        <div className="flex items-center justify-between border-r border-l p-2">
+        <div className="relative flex items-center justify-between border-r border-l p-2">
           <div
             ref={targetRef}
             className="logo flex size-12 items-center justify-center"
-          >
-            <IconUser />
-          </div>
+          />
 
-          <nav>
+          <motion.nav
+            style={{ x: smoothNavLinksX }}
+            className="absolute left-0 px-4"
+          >
             <ul className="flex items-center justify-center gap-4">
               <li>Home</li>
               <li>Component</li>
               <li>Blogs</li>
             </ul>
-          </nav>
+          </motion.nav>
 
-          <button
-            type="button"
-            onClick={toggleTheme}
-            className="cursor-pointer"
-          >
-            {isDark ? <IconMoon /> : <IconSun />}
-          </button>
+          <div className="flex items-center gap-x-6">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <IconBrandGithub />
+            </a>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="cursor-pointer"
+            >
+              {isDark ? <IconMoon /> : <IconSun />}
+            </button>
+          </div>
         </div>
       </Container>
     </div>

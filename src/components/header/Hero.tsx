@@ -38,9 +38,9 @@ export const Hero = ({
               height={250}
               className="fixed size-62.5"
               style={{
-                left: startX, // fixed base position
-                top: startY, // fixed base position
-                x: smoothX, // relative movement
+                left: startX,
+                top: startY,
+                x: smoothX,
                 y: smoothY,
                 width: smoothSize,
                 height: smoothSize,
