@@ -34,12 +34,10 @@ export const Hero = ({
             <motion.img
               src="/rezaul.avif"
               alt="Profile Pic"
-              width={250}
-              height={250}
               className="fixed size-85 sm:size-62.5"
               style={{
-                left: startX,
-                top: startY,
+                left: `${startX}px`,
+                top: `${startY}px`,
                 x: smoothX,
                 y: smoothY,
                 width: smoothSize,

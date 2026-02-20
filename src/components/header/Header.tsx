@@ -4,17 +4,22 @@ import { Navbar } from "./Navbar";
 import { SpacerPattern } from "../common/SpacerPattern";
 import { Hero } from "./Hero";
 import { useScroll, useSpring, useTransform } from "motion/react";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export default function Header() {
   const heroRef = useRef<HTMLDivElement | null>(null);
   const startRef = useRef<HTMLDivElement | null>(null);
   const targetRef = useRef<HTMLDivElement | null>(null);
-  const isMobile = useMediaQuery("(max-width: 640px)");
+
+  const [isClientMobile, setIsClientMobile] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsClientMobile(window.matchMedia("(max-width: 640px)").matches);
+  }, []);
 
   const [positions, setPositions] = useState({
-    startX: 0,
-    startY: 0,
+    startX: -1000,
+    startY: -1000,
     deltaX: 0,
     deltaY: 0,
   });
@@ -27,7 +32,7 @@ export default function Header() {
   const borderRadius = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    ["0", "0", "28px"],
+    ["0px", "0px", "28px"],
   );
 
   const x = useTransform(scrollYProgress, [0, 1], [0, positions.deltaX]);
@@ -41,7 +46,7 @@ export default function Header() {
   const size = useTransform(
     scrollYProgress,
     [0, 1],
-    [isMobile ? 340 : 250, 48],
+    [isClientMobile ? 340 : 250, 48],
   );
   const rotate = useTransform(scrollYProgress, [0, 0.8, 1], [0, -25, 0]);
 
