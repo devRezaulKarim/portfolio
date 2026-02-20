@@ -60,14 +60,14 @@ export const Navbar = ({
 
           <div className="flex items-center gap-x-6">
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <IconBrandGithub />
+              <IconBrandGithub size={20} />
             </a>
             <button
               type="button"
               onClick={toggleTheme}
               className="cursor-pointer"
             >
-              {isDark ? <IconMoon /> : <IconSun />}
+              {isDark ? <IconMoon size={20} /> : <IconSun size={20} />}
             </button>
           </div>
         </div>
