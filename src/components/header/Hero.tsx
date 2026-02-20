@@ -27,16 +27,16 @@ export const Hero = ({
   return (
     <div className="border-y">
       <Container>
-        <div ref={heroRef} className="flex border-x">
+        <div ref={heroRef} className="flex flex-col border-x sm:flex-row">
           <div className="grow border-r p-4">Content</div>
           <div className="flex shrink-0 items-center justify-center p-4">
-            <div ref={startRef} className="size-62.5" />
+            <div ref={startRef} className="size-85 sm:size-62.5" />
             <motion.img
               src="/rezaul.avif"
               alt="Profile Pic"
               width={250}
               height={250}
-              className="fixed size-62.5"
+              className="fixed size-85 sm:size-62.5"
               style={{
                 left: startX,
                 top: startY,
