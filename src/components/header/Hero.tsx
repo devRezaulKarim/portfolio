@@ -109,6 +109,7 @@ export const Hero = ({
             <div ref={startRef} className="size-85 sm:size-62.5" />
             <motion.img
               src="/rezaul.avif"
+              fetchPriority="high"
               alt="Profile Pic"
               className="fixed size-85 sm:size-62.5"
               style={{
