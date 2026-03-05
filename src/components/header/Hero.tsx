@@ -9,6 +9,7 @@ import {
   ProfileItemIcon,
   ProfileItemLink,
 } from "../common/ProfileItem";
+import Section from "../wrappers/Section";
 
 export const Hero = ({
   heroRef,
@@ -32,9 +33,9 @@ export const Hero = ({
   smoothBorderRadius: MotionValue<string>;
 }) => {
   return (
-    <div className="border-y">
+    <Section className="border-y">
       <Container>
-        <div ref={heroRef} className="flex flex-col border-x sm:flex-row">
+        <div ref={heroRef} className="flex flex-col sm:flex-row">
           <div className="flex grow flex-col justify-end border-r py-4">
             <div className="border-y px-4">
               <h1 className="group w-fit overflow-clip text-3xl font-semibold select-none">
@@ -113,7 +114,7 @@ export const Hero = ({
               src="/rezaul.avif"
               fetchPriority="high"
               alt="Profile Pic"
-              className="fixed size-85 sm:size-62.5"
+              className="fixed z-1 size-85 sm:size-62.5"
               style={{
                 left: `${startX}px`,
                 top: `${startY}px`,
@@ -128,6 +129,6 @@ export const Hero = ({
           </div>
         </div>
       </Container>
-    </div>
+    </Section>
   );
 };

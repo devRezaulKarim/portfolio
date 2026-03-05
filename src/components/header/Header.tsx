@@ -56,7 +56,11 @@ export default function Header() {
     damping: 25,
   });
 
-  const navLinksX = useTransform(scrollYProgress, [0, 1], [0, 250]);
+  const navLinksX = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, isMobile ? 400 : 250],
+  );
   const smoothNavLinksX = useSpring(navLinksX, {
     stiffness: 80,
     damping: 25,
@@ -111,8 +115,6 @@ export default function Header() {
   return (
     <>
       <Navbar targetRef={targetRef} smoothNavLinksX={smoothNavLinksX} />
-      <SpacerPattern />
-      <SpacerPattern direction="right" />
       <Hero
         heroRef={heroRef}
         startRef={startRef}
