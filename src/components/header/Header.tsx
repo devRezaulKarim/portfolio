@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Navbar } from "./Navbar";
-import { SpacerPattern } from "../common/SpacerPattern";
 import { Hero } from "./Hero";
 import { useScroll, useSpring, useTransform } from "motion/react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";

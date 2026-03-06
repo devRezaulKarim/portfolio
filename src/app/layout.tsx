@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`h-[400vh] antialiased`}>{children}</body>
+      <body className={`h-[400vh] antialiased`}>
+        <TooltipProvider>{children}</TooltipProvider>
+      </body>
     </html>
   );
 }
