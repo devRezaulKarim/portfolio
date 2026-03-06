@@ -21,10 +21,10 @@ export function GitHubContributionGraph({
   contributions: Promise<Activity[]>;
 }) {
   const data = use(contributions);
-  console.log({ data });
+
   return (
     <ContributionGraph
-      className="mx-auto py-2"
+      className="mx-auto py-4"
       data={data}
       blockSize={11}
       blockMargin={3}
@@ -35,30 +35,21 @@ export function GitHubContributionGraph({
         title="GitHub Contributions"
       >
         {({ activity, dayIndex, weekIndex }) => (
-          <g>
-            <ContributionGraphBlock
-              activity={activity}
-              dayIndex={dayIndex}
-              weekIndex={weekIndex}
-            />
-          </g>
-          // <Tooltip>
-          //   <TooltipTrigger>
-          //     <g>
-          //       <ContributionGraphBlock
-          //         activity={activity}
-          //         dayIndex={dayIndex}
-          //         weekIndex={weekIndex}
-          //       />
-          //     </g>
-          //   </TooltipTrigger>
-          //   <TooltipContent className="font-sans">
-          //     <p>
-          //       {activity.count} contribution{activity.count > 1 ? "s" : null}{" "}
-          //       on {format(new Date(activity.date), "dd.MM.yyyy")}
-          //     </p>
-          //   </TooltipContent>
-          // </Tooltip>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <ContributionGraphBlock
+                activity={activity}
+                dayIndex={dayIndex}
+                weekIndex={weekIndex}
+              />
+            </TooltipTrigger>
+            <TooltipContent className="font-sans">
+              <p>
+                {activity.count} contribution{activity.count > 1 ? "s" : null}{" "}
+                on {format(new Date(activity.date), "dd.MM.yyyy")}
+              </p>
+            </TooltipContent>
+          </Tooltip>
         )}
       </ContributionGraphCalendar>
 
