@@ -1,5 +1,5 @@
+import { Activity } from "@/components/about/kibo-ui/contribution-graph";
 import { unstable_cache } from "next/cache";
-import type { Activity } from "@/components/kibo-ui/contribution-graph";
 
 type GitHubContributionsResponse = {
   contributions: Activity[];

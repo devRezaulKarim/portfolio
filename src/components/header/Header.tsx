@@ -22,7 +22,7 @@ export default function Header() {
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start 100px", "end start"],
+    offset: ["start 100px", "end 200px"],
   });
 
   const borderRadius = useTransform(

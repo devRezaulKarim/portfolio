@@ -4,8 +4,6 @@ import { format } from "date-fns";
 import { LoaderIcon } from "lucide-react";
 import { use } from "react";
 
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-import type { Activity } from "@/components/kibo-ui/contribution-graph";
 import {
   ContributionGraph,
   ContributionGraphBlock,
@@ -13,7 +11,13 @@ import {
   ContributionGraphFooter,
   ContributionGraphLegend,
   ContributionGraphTotalCount,
-} from "@/components/kibo-ui/contribution-graph";
+} from "../kibo-ui/contribution-graph";
+import { Activity } from "../kibo-ui/contribution-graph";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function GitHubContributionGraph({
   contributions,
@@ -24,7 +28,7 @@ export function GitHubContributionGraph({
 
   return (
     <ContributionGraph
-      className="mx-auto py-4"
+      className="mx-auto pt-3 pb-2"
       data={data}
       blockSize={11}
       blockMargin={3}

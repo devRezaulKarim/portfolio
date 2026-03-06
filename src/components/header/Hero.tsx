@@ -33,7 +33,7 @@ export const Hero = ({
   smoothBorderRadius: MotionValue<string>;
 }) => {
   return (
-    <Section className="border-y">
+    <Section>
       <Container>
         <div ref={heroRef} className="flex flex-col sm:flex-row">
           <div className="flex grow flex-col justify-end border-r py-4">

@@ -1,6 +1,6 @@
 import { SpacerPattern } from "@/components/common/SpacerPattern";
-import { GitHubContributions } from "@/components/github-contributions/GitHubContributions";
 import Header from "@/components/header/Header";
+import { About } from "@/components/about/About";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <SpacerPattern />
       <SpacerPattern position="right" />
       <Header />
-      <GitHubContributions />
+      <About />
     </>
   );
 }
