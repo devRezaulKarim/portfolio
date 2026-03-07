@@ -2,12 +2,13 @@ import { IconTrophy } from "@tabler/icons-react";
 import Container from "../wrappers/Container";
 import Section from "../wrappers/Section";
 import { GitHubContributions } from "./github-contributions/GitHubContributions";
+import { SectionHeader } from "../common/SectionHeader";
 
 export const About = () => {
   return (
     <Section>
       <Container>
-        <div className="my-4 border-y px-4 text-3xl font-semibold">About</div>
+        <SectionHeader>About</SectionHeader>
         <ul className="my-4 list-disc space-y-2 border-y pr-4 pb-1 pl-8 font-mono text-sm leading-6 marker:pt-1 marker:text-lg marker:text-neutral-500">
           <li>
             Frontend Engineer focused on building{" "}
