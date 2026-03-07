@@ -13,12 +13,14 @@ const TECH_ICON_SIZE = 48;
 export const StackCard = ({
   tech,
   scrollYProgress,
+  initialPosition,
 }: {
   tech: TechStack;
   scrollYProgress: MotionValue<number>;
+  initialPosition: { x: number; y: number };
 }) => {
-  const x = useTransform(scrollYProgress, [0, 1], [200, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 0]);
+  const x = useTransform(scrollYProgress, [0, 1], [initialPosition.x, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [initialPosition.y, 0]);
   const smoothX = useSpring(x, { stiffness: 100, damping: 25 });
   const smoothY = useSpring(y, { stiffness: 100, damping: 25 });
   return (
