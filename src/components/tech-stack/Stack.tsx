@@ -5,6 +5,8 @@ import { TECH_STACK } from "@/lib/tech-stack";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import Image from "next/image";
 
+const TECH_ICON_SIZE = 48;
+
 export const Stack = () => {
   return (
     <Section>
@@ -28,16 +30,16 @@ export const Stack = () => {
                           <Image
                             src={`/stacks/${tech.key}-light.svg`}
                             alt={`${tech.title} light icon`}
-                            width={48}
-                            height={48}
+                            width={TECH_ICON_SIZE}
+                            height={TECH_ICON_SIZE}
                             className="dark:hidden"
                             unoptimized
                           />
                           <Image
                             src={`/stacks/${tech.key}-dark.svg`}
                             alt={`${tech.title} dark icon`}
-                            width={48}
-                            height={48}
+                            width={TECH_ICON_SIZE}
+                            height={TECH_ICON_SIZE}
                             className="hidden dark:block"
                             unoptimized
                           />
@@ -46,8 +48,8 @@ export const Stack = () => {
                         <Image
                           src={`/stacks/${tech.key}.svg`}
                           alt={`${tech.title} icon`}
-                          width={48}
-                          height={48}
+                          width={TECH_ICON_SIZE}
+                          height={TECH_ICON_SIZE}
                           unoptimized
                           className=""
                         />
