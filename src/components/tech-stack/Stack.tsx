@@ -9,17 +9,20 @@ import { StackCard } from "./StackCard";
 
 export const Stack = () => {
   const sectionRef = useRef<HTMLUListElement | null>(null);
+  const [sectionLeft, setSectionLeft] = useState(0);
+  const [sectionTop, setSectionTop] = useState(0);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "start 400px"],
+    offset: [`start ${sectionTop}px`, "start end"],
   });
-  const [sectionLeft, setSectionLeft] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
       const sectionRect = sectionRef.current?.getBoundingClientRect();
       const sectionLeft = sectionRect?.left ? sectionRect?.left - 100 : 0;
+      const sectionTop = sectionRect?.top ? sectionRect?.top : 1200;
       setSectionLeft(sectionLeft);
+      setSectionTop(sectionTop);
     }, 0);
   }, []);
 
@@ -31,17 +34,15 @@ export const Stack = () => {
           ref={sectionRef}
           className="my-4 flex flex-wrap gap-5 border-y p-4 select-none"
         >
-          {TECH_STACK.map((tech, idx) => {
-            return (
-              <StackCard
-                key={tech.key}
-                idx={idx}
-                tech={tech}
-                scrollYProgress={scrollYProgress}
-                sectionLeft={sectionLeft}
-              />
-            );
-          })}
+          {TECH_STACK.map((tech, idx) => (
+            <StackCard
+              key={tech.key}
+              idx={idx}
+              tech={tech}
+              scrollYProgress={scrollYProgress}
+              sectionLeft={sectionLeft}
+            />
+          ))}
         </ul>
       </Container>
     </Section>

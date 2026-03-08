@@ -1,3 +1,4 @@
+"use client";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import Image from "next/image";
 import {
@@ -25,18 +26,18 @@ export const StackCard = ({
   const targetRef = useRef(null);
   const [randomPosition, setRandomPosition] = useState({ y: 0, x: 0 });
   const [targetPosition, setTargetPosition] = useState({ y: 0, x: 0 });
-  const initX =
-    idx % 2 === 0
-      ? randomPosition.x - targetPosition.x
-      : randomPosition.x + targetPosition.x;
-  const x = useTransform(scrollYProgress, [0, 1], [initX, 0]);
+  const [initX, setInitX] = useState(0);
+
+  const x = useTransform(scrollYProgress, [0, 0.8, 1], [initX, initX, 0]);
   const y = useTransform(
     scrollYProgress,
     [0, 1],
     [randomPosition.y - targetPosition.y, 0],
   );
-  const smoothX = useSpring(x, { stiffness: 100, damping: 25 });
-  const smoothY = useSpring(y, { stiffness: 100, damping: 25 });
+  const scale = useTransform(scrollYProgress, [0.5, 1], [0.5, 1]);
+  const smoothX = useSpring(x, { stiffness: 120, damping: 25 });
+  const smoothY = useSpring(y, { stiffness: 120, damping: 25 });
+  const smoothScale = useSpring(scale, { stiffness: 120, damping: 25 });
 
   useEffect(() => {
     setTimeout(() => {
@@ -49,9 +50,15 @@ export const StackCard = ({
           targetRef.current as HTMLElement
         ).getBoundingClientRect();
         setTargetPosition({ y: top, x: left });
+
+        const distanceFromRight = window.innerWidth - x - TECH_ICON_SIZE;
+        const calculatedInitX =
+          idx % 2 === 0 ? x - left : distanceFromRight - left;
+        setInitX(calculatedInitX);
       }
     }, 0);
-  }, [sectionLeft]);
+  }, [sectionLeft, idx]);
+
   return (
     <>
       <li ref={targetRef}>
@@ -60,6 +67,7 @@ export const StackCard = ({
           style={{
             y: smoothY,
             x: smoothX,
+            scale: smoothScale,
           }}
         >
           <Tooltip>
