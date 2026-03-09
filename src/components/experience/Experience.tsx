@@ -1,3 +1,4 @@
+import { experiences } from "@/lib/experiences";
 import { SectionHeader } from "../common/SectionHeader";
 import Container from "../wrappers/Container";
 import Section from "../wrappers/Section";
@@ -8,8 +9,14 @@ export const Experience = () => {
     <Section>
       <Container>
         <SectionHeader>Experience</SectionHeader>
-        <div className="border-t py-2 pl-4">
-          <ExperienceCard />
+        <div className="space-y-6 border-t py-2 pl-4">
+          {experiences.map((experience, index) => (
+            <ExperienceCard
+              key={experience.key}
+              experience={experience}
+              defaultOpen={index === 0}
+            />
+          ))}
         </div>
       </Container>
     </Section>

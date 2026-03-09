@@ -1,4 +1,17 @@
-export const experiences = [
+export type ExperienceItem = {
+  key: string;
+  role: string;
+  type: string;
+  company: string;
+  website: string;
+  startDate: string;
+  endDate: string;
+  responsibilities: string;
+  skills: string[];
+  isCurrent?: boolean;
+};
+
+export const experiences: ExperienceItem[] = [
   {
     key: "ds",
     role: "Frontend Developer",
@@ -7,6 +20,7 @@ export const experiences = [
     website: "https://debuggersstudio.com/",
     startDate: "6.2024",
     endDate: "Present",
+    isCurrent: true,
     responsibilities: `
       <ul>
         <li>Built and maintained multiple production-level React/Next.js applications, improving performance and SEO for client websites.</li>
