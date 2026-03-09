@@ -1,7 +1,6 @@
 "use client";
 
 import { format } from "date-fns";
-import { LoaderIcon } from "lucide-react";
 import { use } from "react";
 
 import {
@@ -18,6 +17,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { IconLoader } from "@tabler/icons-react";
 
 export function GitHubContributionGraph({
   contributions,
@@ -84,7 +84,7 @@ export function GitHubContributionGraph({
 export function GitHubContributionFallback() {
   return (
     <div className="flex h-40.5 w-full items-center justify-center">
-      <LoaderIcon className="text-muted-foreground animate-spin" />
+      <IconLoader className="text-muted-foreground animate-spin" />
     </div>
   );
 }

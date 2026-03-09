@@ -3,6 +3,7 @@ import Header from "@/components/header/Header";
 import { About } from "@/components/about/About";
 import { Stack } from "@/components/tech-stack/Stack";
 import { SectionGap } from "@/components/common/SectionGap";
+import { Experience } from "@/components/experience/Experience";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <About />
       <SectionGap />
       <Stack />
+      <SectionGap />
+      <Experience />
     </>
   );
 }
