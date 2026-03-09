@@ -62,40 +62,8 @@ export const About = () => {
             experience, and shipping products that feel fast, intuitive, and
             reliable.
           </li>
-          {/* <li>
-            Frontend Engineer with 3+ years of hands-on experience, focused on
-            building modern, high-performance web applications with strong
-            attention to detail and clean architecture.
-            <ul className="my-2">
-              <li className="flex items-center gap-x-2">
-                <IconTrophy size={18} />
-                Performer of the Year 2025 — DebuggersStudio
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            Skilled in{" "}
-            <strong>
-              Next.js, React, TypeScript, and modern front-end tooling,
-            </strong>{" "}
-            creating scalable interfaces that balance usability, performance,
-            and maintainability. Experienced with real-world production
-            workflows including authentication, API integration, caching
-            strategies, and deployment.
-          </li>
-          <li>
-            Passionate about deeply understanding how things work, exploring new
-            technologies, and building polished side projects that solve real
-            problems.
-          </li>
-          <li>
-            Always focused on writing maintainable code, improving developer
-            experience, and shipping products that feel fast, intuitive, and
-            reliable.
-          </li> */}
         </ul>
-        <GitHubContributions />
+        {/* <GitHubContributions /> */}
       </Container>
     </Section>
   );

@@ -23,7 +23,7 @@ export const Stack = () => {
           }}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.25 }}
+          viewport={{ once: true, amount: 0.25 }}
         >
           {TECH_STACK.map((tech) => (
             <StackCard key={tech.key} tech={tech} />

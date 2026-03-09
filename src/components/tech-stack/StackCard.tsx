@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { TechStack } from "@/lib/tech-stack";
 
-const TECH_ICON_SIZE = 48;
+const TECH_ICON_SIZE = 40;
 
 export const StackCard = ({ tech }: { tech: TechStack }) => {
   return (

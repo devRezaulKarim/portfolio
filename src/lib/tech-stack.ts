@@ -24,7 +24,12 @@ export const TECH_STACK: TechStack[] = [
     href: "https://nodejs.org/",
     categories: ["Runtime Environment"],
   },
-
+  {
+    key: "php",
+    title: "PHP",
+    href: "https://www.php.net/",
+    categories: ["Language"],
+  },
   {
     key: "react",
     title: "React",
