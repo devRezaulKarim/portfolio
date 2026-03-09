@@ -4,6 +4,7 @@ import { Navbar } from "./Navbar";
 import { Hero } from "./Hero";
 import { useScroll, useSpring, useTransform } from "motion/react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { SectionGap } from "../common/SectionGap";
 
 export default function Header() {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -114,6 +115,7 @@ export default function Header() {
   return (
     <>
       <Navbar targetRef={targetRef} smoothNavLinksX={smoothNavLinksX} />
+      <SectionGap />
       <Hero
         heroRef={heroRef}
         startRef={startRef}

@@ -9,12 +9,7 @@ export default function Section({
   children: ReactNode;
 }) {
   return (
-    <section
-      className={cn(
-        "mt-20 overflow-x-clip border-y md:mt-20 lg:mt-30",
-        className,
-      )}
-    >
+    <section className={cn("overflow-x-clip border-y", className)}>
       {children}
     </section>
   );
