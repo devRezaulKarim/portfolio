@@ -1,31 +1,27 @@
 "use client";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import Image from "next/image";
-import {
-  motion,
-  type MotionValue,
-  useSpring,
-  useTransform,
-} from "motion/react";
+import { motion } from "motion/react";
 import { TechStack } from "@/lib/tech-stack";
 
 const TECH_ICON_SIZE = 48;
 
-export const StackCard = ({
-  tech,
-  scrollYProgress,
-}: {
-  tech: TechStack;
-  scrollYProgress: MotionValue<number>;
-}) => {
-  const scale = useTransform(scrollYProgress, [0.5, 1], [0.5, 1]);
-  const smoothScale = useSpring(scale, { stiffness: 120, damping: 25 });
-
+export const StackCard = ({ tech }: { tech: TechStack }) => {
   return (
     <motion.li
       className="flex"
-      style={{
-        scale: smoothScale,
+      variants={{
+        hidden: { opacity: 0, x: (TECH_ICON_SIZE / 2) * -1 },
+        show: {
+          opacity: 1,
+          x: 0,
+          transition: {
+            type: "spring",
+            stiffness: 120,
+            damping: 20,
+            mass: 0.5,
+          },
+        },
       }}
     >
       <Tooltip>

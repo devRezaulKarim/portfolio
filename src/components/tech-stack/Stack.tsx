@@ -3,33 +3,32 @@ import Section from "../wrappers/Section";
 import Container from "../wrappers/Container";
 import { SectionHeader } from "../common/SectionHeader";
 import { TECH_STACK } from "@/lib/tech-stack";
-import { useScroll } from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
 import { StackCard } from "./StackCard";
 
 export const Stack = () => {
-  const sectionRef = useRef<HTMLUListElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: [`start end`, "end start"],
-  });
-
   return (
     <Section>
       <Container>
         <SectionHeader>Stack</SectionHeader>
-        <ul
-          ref={sectionRef}
+        <motion.ul
           className="my-4 flex flex-wrap gap-5 border-y p-4 select-none"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.08,
+              },
+            },
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
         >
           {TECH_STACK.map((tech) => (
-            <StackCard
-              key={tech.key}
-              tech={tech}
-              scrollYProgress={scrollYProgress}
-            />
+            <StackCard key={tech.key} tech={tech} />
           ))}
-        </ul>
+        </motion.ul>
       </Container>
     </Section>
   );
