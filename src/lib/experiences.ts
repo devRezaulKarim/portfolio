@@ -35,12 +35,10 @@ export const experiences: ExperienceItem[] = [
       <a href="https://marqueeaddons.com/" target="_blank"><strong>Marquee Addons</strong></a></p>
 
       <ul>
-        <li>Developed UI features for a popular Elementor addon plugin providing multiple animated content widgets.</li>
-        <li>Implemented widgets including Text Marquee, Animated Heading, Animated Word Roller, and News Ticker.</li>
-        <li>Built advanced interactive widgets such as Image Marquee, Video Marquee, Image Accordion, and Image Hotspot.</li>
-        <li>Contributed to creative layout components like Bento Grid, Stacked Slider, Smart Tabs, and Sticky Cards.</li>
-        <li>Developed animation-focused components including Circular Text Rotation, Card Marquee, and Text Reveal.</li>
-        <li>Worked on dynamic WordPress + Elementor integrations ensuring smooth widget configuration and performance.</li>
+        <li>Developed UI features for an Elementor addon plugin with 20+ animated widgets.</li>
+        <li>Built components like Text Marquee, Animated Heading, News Ticker, Image Accordion, and Bento Grid.</li>
+        <li>Implemented advanced layouts such as Stacked Slider, Sticky Cards, Smart Tabs, and Media Marquee.</li>
+        <li>Focused on smooth animations, responsive layouts, and Elementor compatibility.</li>
       </ul>
       </div>
       <div class="pt-2">
@@ -48,14 +46,11 @@ export const experiences: ExperienceItem[] = [
       <a href="https://reelswp.com/" target="_blank"><strong>ReelsWP</strong></a></p>
 
       <ul>
-        <li>Developed frontend features for a WordPress plugin that enables Instagram/TikTok-style video reels for WooCommerce stores.</li>
-        <li>Implemented multiple display layouts including Grid, Carousel, Marquee Reels, and Stacked Reels experiences.</li>
-        <li>Built interactive video player features including swipe navigation, hover play, autoplay, and popup reels.</li>
-        <li>Implemented shoppable video functionality allowing products to be tagged directly inside videos.</li>
-        <li>Worked on Elementor widget and Gutenberg block integrations for seamless page builder support.</li>
-        <li>Developed customizable UI controls including typography, spacing, colors, shapes, and CTA elements.</li>
-        <li>Added support for multiple video sources including self-hosted videos, Vimeo, and custom video URLs.</li>
-        <li>Improved user engagement with features like video view counters and drag-and-drop reel management.</li>
+        <li>Developed frontend features for a WooCommerce video reels plugin.</li>
+        <li>Implemented Grid, Carousel, Marquee, and Stacked video layouts.</li>
+        <li>Built swipe-based video player with autoplay, hover play, and popup reels.</li>
+        <li>Added shoppable video features with product tagging inside reels.</li>
+        <li>Integrated Elementor widget and Gutenberg block support.</li>
       </ul>
       </div>
     `,

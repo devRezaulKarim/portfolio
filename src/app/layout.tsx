@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`h-[400vh] antialiased`}>
+      <body className={`antialiased`}>
         <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
