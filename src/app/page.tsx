@@ -17,6 +17,7 @@ export default function Home() {
       <Stack />
       <SectionGap />
       <Experience />
+      <SectionGap className="h-10 lg:h-15" />
     </>
   );
 }
