@@ -12,14 +12,16 @@ import {
 type ExperienceCardProps = {
   experience: ExperienceItem;
   defaultOpen?: boolean;
+  index: number;
 };
 
 export const ExperienceCard = ({
   experience,
   defaultOpen = false,
+  index,
 }: ExperienceCardProps) => {
   return (
-    <div className="space-y-4">
+    <div className={cn("space-y-4 pl-4", index !== 0 && "mb-4 border-y py-2")}>
       <div className="flex items-center gap-3">
         <div className="flex size-6 items-center justify-center">
           <Image

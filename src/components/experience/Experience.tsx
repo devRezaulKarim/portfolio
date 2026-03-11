@@ -9,12 +9,13 @@ export const Experience = () => {
     <Section>
       <Container>
         <SectionHeader>Experience</SectionHeader>
-        <div className="space-y-6 border-t py-2 pl-4">
+        <div className="space-y-2 border-t pt-2">
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={experience.key}
               experience={experience}
               defaultOpen={index === 0}
+              index={index}
             />
           ))}
         </div>
