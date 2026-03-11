@@ -8,6 +8,8 @@ import {
   CollapsibleTrigger,
   CollapsibleWithContext,
 } from "@/components/ui/collapsible";
+import { ProseMono } from "../ui/typography";
+import { Markdown } from "../common/markdown";
 
 type ExperienceCardProps = {
   experience: ExperienceItem;
@@ -92,21 +94,21 @@ export const ExperienceCard = ({
               </div>
             </CollapsibleTrigger>
             <CollapsibleContent>
-              <div
+              {/* <div
                 className="prose prose-sm dark:prose-invert max-w-none [&_li::marker]:text-xl [&_ul]:mt-4 [&_ul]:mb-0"
                 dangerouslySetInnerHTML={{
                   __html: experience.responsibilities.trim(),
                 }}
-              />
+              /> */}
+              <ProseMono className="pt-2 pl-9">
+                <Markdown>{experience.responsibilities}</Markdown>
+              </ProseMono>
             </CollapsibleContent>
           </CollapsibleWithContext>
           <ul className="flex flex-wrap gap-1.5 pt-3">
             {experience.skills.map((skill) => (
               <li className="flex" key={`${experience.key}-${skill}`}>
-                <span
-                  data-slot="tag"
-                  className="text-muted-foreground inline-flex items-center border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs dark:bg-zinc-900 [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-3.5"
-                >
+                <span className="text-muted-foreground border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs dark:bg-zinc-900">
                   {skill}
                 </span>
               </li>
