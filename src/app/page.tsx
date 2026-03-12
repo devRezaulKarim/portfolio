@@ -4,6 +4,7 @@ import { About } from "@/components/about/About";
 import { Stack } from "@/components/tech-stack/Stack";
 import { SectionGap } from "@/components/common/SectionGap";
 import { Experience } from "@/components/experience/Experience";
+import { Projects } from "@/components/project/Projects";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <Stack />
       <SectionGap />
       <Experience />
+      <SectionGap />
+      <Projects />
       <SectionGap className="h-10 lg:h-15" />
     </>
   );

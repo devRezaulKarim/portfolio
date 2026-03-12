@@ -94,13 +94,7 @@ export const ExperienceCard = ({
               </div>
             </CollapsibleTrigger>
             <CollapsibleContent>
-              {/* <div
-                className="prose prose-sm dark:prose-invert max-w-none [&_li::marker]:text-xl [&_ul]:mt-4 [&_ul]:mb-0"
-                dangerouslySetInnerHTML={{
-                  __html: experience.responsibilities.trim(),
-                }}
-              /> */}
-              <ProseMono className="pt-2 pl-9">
+              <ProseMono className="pt-2">
                 <Markdown>{experience.responsibilities}</Markdown>
               </ProseMono>
             </CollapsibleContent>
