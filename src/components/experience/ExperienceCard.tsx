@@ -33,14 +33,16 @@ export const ExperienceCard = ({
             src={`/experience/${experience.key}.png`}
           />
         </div>
-        <a
-          href={experience.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-lg leading-snug font-semibold underline-offset-4 hover:underline"
-        >
-          {experience.company}
-        </a>
+        <h3>
+          <a
+            href={experience.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg leading-snug font-semibold underline-offset-4 hover:underline"
+          >
+            {experience.company}
+          </a>
+        </h3>
         {experience.isCurrent ? (
           <span className="relative flex items-center justify-center">
             <span className="absolute inline-flex size-3 animate-ping rounded-full bg-[#ff5200] opacity-50" />
@@ -62,13 +64,13 @@ export const ExperienceCard = ({
           <CollapsibleWithContext defaultOpen={defaultOpen} disabled={false}>
             <CollapsibleTrigger
               asChild
-              className="hover:before:bg-foreground/10 relative before:absolute before:-top-0.5 before:right-1 before:-bottom-0.5 before:-left-2 before:duration-300"
+              className="hover:before:bg-foreground/10 relative before:absolute before:-top-0.5 before:right-0 before:-bottom-0.5 before:-left-2 before:duration-300"
             >
               <div className="flex items-start justify-between pr-1">
                 <div>
-                  <p className="flex-1 font-medium text-balance">
+                  <h4 className="flex-1 font-medium text-balance">
                     {experience.role}
-                  </p>
+                  </h4>
                   <div className="text-muted-foreground flex items-center text-sm">
                     <dl>
                       <dt className="sr-only">Employment Type</dt>
@@ -94,7 +96,7 @@ export const ExperienceCard = ({
               </div>
             </CollapsibleTrigger>
             <CollapsibleContent>
-              <ProseMono className="pt-2">
+              <ProseMono className="pt-2 pr-2">
                 <Markdown>{experience.responsibilities}</Markdown>
               </ProseMono>
             </CollapsibleContent>

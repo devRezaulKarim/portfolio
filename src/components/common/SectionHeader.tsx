@@ -8,8 +8,8 @@ export const SectionHeader = ({
   children: string;
 }) => {
   return (
-    <div className={cn("my-4 border-y px-4 text-3xl font-semibold", className)}>
+    <h2 className={cn("my-4 border-y px-4 text-3xl font-semibold", className)}>
       {children}
-    </div>
+    </h2>
   );
 };

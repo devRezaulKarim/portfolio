@@ -41,7 +41,7 @@ export const Navbar = ({
   return (
     <div className="bg-background sticky top-0 z-1 w-full border-y">
       <Container>
-        <div className="relative flex items-center justify-between px-4 py-2">
+        <div className="relative flex items-center justify-between overflow-x-clip px-4 py-2">
           <div
             ref={targetRef}
             className="logo flex size-12 items-center justify-center"

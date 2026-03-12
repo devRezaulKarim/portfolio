@@ -24,7 +24,7 @@ export const projects: ProjectItem[] = [
     subtitle: "React & Next.js Frontend Engineer",
     website: "https://dev-rezaulkarim.netlify.app",
     github: "https://github.com/devRezaulKarim/portfolio",
-    stack: ["React", "TypeScript", "Vite", "TailwindCSS", "Motion"],
+    stack: ["Next.js", "TypeScript", "Vite", "TailwindCSS", "Motion"],
     highlights: `
 - Built a clean and minimal developer portfolio with responsive design.
 - Implemented subtle UI animations using Motion for better user experience.
