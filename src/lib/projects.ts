@@ -22,7 +22,7 @@ export const projects: ProjectItem[] = [
     theme: true,
     title: "Rezaul Karim",
     subtitle: "React & Next.js Frontend Engineer",
-    website: "https://dev-rezaulkarim.netlify.app",
+    website: "https://rkz.vercel.app/",
     github: "https://github.com/devRezaulKarim/portfolio",
     stack: ["Next.js", "TypeScript", "Vite", "TailwindCSS", "Motion"],
     highlights: `
