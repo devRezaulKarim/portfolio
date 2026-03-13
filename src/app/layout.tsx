@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 export const metadata: Metadata = {
   title: "Rezaul Karim | Frontend Developer",
   description:
-    "Portfolio of Rezaul Karim, a frontend developer specializing in React and Next.js.",
+    "Clean code. Fast interfaces. Thoughtful design. Attention to Details",
   icons: {
     icon: "/favicon.svg",
   },
