@@ -56,10 +56,9 @@ export const ExperienceCard = ({
         <div
           className={cn(
             "border-muted-foreground/15 dark:ring-edge ring-border ring-offset-background flex size-6 shrink-0 items-center justify-center border bg-[#ff5200]/20 ring-1 ring-offset-1 dark:bg-[#ff5200]/10",
-            "[&_svg]:text-muted-foreground [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4",
           )}
         >
-          <IconCode />
+          <IconCode className="text-muted-foreground pointer-events-none size-4" />
         </div>
         <div className="grow">
           <CollapsibleWithContext defaultOpen={defaultOpen} disabled={false}>
