@@ -13,6 +13,7 @@ import { ProseMono } from "../ui/typography";
 import { Markdown } from "../common/markdown";
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Tag } from "../ui/Tag";
 
 export const ProjectCard = ({
   index,
@@ -122,10 +123,8 @@ export const ProjectCard = ({
               </ProseMono>
               <ul className="flex flex-wrap gap-1.5 pt-3 pb-2 pl-4">
                 {project.stack.map((stack) => (
-                  <li className="flex" key={stack}>
-                    <span className="text-muted-foreground border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs dark:bg-zinc-900">
-                      {stack}
-                    </span>
+                  <li key={`${project.key}-${stack}`}>
+                    <Tag>{stack}</Tag>
                   </li>
                 ))}
               </ul>

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/collapsible";
 import { ProseMono } from "../ui/typography";
 import { Markdown } from "../common/markdown";
+import { Tag } from "../ui/Tag";
 
 type ExperienceCardProps = {
   experience: ExperienceItem;
@@ -103,10 +104,8 @@ export const ExperienceCard = ({
           </CollapsibleWithContext>
           <ul className="flex flex-wrap gap-1.5 pt-3">
             {experience.skills.map((skill) => (
-              <li className="flex" key={`${experience.key}-${skill}`}>
-                <span className="text-muted-foreground border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs dark:bg-zinc-900">
-                  {skill}
-                </span>
+              <li key={`${experience.key}-${skill}`}>
+                <Tag>{skill}</Tag>
               </li>
             ))}
           </ul>

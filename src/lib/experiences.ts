@@ -75,10 +75,10 @@ In-house Project: [ReelsWP](https://reelswp.com)
       "React",
       "Tailwind CSS",
       "Shadcn",
-      "Responsive Design",
-      "Component Architecture",
       "Git",
       "Figma",
+      "Responsive Design",
+      "Component Architecture",
     ],
   },
 ];
