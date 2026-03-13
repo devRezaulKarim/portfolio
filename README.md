@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal personal portfolio built with Next.js.
 
-Currently, two official plugins are available:
+## Highlights
+- Scroll‑driven hero animation with Motion.
+- Staggered, in‑view reveal animations for profile and about sections.
+- Data‑driven sections for Projects, Experience, and Tech Stack.
+- GitHub contribution graph with caching and graceful fallback.
+- Dark mode toggle and responsive layout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- Motion (animations)
+- Tabler Icons
+- Radix UI + shadcn/ui primitives
 
-## React Compiler
+## Project Structure
+- `src/app` App Router entry, layout, and global styles
+- `src/components` UI sections, cards, and reusable primitives
+- `src/lib` Content data and helpers
+- `src/config` Small site config values
+- `public` Static assets (icons, images)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Sections
+- `Header` Hero + navigation with scroll‑based transforms
+- `About` Narrative highlights + GitHub contributions graph
+- `Stack` Tech stack grid with tooltips and staggered animation
+- `Experience` Collapsible experience timeline
+- `Projects` Collapsible project cards with highlights and tags
 
-## Expanding the ESLint configuration
+## Data Sources (Edit These)
+- Projects: `src/lib/projects.ts`
+- Experience: `src/lib/experiences.ts`
+- Tech Stack: `src/lib/tech-stack.ts`
+- UTM config: `src/config/site.ts`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## GitHub Contributions
+- Data is fetched from a public contributions API and cached via `unstable_cache`.
+- Source: `src/lib/github-contributions.ts`
+- UI: `src/components/about/github-contributions/`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Development
+Install dependencies and start the dev server:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open `http://localhost:3000`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
+- `npm run dev` Start development server
+- `npm run build` Build for production
+- `npm run start` Run production server
+- `npm run lint` Lint the codebase
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Notes
+- The app uses client components where Motion or interactive UI is needed.
+- Content is mostly data‑driven for easy updates.

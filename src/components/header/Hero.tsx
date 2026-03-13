@@ -1,119 +1,162 @@
-import { MailIcon } from "lucide-react";
-import { ProfileCard } from "../ui/ProfileCard";
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { motion, type MotionValue } from "motion/react";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
+import Container from "../wrappers/Container";
+import { RefObject } from "react";
+import { IconCode, IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
+import {
+  ProfileItem,
+  ProfileItemContent,
+  ProfileItemIcon,
+  ProfileItemLink,
+} from "../common/ProfileItem";
+import Section from "../wrappers/Section";
+
+const profileItems = [
+  {
+    icon: IconCode,
+    content: (
+      <>
+        <span>Frontend Developer</span>{" "}
+        <ProfileItemLink
+          href="https://debuggersstudio.com/"
+          aria-label="Debuggers Studio"
+        >
+          @DebuggersStudio
+        </ProfileItemLink>
+      </>
+    ),
+  },
+  {
+    icon: IconMapPin,
+    content: (
+      <ProfileItemLink
+        href="https://maps.app.goo.gl/MAL6pasSuRThWimn7"
+        aria-label="Dhaka, Bangladesh"
+      >
+        Dhaka, Bangladesh
+      </ProfileItemLink>
+    ),
+  },
+  {
+    icon: IconPhone,
+    content: (
+      <ProfileItemLink
+        href="tel:+880 1540 652375"
+        aria-label="+880 1540 652375"
+      >
+        +880 1540 652375
+      </ProfileItemLink>
+    ),
+  },
+  {
+    icon: IconMail,
+    content: (
+      <ProfileItemLink
+        href="mailto:dev.rezaulkarim@gmail.com"
+        aria-label="dev.rezaulkarim@gmail.com"
+      >
+        dev.rezaulkarim@gmail.com
+      </ProfileItemLink>
+    ),
+  },
+];
+
+const nameChars = "REZAUL KARIM".split("");
+
+const profileListVariants = {
+  hidden: {},
+  show: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.08,
     },
   },
 };
-const itemVariants = {
-  hidden: { opacity: 0, filter: "blur(20px)", y: -100 },
-  visible: {
-    opacity: 1,
-    filter: "blur(0px)",
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1] as const,
-    },
-  },
+
+const profileItemVariants = {
+  hidden: { y: 10, opacity: 0 },
+  show: { y: 0, opacity: 1 },
 };
 
-export const Hero = () => {
-  const isDesktop = useMediaQuery("(min-width: 1024px)");
-
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const translateProfileCard = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isDesktop ? [200, -200] : [100, -100],
-  );
-
+export const Hero = ({
+  heroRef,
+  startRef,
+  startX,
+  startY,
+  smoothX,
+  smoothY,
+  smoothSize,
+  smoothRotate,
+  smoothBorderRadius,
+}: {
+  heroRef: RefObject<HTMLDivElement | null>;
+  startRef: RefObject<HTMLDivElement | null>;
+  startX: number;
+  startY: number;
+  smoothX: MotionValue<number>;
+  smoothY: MotionValue<number>;
+  smoothSize: MotionValue<number>;
+  smoothRotate: MotionValue<number>;
+  smoothBorderRadius: MotionValue<string>;
+}) => {
   return (
-    <section
-      id="hero"
-      ref={ref}
-      style={{
-        backgroundImage: `radial-gradient(circle at 0.5px 0.5px, rgba(255, 82, 0, 0.3) 0.5px, transparent 0)`,
-        backgroundSize: "12px 12px",
-      }}
-      className="bg-bg-1"
-    >
-      <div className="container px-6 pt-4 pb-20 sm:pt-8 md:px-0 lg:px-16">
-        <div className="grid md:grid-cols-11">
-          <div className="md:col-span-5 xl:col-span-4" />
-          <motion.div
-            initial={{ filter: "blur(20px)", scale: 0.5 }}
-            animate={{ filter: "blur(0px)", scale: 1 }}
-            transition={{
-              duration: 0.3,
-            }}
-            className="bg-text-u text-primary text-center md:col-span-6 md:text-left xl:col-span-7 xl:text-left"
-          >
-            Developer
-          </motion.div>
-        </div>{" "}
-        <div className="grid items-center md:mt-6 md:grid-cols-11 md:gap-8 xl:mt-0 lg:gap-0">
-          <motion.div
-            style={{
-              y: translateProfileCard,
-            }}
-            className="md:col-span-5 xl:col-span-4"
-          >
-            <ProfileCard />
-          </motion.div>
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="pt-20 sm:pt-0 md:col-span-6 xl:col-span-7 xl:space-y-6 2xl:space-y-8"
-          >
-            <motion.div variants={itemVariants}>
-              <span className="text-secondary code-text-ibm">&lt;h1&gt;</span>
-              <h1 className="h1-text-u flex flex-col pl-6 text-neutral-300">
-                <span>Hey</span>
-                <span>
-                  I’m <span className="text-primary">Rezaul Karim</span>,
-                </span>
-                <span>Front-end developer</span>
+    <Section id="hero">
+      <Container>
+        <div ref={heroRef} className="flex flex-col sm:flex-row">
+          <div className="flex grow flex-col justify-end border-r py-4">
+            <div className="border-y px-4">
+              <h1 className="group w-fit overflow-clip text-3xl font-semibold select-none">
+                {nameChars.map((char, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-block drop-shadow-[0px_2.3ex_0px_#ff5200] duration-200 group-hover:-translate-y-full"
+                    style={{ transitionDelay: `${idx * 30}ms` }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </span>
+                ))}
               </h1>
-              <span className="text-secondary code-text-ibm">&lt;/h1&gt;</span>
+            </div>
+            <h2 className="border-b px-4 text-lg">Frontend Developer</h2>
+            <div className="h-4 border-b" />
+            <motion.div
+              className="space-y-3.25 border-b px-4 py-4"
+              variants={profileListVariants}
+              initial="hidden"
+              animate="show"
+            >
+              {profileItems.map(({ icon: Icon, content }, idx) => (
+                <motion.div key={idx} variants={profileItemVariants}>
+                  <ProfileItem>
+                    <ProfileItemIcon>
+                      <Icon />
+                    </ProfileItemIcon>
+                    <ProfileItemContent>{content}</ProfileItemContent>
+                  </ProfileItem>
+                </motion.div>
+              ))}
             </motion.div>
-            <motion.div variants={itemVariants}>
-              <span className="text-secondary code-text-ibm">&lt;p&gt;</span>
-              <p className="para-text-ibm pl-6 text-neutral-300">
-                I help businesses build modern, responsive web interfaces with a
-                strong focus on performance and usability. Turning complex ideas
-                into clean, scalable UI that supports real growth.
-              </p>
-              <span className="text-secondary code-text-ibm">&lt;/p&gt;</span>
-            </motion.div>
-            <motion.div variants={itemVariants}>
-              <a
-                href="#contact"
-                className="text-primary h2-text-ibm talk-btn ml-6 flex w-fit items-center py-1 pr-2 pl-3 sm:ml-4 sm:items-stretch xl:pr-2 xl:pl-3 2xl:pr-3 2xl:pl-4"
-              >
-                <span className="mr-2 xl:mr-3 2xl:mr-4">let’s talk</span>
-                <span className="talk-icon inline-flex items-center justify-center p-2">
-                  <MailIcon className="size-4 xl:size-4.5 2xl:size-6" />
-                </span>
-              </a>
-            </motion.div>
-          </motion.div>
+          </div>
+          <div className="flex shrink-0 items-center justify-center p-4">
+            <div ref={startRef} className="size-85 sm:size-62.5" />
+            <motion.img
+              src="/rezaul.avif"
+              fetchPriority="high"
+              alt="Profile Pic"
+              className="fixed z-1 size-85 sm:size-62.5"
+              style={{
+                left: `${startX}px`,
+                top: `${startY}px`,
+                x: smoothX,
+                y: smoothY,
+                width: smoothSize,
+                height: smoothSize,
+                rotate: smoothRotate,
+                borderRadius: smoothBorderRadius,
+              }}
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };
