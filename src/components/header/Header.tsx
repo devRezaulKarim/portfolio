@@ -59,9 +59,18 @@ export default function Header() {
   const navLinksX = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, isMobile ? 400 : 250],
+    [0, isMobile ? 400 : 220],
+  );
+  const navLinksScale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [1, isMobile ? 0 : 1],
   );
   const smoothNavLinksX = useSpring(navLinksX, {
+    stiffness: 80,
+    damping: 25,
+  });
+  const smoothNavLinksScale = useSpring(navLinksScale, {
     stiffness: 80,
     damping: 25,
   });
@@ -114,7 +123,11 @@ export default function Header() {
   }, []);
   return (
     <>
-      <Navbar targetRef={targetRef} smoothNavLinksX={smoothNavLinksX} />
+      <Navbar
+        targetRef={targetRef}
+        smoothNavLinksX={smoothNavLinksX}
+        smoothNavLinksScale={smoothNavLinksScale}
+      />
       <SectionGap />
       <Hero
         heroRef={heroRef}

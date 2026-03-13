@@ -6,7 +6,7 @@ import { SectionHeader } from "../common/SectionHeader";
 
 export const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <SectionHeader>About</SectionHeader>
         <ul className="my-4 list-disc space-y-2 border-y pr-4 pb-1 pl-8 font-mono text-sm leading-6 marker:pt-1 marker:text-lg marker:text-neutral-500">

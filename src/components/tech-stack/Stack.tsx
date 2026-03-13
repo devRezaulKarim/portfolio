@@ -8,7 +8,7 @@ import { StackCard } from "./StackCard";
 
 export const Stack = () => {
   return (
-    <Section>
+    <Section id="skills">
       <Container>
         <SectionHeader>Stack</SectionHeader>
         <motion.ul

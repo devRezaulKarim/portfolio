@@ -6,7 +6,7 @@ import { ExperienceCard } from "./ExperienceCard";
 
 export const Experience = () => {
   return (
-    <Section>
+    <Section id="experience">
       <Container>
         <SectionHeader>Experience</SectionHeader>
         <div className="space-y-2 border-t pt-2">

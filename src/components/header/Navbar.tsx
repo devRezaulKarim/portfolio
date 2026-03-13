@@ -1,4 +1,9 @@
-import { IconBrandGithub, IconMoon, IconSun } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMoon,
+  IconSun,
+} from "@tabler/icons-react";
 import { RefObject, useSyncExternalStore } from "react";
 import Container from "../wrappers/Container";
 import { motion, type MotionValue } from "motion/react";
@@ -24,9 +29,11 @@ function getServerSnapshot() {
 export const Navbar = ({
   targetRef,
   smoothNavLinksX,
+  smoothNavLinksScale,
 }: {
   targetRef: RefObject<HTMLDivElement | null>;
   smoothNavLinksX: MotionValue<number>;
+  smoothNavLinksScale: MotionValue<number>;
 }) => {
   const isDark = useSyncExternalStore(
     subscribe,
@@ -48,20 +55,42 @@ export const Navbar = ({
           />
 
           <motion.nav
-            style={{ x: smoothNavLinksX }}
+            style={{ x: smoothNavLinksX, scale: smoothNavLinksScale }}
             className="absolute left-0 px-4"
           >
             <ul className="flex items-center justify-center gap-4 duration-200">
-              <li>Home</li>
-              <li>Component</li>
-              <li>Blogs</li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
             </ul>
           </motion.nav>
 
           <div className="flex items-center gap-x-6">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <IconBrandGithub size={20} />
-            </a>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/in/dev-rezaul-karim/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconBrandLinkedin size={20} />
+              </a>
+              <a
+                href="https://github.com/devRezaulKarim"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconBrandGithub size={20} />
+              </a>
+            </div>
             <button
               type="button"
               onClick={toggleTheme}
