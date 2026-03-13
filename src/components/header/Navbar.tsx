@@ -1,12 +1,16 @@
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconMoon,
-  IconSun,
-} from "@tabler/icons-react";
+import { IconMenu, IconMoon, IconSun } from "@tabler/icons-react";
 import { RefObject, useSyncExternalStore } from "react";
 import Container from "../wrappers/Container";
 import { motion, type MotionValue } from "motion/react";
+import { NavSocial } from "./NavSocial";
+import { NavLinks } from "./NavLinks";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 
 function subscribe(callback: () => void) {
   const observer = new MutationObserver(callback);
@@ -29,11 +33,11 @@ function getServerSnapshot() {
 export const Navbar = ({
   targetRef,
   smoothNavLinksX,
-  smoothNavLinksScale,
+  smoothSocialX,
 }: {
   targetRef: RefObject<HTMLDivElement | null>;
   smoothNavLinksX: MotionValue<number>;
-  smoothNavLinksScale: MotionValue<number>;
+  smoothSocialX: MotionValue<number>;
 }) => {
   const isDark = useSyncExternalStore(
     subscribe,
@@ -55,53 +59,42 @@ export const Navbar = ({
           />
 
           <motion.nav
-            style={{ x: smoothNavLinksX, scale: smoothNavLinksScale }}
-            className="absolute left-0 px-4"
+            style={{ x: smoothNavLinksX }}
+            className="absolute left-4 hidden sm:block"
           >
-            <ul className="flex items-center justify-center gap-4 duration-200">
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#skills">Skills</a>
-              </li>
-              <li>
-                <a href="#experience">Experience</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-            </ul>
+            <NavLinks />
           </motion.nav>
+          <NavSocial
+            className="absolute left-4 sm:invisible"
+            style={{ x: smoothSocialX }}
+          />
 
           <div className="flex items-center gap-x-6">
+            <NavSocial className="invisible sm:visible" />
             <div className="flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/in/dev-rezaul-karim/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="cursor-pointer"
               >
-                <IconBrandLinkedin size={20} />
-              </a>
-              <a
-                href="https://github.com/devRezaulKarim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IconBrandGithub size={20} />
-              </a>
+                {isDark ? (
+                  <IconMoon size={20} />
+                ) : (
+                  <IconSun size={20} color="#ff5200" />
+                )}
+              </button>
+              <Sheet>
+                <SheetTrigger className="sm:hidden">
+                  <IconMenu />
+                </SheetTrigger>
+                <SheetContent className="max-w-40">
+                  <SheetHeader>
+                    <SheetTitle></SheetTitle>
+                  </SheetHeader>
+                  <NavLinks className="flex-col" />
+                </SheetContent>
+              </Sheet>
             </div>
-            <button
-              type="button"
-              onClick={toggleTheme}
-              className="cursor-pointer"
-            >
-              {isDark ? (
-                <IconMoon size={20} />
-              ) : (
-                <IconSun size={20} color="#ff5200" />
-              )}
-            </button>
           </div>
         </div>
       </Container>

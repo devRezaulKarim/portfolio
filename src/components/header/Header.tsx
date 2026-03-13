@@ -56,21 +56,14 @@ export default function Header() {
     damping: 25,
   });
 
-  const navLinksX = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, isMobile ? 400 : 220],
-  );
-  const navLinksScale = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [1, isMobile ? 0 : 1],
-  );
+  const navLinksX = useTransform(scrollYProgress, [0, 1], [0, 215]);
+  const socialX = useTransform(scrollYProgress, [0, 1], [0, 225]);
+
   const smoothNavLinksX = useSpring(navLinksX, {
     stiffness: 80,
     damping: 25,
   });
-  const smoothNavLinksScale = useSpring(navLinksScale, {
+  const smoothSocialX = useSpring(socialX, {
     stiffness: 80,
     damping: 25,
   });
@@ -126,7 +119,7 @@ export default function Header() {
       <Navbar
         targetRef={targetRef}
         smoothNavLinksX={smoothNavLinksX}
-        smoothNavLinksScale={smoothNavLinksScale}
+        smoothSocialX={smoothSocialX}
       />
       <SectionGap />
       <Hero
